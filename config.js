@@ -5,10 +5,10 @@ import moment from 'moment-timezone'
 import fetch from 'node-fetch'
 
 /*⫘⫘⫘⫘ WAKTU ⫘⫘⫘⫘⫘*/
-global.wibh = moment.tz('Asia/Jakarta').format('HH')
-global.wibm = moment.tz('Asia/Jakarta').format('mm')
-global.wibs = moment.tz('Asia/Jakarta').format('ss')
-global.wib = moment.tz('Asia/Jakarta').format('HH:mm:ss')
+global.wibh = moment.tz('Asia/Makassar').format('HH')
+global.wibm = moment.tz('Asia/Makassar').format('mm')
+global.wibs = moment.tz('Asia/Makassar').format('ss')
+global.wib = moment.tz('Asia/Makassar').format('HH:mm:ss')
 global.wktuwib = `${global.wibh} H ${global.wibm} M ${global.wibs} S`
     
     let d = new Date(new Date + 3600000)
@@ -30,43 +30,43 @@ global.wktuwib = `${global.wibh} H ${global.wibm} M ${global.wibs} S`
 // Kalau gapunya di biarin aja!, atau ga di kasih tanda '-'
 
 // kalo ga punya ketik "-" atau biarin aja biar ada creditsnya :v
-global.sig = 'https://instagram.com/fangzganz?igshid=YmMyMTA2M2Y=' //Instagram mu
-global.sgh = 'https://github.com/Fangzbotz2007' //Github mu
-global.swb = 'https://fangzbot.websites.co.in'
+global.sig = 'https://instagram.com/katyushaclara' //Instagram mu
+global.sgh = 'http://tiktok.com/@onlyonegreat' //Github mu 
+global.swb = 'wa.me/6281347927862'
 global.sfb = 'https://www.facebook.com/'
 global.syt = 'https://www.youtube.com/'
-global.syt = 'https://youtube.com/channel/UCACHvReRmw2fxgMutPFCBWg' //YT Mu
-global.sgc = 'https://chat.whatsapp.com/HpxyS6b45SoGIKG7LHddiM' //Group WhatsApp mu
-global.sdc = 'https://youtube.com/channel/UCACHvReRmw2fxgMutPFCBWg' //Discord Mu
+global.syt = 'https://bili.im/EktBYXY' //YT Mu
+global.sgc = 'https://chat.whatsapp.com/JPXhbeh6DsI6G8guMGKrEQ' //Group WhatsApp mu
+global.sdc = 'https://t.me/feliciabotfancommunity' //Discord Mu
 global.snh = 'https://nhentai.net/g/365296/' //Make ini aja gausah di ganti.
 
 /*⫘⫘⫘⫘ALL PAYMENT⫘⫘⫘⫘⫘*/
-global.pdana = '088215689772' //Dana
-global.povo = '088215689772' //Ovo
-global.pgopay = '088215689772' //Gopay
-global.ppulsa = '088215689772' //Pulsa 
-global.ppulsa2 = '0895394988123' //Pulsa, Kalau nomor cuma 1, yg ini kasih tanda -
-global.psaweria = 'https://saweria.co/FangzBot' //Saweria
+global.pdana = '082253479547' //Dana
+global.povo = '082253479547' //Ovo
+global.pgopay = '082253479547' //Gopay
+global.ppulsa = '082253479547' //Pulsa 
+global.ppulsa2 = '-' //Pulsa, Kalau nomor cuma 1, yg ini kasih tanda -
+global.psaweria = 'https://saweria.co/kitsunee928' //Saweria
 global.donate = '〔 Dᴏɴᴛ ғᴏʀɢᴇᴛ Dᴏɴᴀᴛɪᴏɴ 〕\n\n››╭─〘 *Donasi* 〙\n╭╡📮: Donasi ngab jangan make bot doang.│\n┝‷✧ *Ovo:* 088215689772\n│┝‷✧ *Dana:* 088215689772\n│┝‷✧ *Gopay:* 088215689772\n│╰───···─────\n│⁺◛˖ Ingin Donasi? Chat nomor owner\n╰──────────···───╮'
 
 /*⫘⫘⫘⫘ GLOBAL NOMOR ⫘⫘⫘⫘⫘*/
 global.nomorbot = '6285163083750' //Nomor Bot mu
 global.nomorown = '6281347927862' //Nomormu
-global.namebot = 'Fangz BOT' //Nama bot mu
-global.nameown = 'Fangz Ganz' //Nama mu
+global.namebot = '⌬ Felicia-MD' //Nama bot mu
+global.nameown = '么 Kitsuneee' //Nama mu
 
 /*⫘⫘⫘⫘GLOBAL FUNCTION⫘⫘⫘⫘⫘*/
 //KALAU MAGER EDIT, MENDING GAUSAH DI APA² IN. SAMA AJA//
 global.swo = 'https://wa.me/6281347927862' //Nomor mu
-global.linksc = 'https://bit.ly/3PqdYYS' //Gausah di ganti, biar ga eror
-global.danied = '✘ 𝗘𝗥𝗢𝗥 𝟰𝟬𝟰' //Gausah di apa² in
-global.botclick = '𝍤 CLICK HERE' //Bebas, Kalau gw saranin mending gausah di ganti.
-global.after = 'Bot by https://bit.ly/3QJOy9F'
-global.author = '                © Fangz BOT By Fangz' //Wm author
-global.acguest = 'Kamu akan Menggunakan akun guest dari FangzXD\n\nClick Button di bawah.'
-global.botintro = 'Hallo, Kenalin saya Fangz BOT Saya akan membantu Anda kapan pun & Dimana pun, Saya asisten bot WhatsApp yang di buat oleh *FangzXD* Saya di rilis pada tanggal\n🗓 ️_16/04/2022_'
-global.sc = 'https://telegra.ph/file/ff583768b40239651d69d.jpg'
-global.sallam = '💬 Waalaikumsallam'
+global.linksc = 'https://wa.me/6281347927862' //Gausah di ganti, biar ga eror
+global.danied = '𝗘𝗥𝗥𝗢𝗥 𝟰𝟬𝟰' //Gausah di apa² in
+global.botclick = '𝍤 MENU OPTIONS' //Bebas, Kalau gw saranin mending gausah di ganti.
+global.after = 'Bot By 么 Kitsuneee'
+global.author = '                ©6285163083750' //Wm author
+global.acguest = 'Kamu Akan Menggunakan Akun Guest Dari ⌬ Felicia-MD\n\nPress the button below.'
+global.botintro = 'Hai, Perkenalkan Saya ⌬ Felicia-MD Salah Satu Bot Whatsapp Yang Dapat Membantu Anda Di WhatsApp Dan Saya Dirilis Pada Tanggal\n*🗓28/11/2021*'
+global.sc = 'https://telegra.ph/file/6c280089a0b40057dcdb7.jpg'
+global.sallam = '*Waalaikumussalam*'
 global.thumbBanned = 'https://telegra.ph/file/b810a9fbc18afc1aaa6c8.jpg'
 global.thumbWarn = 'https://telegra.ph/file/38f72943a6f152112d128.jpg'
 global.speed = 'https://telegra.ph/file/733725060ca73e223a0ab.jpg'
@@ -77,7 +77,7 @@ global.assalam = 'https://telegra.ph/file/867134be21091efeee226.jpg'
 global.collab = 'https://telegra.ph/file/09f8b94f8d820153034e2.jpg'
 global.dand = 'https://telegra.ph/file/7fb83420644e354aa0eec.jpg'
 global.thumbEnable = 'https://telegra.ph/file/8c89c250c1cda88d92b3d.jpg'
-global.runtime = 'https://telegra.ph/file/624dda855b899a0c727a6.jpg'
+global.runtime = 'https://telegra.ph/file/aa539ea23733ae871230e.jpg'
 global.serialimg = 'https://telegra.ph/file/eaf30ca57d5c4c2d7a6f0.jpg'
 global.jlimit = 'https://telegra.ph/file/449ce1a72312c8fcb99f6.jpg'
 global.thumbDidyou = 'https://telegra.ph/file/e27e5468705a73de2328d.jpg'
@@ -567,7 +567,7 @@ global.fpay = {
 			requestFrom: '0@s.whatsapp.net',
 			noteMessage: {
 				extendedTextMessage: {
-					text: 'Hay kak👋'
+					text: 'Hay kak??'
 				}
 			},
 			expiryTimestamp: 999999999,
