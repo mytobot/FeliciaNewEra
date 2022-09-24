@@ -1,4 +1,4 @@
-let bonus = `${Math.floor(Math.random() * 300)}`.trim()
+let bonus = `${Math.floor(Math.random() * 1000)}`.trim()
 
 let handler = async (m, { conn, command, text, args }) => {
 

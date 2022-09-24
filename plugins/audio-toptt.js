@@ -3,11 +3,11 @@ import { toPTT } from '../lib/converter.js'
 let handler = async (m, { conn, usedPrefix, command }) => {
     let q = m.quoted ? m.quoted : m
     let mime = (m.quoted ? m.quoted : m.msg).mimetype || ''
-    if (!/video|audio/.test(mime)) throw `reply video/audio you want to convert to voice note/vn with caption *${usedPrefix + command}*`
+    if (!/video|audio/.test(mime)) throw `Reply Video/VN Yang Ingin Anda Ubah Ke PTT Dengan Balasan  *${usedPrefix + command}*`
     let media = await q.download?.()
-    if (!media) throw 'Can\'t download media'
+    if (!media) throw '*Tidak Dapat Mengunduh Media*'
     let audio = await toPTT(media, 'mp4')
-    if (!audio.data) throw 'Can\'t convert media to audio'
+    if (!audio.data) throw '*Tidak Dapat Mengonversi Media Ke Audio*'
     conn.sendFile(m.chat, audio.data, 'audio.mp3', '', m, true, { mimetype: 'audio/mp4' })
 }
 handler.help = ['tovn (reply)']

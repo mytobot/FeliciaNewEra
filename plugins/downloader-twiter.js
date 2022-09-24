@@ -21,13 +21,13 @@ let res = await axios('https://violetics.pw/api/downloader/twitter?apikey=beta&u
 let json = res.data
 let dapet = json.result.url
 	let row = Object.values(dapet).map((v, index) => ({
-		title: htjava + '📌 Quality: ' + v.name,
-		description: '\n⌚ Host: ' + json.result.hosting + '\n⏲️ Title: ' + json.result.meta.title + '\n📎 URL: ' + v.url + '\n📌 Source: ' + json.result.meta.source,
+		title: htjava + '📌 ǫᴜᴀʟɪᴛʏ: ' + v.name,
+		description: '\n⌚ Host: ' + json.result.hosting + '\n💬 sᴏᴜʀᴄᴇ: ' + json.result.meta.title + '\n🌐 ᴜʀʟ: ' + v.url + '\n🔎 sᴏᴜʀᴄᴇ: ' + json.result.meta.source,
 		rowId: usedPrefix + 'get ' + v.url
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Search Disini ☂️`,
-		description: `⚡ Hai ${name}, Silakan pilih ${command} Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `${command} SEARCH RESULT 🔎`,
+		description: `*Silahkan Hasil Pencarian ${command} Untuk:*\n*📍 Hasil Pencarian:* ${text}\n\n`,
 		footerText: wm
 	}
 	return conn.sendListM(m.chat, button, row, m)

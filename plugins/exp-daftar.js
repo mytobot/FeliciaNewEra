@@ -49,20 +49,16 @@ let handler = async function (m, { text, usedPrefix, command }) {
 ]
   
  const listMessage = { 
-   text: `┏━━━〔 ıll 𝐑𝐄𝐆𝐈𝐒𝐓𝐄𝐑 llı 〕━━㉿
-⬡ Hallo ${conn.getName(m.sender)} 👋
-⬡ Sebelum melihat fitur bot, lebih baik Verify dulu
-⬡ Kalau tidak kelihatan button nya, contohnya dibawah!
-┗━━━━━━━━━━━━━━━━━━㉿
-┏━━〔 ıll CONTOH llı 〕━㉿
-⬡ #daftar namamu.umurmu
-⬡ #daftar ${conn.getName(m.sender)}.17
-┗━━━━━━━━━━㉿ 
-⫹⫺ 
-⫹⫺`, 
-   footer: `┗ © FangzXD*`, 
+   text: `*Silahkan Daftar Terlebih Dahulu*\n
+• Format:
+  #daftar nama.umur
+• Contoh:
+  #daftar ${conn.getName(m.sender)}.17
+
+`, 
+   footer: `么 Kitsuneee`, 
    title: "", 
-   buttonText: "CLICK HERE", 
+   buttonText: "ᴄʟɪᴄᴋ ʜᴇʀᴇ", 
    sections 
  } 
   
@@ -73,36 +69,24 @@ let handler = async function (m, { text, usedPrefix, command }) {
    if (!name) throw 'Nama tidak boleh kosong (Alphanumeric)' 
    if (!age) throw 'Umur tidak boleh kosong (Angka)' 
    age = parseInt(age) 
-   if (age > 30) throw 'WOI TUA (。-`ω´-)' 
-   if (age < 0) throw 'Halah dasar bocil' 
+   if (age > 25) throw '*Masukkin Umur Tidak Jujur? Mati Aja*' 
+   if (age < 10) throw '*Masukkin Umur Tidak Jujur? Mati Aja*' 
    user.name = name.trim() 
    user.age = age 
    user.regTime = + new Date 
    user.registered = true 
    let sn = createHash('md5').update(m.sender).digest('hex') 
-    let mim_ = ["application/pdf"] 
-      let lin_ = ["https://www.youtube.com","https://www.instagram.com","https://www.facebook.com"] 
+    let mim_ = ["application/json"] 
+      let lin_ = ["https://www.instagram.com"] 
     let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : m.fromMe ? conn.user.jid : m.sender 
    let cap = ` 
- ╭━━━━「 *BERHASIL* 」
- ❖ Terima kasih ${name} Sudah mendaftar
-Di Database kami
- ❖ © FANGZ BOT || ALL RESERVED
+*REGISTRATION SIGN 💳*
 
- ╭━━━━「 *DATA* 」
- ┊⫹ *Sucsess ☑️* 】Status
- ┊⫹ *${name}* 】Nama
- ┊⫹ *${age}* 】Umur/Age                                          
- ╰═┅═━––––––๑
+*• ɴᴀᴍᴇ* : ${name}
+*• ᴀɢᴇ*    : ${age}
 
-*SYARAT*
-➥ Gunakan Bot ini dengan bijak
-➥ Dilarang menelepon Bot ini
-➥ Dilarang spam Button/Chat
-➥ Dilarang Toxic
-
-Jika owner mengetahui Hal di atas, Maka tidak segan²
-Nomor akan di banned!.
+*Group Official (Wajib Bergabung)*
+https://chat.whatsapp.com/JPXhbeh6DsI6G8guMGKrEQ
 ` 
    let buttonMessage= { 
  'document':{'url':sig}, 
@@ -119,20 +103,20 @@ Nomor akan di banned!.
  'previewType':'pdf', 
  'title':global.bottime, 
  'body':global.titlebot, 
- 'thumbnail':await(await fetch('https://telegra.ph/file/4de011eaa2a3622522a04.jpg')).buffer(),
+ 'thumbnail':await(await fetch('https://telegra.ph/file/4cdbca81f3981750fc611.jpg')).buffer(),
  'sourceUrl':sig}}, 
  'caption':cap, 
  'footer':botdate, 
  'buttons':[ 
- {'buttonId':'.ref','buttonText':{'displayText':'❍REFERAL'},'type':1}, 
- {'buttonId':'.menu','buttonText':{'displayText':'❍LIST MENU'},'type':1} 
+ {'buttonId':'.sewa','buttonText':{'displayText':'𝗦𝗘𝗪𝗔'},'type':1}, 
+ {'buttonId':'.menu','buttonText':{'displayText':'𝗠𝗘𝗡𝗨'},'type':1} 
  ], 
  'headerType':6} 
      await conn.sendMessage(m.chat,buttonMessage, { quoted:m}) 
  } 
  handler.help = ['daftar', 'register'].map(v => v + ' <nama>.<umur>') 
  handler.tags = ['xp'] 
-  
+ handler.group = true
  handler.command = /^(daftar|verify|reg(ister)?)$/i 
   
  export default handler

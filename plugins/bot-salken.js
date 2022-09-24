@@ -23,6 +23,6 @@ contextInfo: { externalAdReply :{
 
 
 handler.help = ['salken','intro']
-handler.tags = ['info']
-handler.command = /^salken|intro$/i
+handler.tags = ['jkvfy']
+handler.command = /^ffvjiyf|ygddtg$/i
 export default handler

@@ -6,7 +6,7 @@ let handler = async (m) => {
     else who = m.sender
     let user = global.db.data.users[who]
 let anu =`
-${pickRandom(global.masadepan)}
+*${pickRandom(global.masadepan)}*
 `
      const message = {
             document: { url: thumb },
@@ -16,14 +16,14 @@ ${pickRandom(global.masadepan)}
             templateButtons: [
                 {
                     urlButton: {
-                        displayText: 'Support Me',
-                        url: swb
+                        displayText: 'ᴛᴇʟᴇɢʀᴀᴍ',
+                        url: sdc
                     }
                 },
                 {
                     quickReplyButton: {
-                        displayText: 'Aminn',
-                        id: 'Fangz'
+                        displayText: 'Amin...',
+                        id: 'Felicia'
                     }
                 },
             ]

@@ -6,7 +6,7 @@ let handler = async (m, { conn, args }) => {
   if (!args[0]) throw 'Uhm...url nya mana?'
   let chat = global.db.data.chats[m.chat]
   m.reply(wait)
-  await conn.reply(m.chat, `Downloading media from Tiktok`, 0, {
+  await conn.reply(m.chat, `*Downloading Media From Tiktok*`, 0, {
     contextInfo: {
       mentionedJid: [m.sender],
       externalAdReply: {
@@ -14,7 +14,7 @@ let handler = async (m, { conn, args }) => {
         mediaType: 2,
         description: sgc,
         title: global.wm,
-        body: 'Nih Kak', //`${fileSizeH}`,
+        body: 'Done', //`${fileSizeH}`,
         sourceUrl: snh,
         thumbnail: fs.readFileSync('./thumbnail.jpg')
       }
@@ -23,13 +23,7 @@ let handler = async (m, { conn, args }) => {
   let url = `https://api.lolhuman.xyz/api/tiktokwm?apikey=1a5d403c0f75c316c9920b35&url=${args[0]}`
   let txt = `🚀 *Link:* ${await (await axios.get(`https://tinyurl.com/api-create.php?url=${args[0]}`)).data}`
   await conn.sendFile(m.chat, url, 'tiktokaudio.mp3', `
-┏┉━━━━━━━━━━━❏
-┆ *TIKTOK MP3*
-├┈┈┈┈┈┈┈┈┈┈┈
-┆• *Judul:* 
-│• *Type:* MP3
-┆• *📥 Ukuran File:* 
-└❏
+*TikTok MP3*
 `.trim(), m, null, {
     document: { url }, mimetype: 'audio/mpeg', fileName: 'tiktok.mp3', conntextInfo: {
       externalAdReply: {

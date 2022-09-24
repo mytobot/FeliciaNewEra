@@ -1,7 +1,7 @@
 import { instagramStalk } from '@bochilteam/scraper'
 
 let handler= async (m, { args, usedPrefix, command }) => {
-    if (!args[0]) throw `Example use ${usedPrefix}${command} <username>`
+    if (!args[0]) throw `Example ${usedPrefix}${command} <username>`
     const {
         username,
         name,
@@ -12,12 +12,12 @@ let handler= async (m, { args, usedPrefix, command }) => {
     } = await instagramStalk(args[0])
 await conn.sendHydrated(m.chat, `${name} *(${username})*
 https://instagram.com/${username.replace(/^@/, '')}
-*${followersH}* Followers
-*${followingH}* Following
-*${postsH}* Posts
-*Bio:* ${description}
+*${followersH}* ғᴏʟʟᴏᴡᴇʀs
+*${followingH}* ғᴏʟʟᴏᴡɪɴɢ
+*${postsH}* ᴘᴏsᴛ
+*ʙɪᴏ:* ${description}
 `.trim(), botdate, null, 'https://www.whatsapp.com/otp/copy/' + 'https://instagram.com/' +username.replace(/^@/, ''), 'C O P Y', nomorown, nameown, [
-      ['🎀 Menu', '/menu']
+      ['𝐌𝐄𝐍𝐔', '/menu']
     ], null)
 }
 

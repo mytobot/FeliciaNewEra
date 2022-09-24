@@ -37,7 +37,7 @@ async function GDriveDl(url) {
 		}
 	})
 	let { fileName, sizeBytes, downloadUrl } =  JSON.parse((await res.text()).slice(4))
-	if (!downloadUrl) throw 'Link Download Limit!'
+	if (!downloadUrl) throw '*Link Download Limit!*'
 	let data = await fetch(downloadUrl)
 	if (data.status !== 200) throw data.statusText
 	return { downloadUrl, fileName, fileSize: formatSize(sizeBytes), mimetype: data.headers.get('content-type') }

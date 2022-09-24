@@ -9,7 +9,7 @@ let handler = async (m, { conn, args, command }) => {
 let totalf = Object.values(global.plugins).filter(
     (v) => v.help && v.tags
   ).length;
- await conn.sendButton(m.chat, `꒦ ͝ ꒷ ͝ ꒦ ͝ ꒷ ͝ ꒦ ͝ ꒷ ͝ ꒦ ͝ ꒷ ͝ ꒦ ͝ ꒷ ͝ ꒦ ͝ ꒦ ͝ ꒷ ͝ ꒦ ͝ \n`,donate + '\n\n' + titlebot, donsi, [['OKE','Ok']], m, {
+ await conn.sendButton(m.chat, `\n`,donate + '\n\n' + titlebot, donsi, [['𝐎𝐊𝐀𝐘','Ok']], m, {
 contextInfo: { externalAdReply :{
                         mediaUrl: '',
                         mediaType: 2,

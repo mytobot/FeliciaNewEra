@@ -14,6 +14,7 @@ import db from '../lib/database.js'
  //   }] 
  // } 
  let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isROwner }) => {
+  let imgr = flaaa.getRandom()
   let isEnable = /true|enable|(turn)?on|1/i.test(command)
   let chat = global.db.data.chats[m.chat]
   let user = global.db.data.users[m.sender]
@@ -70,6 +71,16 @@ import db from '../lib/database.js'
         throw false
       }
       bot.clear = isEnable
+      break
+          case 'viewonce':
+    case 'antiviewonce':
+      if (m.isGroup) {
+        if (!(isAdmin || isOwner)) {
+          global.dfail('admin', m, conn)
+          throw false
+        }
+      }
+      chat.viewonce = isEnable
       break
     case 'desc':
       if (!m.isGroup) {
@@ -129,6 +140,15 @@ import db from '../lib/database.js'
         }
       }
       chat.antiLink = isEnable
+      break
+    case 'antilinkbitly':
+      if (m.isGroup) {
+        if (!(isAdmin || isOwner)) {
+          global.dfail('admin', m, conn)
+          throw false
+        }
+      }
+      chat.antiLinkBitly = isEnable
       break
       case 'antilinktik':
       if (m.isGroup) {
@@ -379,6 +399,12 @@ import db from '../lib/database.js'
       }
       global.opts['gconly'] = isEnable
       break
+    case 'getmsg':
+      if (m.isGroup) {
+        if (!(isAdmin || isOwner)) return dfail('admin', m, conn)
+      }
+      chat.getmsg = isEnable
+      break
     case 'swonly':
     case 'statusonly':
       isAll = true
@@ -389,10 +415,8 @@ import db from '../lib/database.js'
       global.opts['swonly'] = isEnable
       break
               default: 
-       if (!/[01]/.test(command)) return conn.sendButton(m.chat, `*〔 llı OPTIONS ıll 〕*`, `
-    
-    
-꒦ ͝ ꒷ ͝ ꒦ ͝ ꒷ ͝ ꒦ ͝ ꒷ ͝ ꒦ ͝ ꒷ ͝ ꒦ ͝ ꒷ ͝ ꒦ ͝ ꒷ ͝ ꒦ ͝ ꒷ ͝ ꒦
+       if (!/[01]/.test(command)) return conn.sendButton(m.chat, `*OPTIONS AVAILABLE 📋*`, `
+
    
 Antidelete
 Antilink
@@ -401,10 +425,13 @@ AntilinkIg
 Antilinktel
 AntilinkTik
 AntilinkWa
+Antilinkbitly
 AntilinkYt
+Antihatetepe
 AntiSatir
 AntiSpam
 AntiSticker
+Antiviewonce
 AntiToxic
 AntiVirtex
 AutoDelVn
@@ -431,31 +458,25 @@ Simi
 SwOnly
 Welcome
 WhiteListMyContact
-freply
-clear
-desc
-  
-▶︎ ━━━━━━━•──────────── 
-      ⇆ㅤ◁ㅤ ❚❚ㅤ ▷ㅤ↻
-
-📜 *TUTORIAL*
+Freply
+Clear
+Getmsg
+Desc
  
-𝍤 ON: ${usedPrefix}on wellcome ❫
+*Cara Penggunaan:*
+• Aktifkan: ${usedPrefix}on wellcome
+• Nonaktifkan: ${usedPrefix}off wellcome
 
-𝍤 OFF: ${usedPrefix}off wellcome ❫
 
-📮Pastikan Huruf kecil semua!
  `.trim(), `./media/on-off.jpg`, [ 
- [`SEWA BOT`, `${usedPrefix}sewa`] 
+ [`𝐒𝐄𝐖𝐀 𝐁𝐎𝐓`, `${usedPrefix}sewa`] 
  ], m, {asLocation:true}) 
        throw false 
    } 
-     conn.sendButton(m.chat, botdate, `*${htki} STATUS ${htka}* 
- 📔  *Type:*   ${type}  
- 🗞️   *Status:*   Succes ✅ 
- 💻️   *Options:*   ${isEnable ? 'ON' : 'OFF'} 
- 🗳️   *Mode:*     ${isAll ? 'Bot Only' : isUser ? '' : 'Chat Only'} 
- `, thumbEnable, [['MENU', '.menu'],['OKE', 'Ok'],['SCRIPT BOT', '.sc']],m)
+     conn.sendButton(m.chat, botdate, `*${htki} CHANGE ${htka}* 
+
+${type} Di ${isEnable ? 'Aktifkan' : 'Nonaktifkan'}  Di ${isAll ? 'Bot Ini.' : isUser ? '' : 'Chat/GC Ini.'}    
+ `, `${imgr + 'OPTION RULES'}`, [['𝐌𝐄𝐍𝐔', '.menu'],['𝐎𝐊𝐄', 'Ok']],m)
  } 
  handler.help = ['settings'] 
  handler.tags = ['Bot'] 

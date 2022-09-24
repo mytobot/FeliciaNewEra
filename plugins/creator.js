@@ -3,20 +3,19 @@ import crypto from 'crypto'
 let handler = async (m, { conn, text, usedPrefix }) => {
 
     let sewa = `
-  〔 llı OWNER ${namebot} ıll 〕
+*📋 BIODATA OWNER ${namebot}*
     
-Nama: ${nameowner}
-Umur: ${umurowner}
-Asal: ${asalowner}
-
-Nomor: ${nomorowner}
+ɴᴀᴍᴀ: ${nameowner}
+ᴜᴍᴜʀ: ${umurowner}
+ᴀsᴀʟ: ${asalowner}
+ɴᴏᴍᴏʀ: ${nomorowner}
 
 ${botdate}
 `
 
     let img1 = fs.readFileSync('./img/atas.png');
     let img2 = fs.readFileSync('./img/bawah.png');
-    return conn.sendButton(m.chat, hiasan, sewa, img1, [["menu", usedPrefix + "menu"], ["profile", usedPrefix + "profile"]], m, {
+    return conn.sendButton(m.chat, hiasan, sewa, img1, [["𝐌𝐄𝐍𝐔", usedPrefix + "menu"], ["𝐏𝐑𝐎𝐅𝐈𝐋𝐄", usedPrefix + "profile"]], m, {
         contextInfo: {
             externalAdReply: {
                 mediaUrl: "https://instagram.com/aguzfamilia",

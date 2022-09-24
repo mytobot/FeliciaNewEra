@@ -3,21 +3,21 @@ import fetch from 'node-fetch'
 import axios from 'axios'
 import { instagramStory, instagramStoryv2 } from '@bochilteam/scraper'
 let handler = async (m, { conn, args, usedPrefix, command }) => {
-    if (!args[0]) throw `uhm.. username nya mana?\n\ncontoh:\n\n${usedPrefix + command} rasel.ganz`
-    if (args[0].startsWith('http') || args[0].startsWith('@')) throw `username salah\n\ncontoh: *${usedPrefix}${command} the.sad.boy01*`
+    if (!args[0]) throw `*MASUKKAN USERNAME-NYA*\n\nExample: ${usedPrefix + command} katyhusaclara`
+    if (args[0].startsWith('http') || args[0].startsWith('@')) throw `*USERNAME INVALID*\n\nExample: *${usedPrefix}${command} katyhusaclara*`
     try {
         const res = await fetch(`https://hardianto.xyz/api/download/igstory?username=${args[0]}&apikey=hardianto`)
     var anu = await res.json()
     var anuku = anu.medias
     for (let { url, preview } of anuku) 
-    conn.sendMedia(m.chat, url, null, {mentions: [m.sender], jpegThumbnail: await(await fetch(preview)).buffer(), caption: `🚀 *Link:* ${await(await axios.get(`https://tinyurl.com/api-create.php?url=${url}`)).data}`})
+    conn.sendMedia(m.chat, url, null, {mentions: [m.sender], jpegThumbnail: await(await fetch(preview)).buffer(), caption: `*🌐 LINK:* ${await(await axios.get(`https://tinyurl.com/api-create.php?url=${url}`)).data}`})
     } catch {
         try {
     const res2 = await igstory(args[0])
     for ( const { downloadUrl, url, preview, type, fileType } of res2 )
-    conn.sendMedia(m.chat, url, null, { mentions: [m.sender], jpegThumbnail: await(await fetch(preview)).buffer(), caption: `🚀 *Link:* ${await(await axios.get(`https://tinyurl.com/api-create.php?url=${url}`)).data}`})
+    conn.sendMedia(m.chat, url, null, { mentions: [m.sender], jpegThumbnail: await(await fetch(preview)).buffer(), caption: `*🌐 LINK:* ${await(await axios.get(`https://tinyurl.com/api-create.php?url=${url}`)).data}`})
     } catch {
-        throw `No media found!`
+        throw `*Dia Tidak Membuat Story*`
     }                  
   }
 }

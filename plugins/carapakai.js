@@ -1,45 +1,42 @@
 let handler  = async (m, { conn, usedPrefix }) => { 
    conn.reply(m.chat, ` 
- ╭─「 *Tutorial Main FANGZ BOT* 」 
+ ╭─「 *TUTORIAL MAIN RPG* 」 
  │  
- │〘 Tutorial EPIC RPG 〙 
  │• *${usedPrefix}claim* 
- │   Staterpack yang bisa di klaim  
- │   12 jam sekali 
+ │   Staterpack Yang Bisa Di Klaim 
+ │   12 Jam Sekali 
  │• *${usedPrefix}mulung* 
  │• *${usedPrefix}adventure* 
  │• *${usedPrefix}petualang* 
- │   Untuk mencari resource seperti  
- │   Money, Exp, dll..,dibutuhkan   
- │   minimal 80 nyawa untuk bisa  
- │   melakukannya dan, kamu tidak  
- │   dapat spam karena ada delay 5  
- │   menit 
+ │   Untuk Mencari resource seperti  
+ │   Money, Exp, Dll..,Dibutuhkan   
+ │   Minimal 80 Nyawa Untuk Bisa  
+ │   Melakukannya Dan, Kamu Tidak  
+ │   Dapat Spam Karena Ada Delay 5  
+ │   Menit 
  │• *${usedPrefix}use potion <jumlah>* 
- │   Untuk memakai potion/untuk  
- │   mengisi nyawa/health 
+ │   Untuk Memakai Potion/Untuk  
+ │   Mengisi Nyawa/Health 
  │• *${usedPrefix}shop buy potion <jumlah>* 
- │   Untuk membeli potion dan ketik  
+ │   Untuk Membeli Potion Dan Ketik  
  │   *${usedPrefix}use potion <jumlah>* 
- │   untuk menggunakan potion 
+ │   Untuk Menggunakan Potion 
  │• *${usedPrefix}shop <args>* 
- │   Untuk membeli atau menjual sesuatu 
+ │   Untuk Membeli Atau Menjual Sesuatu 
  │• *${usedPrefix}shop buy <crate> <jumlah>* 
- │   Untuk membeli Crate 
+ │   Untuk Membeli Crate 
  │• *${usedPrefix}profile* 
  │• *${usedPrefix}pp* 
  │• *${usedPrefix}profil* 
- │   untuk mengetahui No whatsapmu, dll 
+ │   Untuk Mengetahui No Whatsapmu, dll 
  │• *${usedPrefix}inv* 
- │• *${usedPrefix}inventory* 
- │• *${usedPrefix}bal* 
- │   Untuk mengecek nyawa, money, dll. 
+ │• *${usedPrefix}my* 
+ │• *${usedPrefix}bank* 
+ │   Untuk Mengecek Nyawa, Money, dll. 
  │• *${usedPrefix}judi <jumlah>* 
- │   *_Jangan judi, Karena gk bakal_* 
- │   *_balik modal.BENERAN GK BOHONG_* 
+ │   Melakukan Judi
  │   
- │*©Fangz BOT 2020-2021* 
- ╰─「 *Tutorial Main FANGZ BOT* 」 
+ ╰─────────────────────
  `.trim(), m) 
  } 
  handler.help = ['tutorial'] 

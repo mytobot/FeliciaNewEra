@@ -103,22 +103,21 @@ let handler = async (m, { conn }) => {
   const crates = Object.keys(inventory.crates).map(v => user[v] && `*${global.rpg.emoticon(v)}${v}:* ${user[v]}`).filter(v => v).join('\n').trim()
   const pets = Object.keys(inventory.pets).map(v => user[v] && `*${global.rpg.emoticon(v)}${v}:* ${user[v] >= inventory.pets[v] ? 'Max Levels' : `Level(s) ${user[v]}`}`).filter(v => v).join('\n').trim()
   const cooldowns = Object.entries(inventory.cooldowns).map(([cd, { name, time }]) => cd in user && `*✧ ${name}*: ${new Date() - user[cd] >= time ? '✅' : '❌'}`).filter(v => v).join('\n').trim()
-  const caption = `*🧑🏻‍🏫 ɴᴀᴍᴇ:* ${user.registered ? user.name : conn.getName(m.sender)}
-*▸ ᴇxᴘ:* ${user.exp}
-*▸ ʟᴇᴠᴇʟ:* ${user.level}
-*▸ ʀᴏʟᴇ:* ${user.role}
-*▸ ʜᴇᴀʟᴛʜ:* ${user.health}
-*▸ ʟɪᴍɪᴛ:* ${user.limit}
-*▸ ᴍᴏɴᴇʏ:* ${user.money}${user.atm ? `
-*▸ ᴀᴛᴍ:* ʟᴠ.${user.atm}
-*▸ ʙᴀɴᴋ:* ${user.bank} $ / ${user.fullatm} $`: ''}
-
-▸ *sᴛᴀᴛᴜs:* ${user.premiumTime > 0 ? 'Premium' : 'Free'}
-▸ *ʀᴇɢɪsᴛᴇʀᴇᴅ:* ${user.registered ? 'Yes':'No'}${user.premiumTime >= 1 ? `
-▸ *ᴇxᴘɪʀᴇᴅ:*
+  const caption = `*• ɴᴀᴍᴇ:* ${user.registered ? user.name : conn.getName(m.sender)}
+*• ᴇxᴘ:* ${user.exp}
+*• ʟᴇᴠᴇʟ:* ${user.level}
+*• ʀᴏʟᴇ:* ${user.role}
+*• ʜᴇᴀʟᴛʜ:* ${user.health}
+*• ʟɪᴍɪᴛ:* ${user.limit}
+*• ᴍᴏɴᴇʏ:* ${user.money}${user.atm ? `
+*• ᴀᴛᴍ:* ʟᴠ.${user.atm}
+*• ʙᴀɴᴋ:* ${user.bank} $ / ${user.fullatm} $`: ''}
+• *sᴛᴀᴛᴜs:* ${user.premiumTime > 0 ? 'Premium' : 'Free'}
+• *ʀᴇɢɪsᴛᴇʀᴇᴅ:* ${user.registered ? 'Yes':'No'}${user.premiumTime >= 1 ? `
+• *ᴇxᴘɪʀᴇᴅ:*
 ${clockString(user.premiumTime - new Date() * 1)}`: ''}
 `.trim()
-  conn.sendButton(m.chat, `${htki} ᴜ s ᴇ ʀ s ${htka}`, caption, `${imgr + 'MY'}`, [[`INVENTORY`, '.inv'],[`MENU`, '.menu']],m)
+  conn.sendButton(m.chat, `${htki} ᴜ s ᴇ ʀ s ${htka}`, caption, `${imgr + 'MY'}`, [[`𝐈𝐍𝐕𝐄𝐍𝐓𝐎𝐑𝐘`, '.inv'],[`𝐌𝐄𝐍𝐔`, '.menu']],m)
 }
 handler.help = ['my']
 handler.tags = ['xp']

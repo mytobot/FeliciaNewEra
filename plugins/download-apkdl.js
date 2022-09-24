@@ -1,7 +1,7 @@
 import fetch from "node-fetch"
 let handler = async(m, { conn, usedPrefix, command, text }) => {
 
-    if (!text) return conn.reply(m.chat, 'Masukan Nama apk nya!', m)
+    if (!text) return conn.reply(m.chat, '*Masukkan Nama APK-nya*', m)
 
 let f = await fetch(`https://nzcha-apii.herokuapp.com/apk-search?q=${text}`)
 let xx = await f.json()
@@ -9,12 +9,12 @@ let v = xx.result
 let thumbDl = `https://telegra.ph/file/0ba47c67fcea1e3670564.jpg`
 let teks = v.map(v => {
 return `
-🏷️Nama Aplikasi : ${v.name}
-🔗Link : ${v.url}
-📂Download : ${v.dl_url}
-📝Tentang Game : ${v.desc}
+• ᴀᴘᴋ ɴᴀᴍᴇ : ${v.name}
+• ʟɪɴᴋ : ${v.url}
+• ᴅᴏᴡɴʟᴏᴀᴅ : ${v.dl_url}
+• ᴀʙᴏᴜᴛ ᴀᴘᴋ : ${v.desc}
       `.trim()
-  }).filter(v => v).join('\n\n【 *APK SEARCH* 】\n\n')
+  }).filter(v => v).join('\n\n*APK SEARCH*\n\n')
   //m.reply(teks)
   await conn.sendButton(m.chat, hiasan, teks, thumbDl, [
                 ['CARI', `${usedPrefix + command}`]

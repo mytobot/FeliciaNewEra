@@ -2,20 +2,20 @@ import fetch from 'node-fetch'
 
 let handler = async (m, {text, usedPrefix, command, conn}) => {
 let noteks = 'Kosong'
-  if (!text) throw `Contoh penggunaan ${usedPrefix}${command} Minecraft`
+  if (!text) throw `Contoh Penggunaan ${usedPrefix}${command} Free Fire`
   
   if (command == 'apkdone') {
   let f = await fetch(`https://dhn-api.herokuapp.com/api/apk/apkdone?apps=${text}&apikey=4ca83deeb14d61d16cf0`)
 let xx = await f.json()
 let dapet = xx.result
 	let row = Object.values(dapet).map((v, index) => ({
-		title: htjava + '📌 ' + v.apps_name,
-		description: '\n⌚ Version: ' + v.apps_version + '\n⏲️ Rate: ' + v.apps_rate + '\n👁️ Tags: ' + v.apps_tag + '\n📎 Url: ' + v.apps_linkdl,
+		title: htjava + '📍' + v.apps_name,
+		description: '\n*• ᴠᴇʀsɪᴏɴ:* ' + v.apps_version + '\n*• ʀᴀᴛᴇ:* ' + v.apps_rate + '\n*• ᴛᴀɢs:* ' + v.apps_tag + '\n\n*• ᴜʀʟ:* ' + v.apps_linkdl,
 		rowId: usedPrefix + 'ss ' + v.apps_linkdl
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Search Disini ☂️`,
-		description: `⚡ Silakan pilih ${command} Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `${command} SEARCH RESULT 🔎`,
+		description: `*Silahkan Hasil Pencarian ${command} Untuk:*\n*📍 Hasil Pencarian:* ${text}\n\n`,
 		footerText: wm
 	}
 	return await conn.sendListM(m.chat, button, row, m)
@@ -26,13 +26,13 @@ let f = await fetch(`https://dhn-api.herokuapp.com/api/apk/apkgoogle?apps=${text
 let xx = await f.json()
 let dapet = xx.result
 	let row = Object.values(dapet).map((v, index) => ({
-		title: htjava + '📌 ' + v.apps_name,
-		description: '\n⌚ Version: ' + noteks + '\n⏲️ Rate: ' + noteks + '\n👁️ Tags: ' + v.apps_tag + '\n📎 Url: ' + v.apps_linkdl,
+		title: htjava + '📍 ' + v.apps_name,
+		description: '\n*• ᴠᴇʀsɪᴏɴ:* ' + noteks + '\n*• ʀᴀᴛᴇ:* ' + noteks + '\n*• ᴛᴀɢs:* ' + v.apps_tag + '\n\n*• ᴜʀʟ:* ' + v.apps_linkdl,
 		rowId: usedPrefix + 'ss ' + v.apps_linkdl
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Search Disini ☂️`,
-		description: `⚡ Silakan pilih ${command} Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `${command} SEARCH RESULT 🔎`,
+		description: `*Silahkan Hasil Pencarian ${command} Untuk:*\n*📍 Hasil Pencarian:* ${text}\n\n`,
 		footerText: wm
 	}
 	return await conn.sendListM(m.chat, button, row, m)
@@ -43,13 +43,13 @@ let f = await fetch(`https://dhn-api.herokuapp.com/api/apk/apkmody?apps=${text}&
 let xx = await f.json()
 let dapet = xx.result
 	let row = Object.values(dapet).map((v, index) => ({
-		title: htjava + '📌 ' + v.apps_name,
-		description: '\n⌚ Version: ' + noteks + '\n⏲️ Rate: ' + noteks + '\n👁️ Desc: ' + v.desc + '\n📎 Url: ' + v.apps_linkdl,
+		title: htjava + '📍 ' + v.apps_name,
+		description: '\n*• ᴠᴇʀsɪᴏɴ:* ' + noteks + '\n*• ʀᴀᴛᴇ:* ' + noteks + '\n*• ᴅᴇsᴄ:*: ' + v.desc + '\n*• ᴜʀʟ:* ' + v.apps_linkdl,
 		rowId: usedPrefix + 'ss ' + v.apps_linkdl
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Search Disini ☂️`,
-		description: `⚡ Silakan pilih ${command} Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `${command} SEARCH RESULT 🔎`,
+		description: `*Silahkan Hasil Pencarian ${command} Untuk:*\n*📍 Hasil Pencarian:* ${text}\n\n`,
 		footerText: wm
 	}
 	return await conn.sendListM(m.chat, button, row, m)
@@ -60,13 +60,13 @@ let f = await fetch(`https://dhn-api.herokuapp.com/api/apk/apkshub?apps=${text}&
 let xx = await f.json()
 let dapet = xx.result
 	let row = Object.values(dapet).map((v, index) => ({
-		title: htjava + '📌 ' + v.apps_name,
-		description: '\n⌚ Version: ' + noteks + '\n⏲️ Rate: ' + noteks + '\n👁️ View: ' + v.apps_views + '\n📎 Url: ' + v.apps_linkdl,
+		title: htjava + '📍 ' + v.apps_name,
+		description: '\n*• ᴠᴇʀsɪᴏɴ:* ' + noteks + '\n*• ʀᴀᴛᴇ:* ' + noteks + '\n*• ᴠɪᴇᴡ:* ' + v.apps_views + '\n*• ᴜʀʟ:* ' + v.apps_linkdl,
 		rowId: usedPrefix + 'ss ' + v.apps_linkdl
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Search Disini ☂️`,
-		description: `⚡ Silakan pilih ${command} Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `${command} SEARCH RESULT 🔎`,
+		description: `*Silahkan Hasil Pencarian ${command} Untuk:*\n*📍 Hasil Pencarian:* ${text}\n\n`,
 		footerText: wm
 	}
 	return await conn.sendListM(m.chat, button, row, m)
@@ -77,13 +77,13 @@ let f = await fetch(`https://dhn-api.herokuapp.com/api/apk/happymod?apps=${text}
 let xx = await f.json()
 let dapet = xx.result
 	let row = Object.values(dapet).map((v, index) => ({
-		title: htjava + '📌 ' + v.apps_name,
-		description: '\n⌚ Version: ' + noteks + '\n⏲️ Rate: ' + v.apps_rate + '\n👁️ View: ' + v.apps_views + '\n📎 Url: ' + v.apps_linkdl,
+		title: htjava + '📍 ' + v.apps_name,
+		description: '\n*• ᴠᴇʀsɪᴏɴ:* ' + noteks + '\n*• ʀᴀᴛᴇ:* ' + v.apps_rate + '\n*• ᴠɪᴇᴡ:* ' + v.apps_views + '\n*• ᴜʀʟ:* ' + v.apps_linkdl,
 		rowId: usedPrefix + 'ss ' + v.apps_linkdl
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Search Disini ☂️`,
-		description: `⚡ Silakan pilih ${command} Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `${command} SEARCH RESULT 🔎`,
+		description: `*Silahkan Hasil Pencarian ${command} Untuk:*\n*📍 Hasil Pencarian:* ${text}\n\n`,
 		footerText: wm
 	}
 	return await conn.sendListM(m.chat, button, row, m)
@@ -94,13 +94,13 @@ let f = await fetch(`https://dhn-api.herokuapp.com/api/apk/hostapk?apps=${text}&
 let xx = await f.json()
 let dapet = xx.result
 	let row = Object.values(dapet).map((v, index) => ({
-		title: htjava + '📌 ' + v.apps_name,
-		description: '\n⌚ Released: ' + v.apps_released + '\n⏲️ Author: ' + v.apps_author + '\n👁️ Desc: ' + v.apps_desc + '\n📎 Url: ' + v.apps_linkdl,
+		title: htjava + '📍 ' + v.apps_name,
+		description: '\n*• ʀᴇʟᴇᴀsᴇᴅ:* ' + v.apps_released + '\n*• ᴀᴜᴛʜᴏʀ:* ' + v.apps_author + '\n*• ᴅᴇsᴄ:*: ' + v.apps_desc + '\n*• ᴜʀʟ:* ' + v.apps_linkdl,
 		rowId: usedPrefix + 'ss ' + v.apps_linkdl
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Search Disini ☂️`,
-		description: `⚡ Silakan pilih ${command} Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `${command} SEARCH RESULT 🔎`,
+		description: `*Silahkan Hasil Pencarian ${command} Untuk:*\n*📍 Hasil Pencarian:* ${text}\n\n`,
 		footerText: wm
 	}
 	return await conn.sendListM(m.chat, button, row, m)
@@ -111,13 +111,13 @@ let f = await fetch(`https://dhn-api.herokuapp.com/api/apk/revdl?apps=${text}&ap
 let xx = await f.json()
 let dapet = xx.result
 	let row = Object.values(dapet).map((v, index) => ({
-		title: htjava + '📌 ' + v.apps_name,
-		description: '\n⌚ Released: ' + noteks + '\n⏲️ Author: ' + noteks + '\n👁️ Desc: ' + noteks + '\n📎 Url: ' + v.apps_linkdl,
+		title: htjava + '📍 ' + v.apps_name,
+		description: '\n*• ʀᴇʟᴇᴀsᴇᴅ:* ' + noteks + '\n*• ᴀᴜᴛʜᴏʀ:* ' + noteks + '\n*• ᴅᴇsᴄ:*: ' + noteks + '\n*• ᴜʀʟ:* ' + v.apps_linkdl,
 		rowId: usedPrefix + 'ss ' + v.apps_linkdl
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Search Disini ☂️`,
-		description: `⚡ Silakan pilih ${command} Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `${command} SEARCH RESULT 🔎`,
+		description: `*Silahkan Hasil Pencarian ${command} Untuk:*\n*📍 Hasil Pencarian:* ${text}\n\n`,
 		footerText: wm
 	}
 	return await conn.sendListM(m.chat, button, row, m)
@@ -128,13 +128,13 @@ let f = await fetch(`https://dhn-api.herokuapp.com/api/apk/toraccino?apps=${text
 let xx = await f.json()
 let dapet = xx.result
 	let row = Object.values(dapet).map((v, index) => ({
-		title: htjava + '📌 ' + v.apps_name,
-		description: '\n⌚ Released: ' + v.apps_upload + '\n⏲️ Author: ' + v.apps_author + '\n⚡ Desc: ' + v.apps_desc + '\n👁️ Tag: ' + v.apps_tag + '\n📎 Url: ' + v.apps_linkdl,
+		title: htjava + '📍 ' + v.apps_name,
+		description: '\n*• ʀᴇʟᴇᴀsᴇᴅ:* ' + v.apps_upload + '\n*• ᴀᴜᴛʜᴏʀ:* ' + v.apps_author + '\n*• ᴅᴇsᴄ:* ' + v.apps_desc + '\n*• ᴛᴀɢ:* ' + v.apps_tag + '\n*• ᴜʀʟ:* ' + v.apps_linkdl,
 		rowId: usedPrefix + 'ss ' + v.apps_linkdl
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Search Disini ☂️`,
-		description: `⚡ Silakan pilih ${command} Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `${command} SEARCH RESULT 🔎`,
+		description: `*Silahkan Hasil Pencarian ${command} Untuk:*\n*📍 Hasil Pencarian:* ${text}\n\n`,
 		footerText: wm
 	}
 	return await conn.sendListM(m.chat, button, row, m)
@@ -145,13 +145,13 @@ let f = await fetch(`https://dhn-api.herokuapp.com/api/apk/uapkpro?apps=${text}&
 let xx = await f.json()
 let dapet = xx.result
 	let row = Object.values(dapet).map((v, index) => ({
-		title: htjava + '📌 ' + v.apps_name,
-		description: '\n⌚ Version: ' + noteks + '\n⏲️ Rate: ' + v.apps_rate + '\n👁️ View: ' + v.apps_views + '\n📎 Url: ' + v.apps_linkdl,
+		title: htjava + '📍 ' + v.apps_name,
+		description: '\n*• ᴠᴇʀsɪᴏɴ:* ' + noteks + '\n*• ʀᴀᴛᴇ:* ' + v.apps_rate + '\n*• ᴠɪᴇᴡ:* ' + v.apps_views + '\n*• ᴜʀʟ:* ' + v.apps_linkdl,
 		rowId: usedPrefix + 'ss ' + v.apps_linkdl
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Search Disini ☂️`,
-		description: `⚡ Silakan pilih ${command} Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `${command} SEARCH RESULT 🔎`,
+		description: `*Silahkan Hasil Pencarian ${command} Untuk:*\n*📍 Hasil Pencarian:* ${text}\n\n`,
 		footerText: wm
 	}
 	return await conn.sendListM(m.chat, button, row, m)

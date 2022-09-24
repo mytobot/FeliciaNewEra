@@ -4,8 +4,8 @@ let handler  = async (m, { conn, command, args, usedPrefix, DevMode }) => {
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 let pp = await conn.profilePictureUrl(who).catch(_ => hwaifu.getRandom())
 let name = await conn.getName(who)
-if (!args[0]) throw `Use example ${usedPrefix}${command} http://i.coco.fun/short/1513tui/`
-if (!args[1]) return conn.sendButton(m.chat, htki + ' SMULE ' + htka, null, null, [['🎥 VIDEO', `.smule ${args[0]} video`],['🎙️ AUDIO', `.smule ${args[0]} audio`]],m)
+if (!args[0]) throw `*Example: ${usedPrefix}${command} http://i.coco.fun/short/1513tui/*`
+if (!args[1]) return conn.sendButton(m.chat, htki + ' 𝐒𝐌𝐔𝐋𝐄 ' + htka, null, null, [['𝐕𝐈𝐃𝐄𝐎', `.smule ${args[0]} video`],['𝐀𝐔𝐃𝐈𝐎', `.smule ${args[0]} audio`]],m)
 let res = await fetch(`https://api.lolhuman.xyz/api/smule?apikey=${global.lolkey}&url=${args[1]}`)
     let x = await res.json()
   if (args[1] == 'video') {

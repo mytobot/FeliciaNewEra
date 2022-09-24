@@ -1,9 +1,9 @@
 
 let handler = async (m, { conn, args, usedPrefix, command, isPrems, isOwner }) => {
-    if (!args[0]) return m.reply('Link?')
+    if (!args[0]) return m.reply('*Example: #ytd https://youtu.be/8UVNT4wvIGY*')
     const sections = [
 	{
-	title: "🎙️ Audio",
+	title: "🎙️ AUDIO",
 	rows: [
 	    {title: "Get Audio", rowId: `${usedPrefix}getaud ${args[0]} audio`},
 	    {title: "Yt Audio", rowId: `${usedPrefix}yta ${args[0]}`},
@@ -11,7 +11,7 @@ let handler = async (m, { conn, args, usedPrefix, command, isPrems, isOwner }) =
 	]
     },
     {
-	title: "🎥 Video",
+	title: "🎥 VIDEO",
 	rows: [
 	    {title: "Get Video 1080p", rowId: `${usedPrefix}getvid ${args[0]} 1080`},
 {title: "Get Video 720p", rowId: `${usedPrefix}getvid ${args[0]} 720`},
@@ -25,10 +25,10 @@ let handler = async (m, { conn, args, usedPrefix, command, isPrems, isOwner }) =
 ]
 
 const listMessage = {
-  text: `${htjava}  ᴩʟᴇᴀꜱᴇ ꜱᴇʟᴇᴄᴛ yᴏᴜʀ ᴍᴇᴅɪᴀ ᴛyᴩᴇ...`,
+  text: `${htjava} ᴊɪᴋᴀ ᴛɪᴅᴀᴋ ᴀᴅᴀ ʙᴀʟᴀsᴀɴ ɪᴛᴜ ᴀʀᴛɪɴʏᴀ ᴠɪᴅᴇᴏ-ɴʏᴀ ᴛɪᴅᴀᴋ ᴍᴇɴᴅᴜᴋᴜɴɢ ᴋᴜᴀʟɪᴛᴀs ʏᴀɴɢ ᴋᴀᴍᴜ ᴘɪʟɪʜ...`,
   footer: wm,
-  title: " 📥 𝗬𝗧 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗥",
-  buttonText: "Click Here !",
+  title: "⏬ 𝗬𝗧 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗥",
+  buttonText: "List Quality & Format",
   sections
 }
 

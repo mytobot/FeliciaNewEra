@@ -10,13 +10,13 @@ let res = await axios('https://violetics.pw/api/downloader/dailymotion?apikey=be
 let json = res.data
 let dapet = json.result.url
 	let row = Object.values(dapet).map((v, index) => ({
-		title: htjava + '📌 Quality: ' + v.quality,
-		description: '\n⌚ ID: ' + json.result.id + '\n⏲️ Title: ' + json.result.meta.title + '\n📎 URL: ' + v.url + '\n📌 Source: ' + json.result.meta.source + '\n👁️ Views: ' + json.result.meta.duration + '\n📌 SD: ' + json.result.sd.url + '\n\n📌 HD: ' + json.result.hd.url,
+		title: htjava + '📌 ǫᴜᴀʟɪᴛʏ: ' + v.quality,
+		description: '\n⌚ ɪᴅ: ' + json.result.id + '\n⏲️ ᴛɪᴛʟᴇ: ' + json.result.meta.title + '\n📎 ᴜʀʟ: ' + v.url + '\n📌 sᴏᴜʀᴄᴇ: ' + json.result.meta.source + '\n👁️ ᴠɪᴇᴡs: ' + json.result.meta.duration + '\n📌 sᴅ: ' + json.result.sd.url + '\n\n📌 ʜᴅ: ' + json.result.hd.url,
 		rowId: usedPrefix + 'get ' + v.url
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Search Disini ☂️`,
-		description: `⚡ Hai ${name}, Silakan pilih ${command} Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `${command} SEARCH RESULT 🔎`,
+		description: `*Silahkan Hasil Pencarian ${command} Untuk:*\n*📍 Hasil Pencarian:* ${text}\n\n`,
 		footerText: wm
 	}
 	return conn.sendListM(m.chat, button, row, m)

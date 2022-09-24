@@ -8,7 +8,7 @@ try {
 		let ras = await xfar.Telesticker(args[0])
 		await m.reply(`Sending ${ras.length} stickers...`)
 		if (m.isGroup && ras.length > 30) {
-			await m.reply('Number of stickers more than 30, bot will send it in private chat.')
+			await m.reply('*Jumlah Stiker Lebih Dari 30, Bot Akan Mengirimkannya Dalam Obrolan Pribadi.*')
 			for (let i = 0; i < ras.length; i++) {
 				conn.sendMessage(m.sender, { sticker: { url: ras[i].url }})
 			}
@@ -22,20 +22,20 @@ try {
 		let ris = await stickerTelegram(query, page)
 		if (!ris.length) throw `Query "${args.join(' ')}" not found`
 		m.reply(ris.map(v => `*${v.title}*\n_${v.link}_`).join('\n\n'))
-	} else throw 'Input Query / Telesticker Url'
+	} else throw '*Masukkan Query/Telesticker URL*'
 	} catch {
-	if (!text) throw '*Masukkan link*\n Example: https://t.me/addstickers/LINE_Menhera_chan_ENG'
+	if (!text) throw '*MASUKKAN LINK*\n\nExample: https://t.me/addstickers/LINE_Menhera_chan_ENG'
 let ros = await axios('https://violetics.pw/api/downloader/telestiker?apikey=beta&url=' + text)
 let json = ros.data
 let dapet = json.result.sticker
 	let row = Object.keys(dapet).map((v, index) => ({
-		title: `📌 Line Sticker: ${1 + index}`,
-		description: '\n⏲️ Name: ' + json.result.name + '\n⏲️ Title: ' + json.result.title,
+		title: `*📌 LINE STICKER:* ${1 + index}`,
+		description: '\n*💭 ɴᴀᴍᴇ:* ' + json.result.name + '\n*💬 ᴛɪᴛʟᴇ:* ' + json.result.title,
 		rowId: usedPrefix + 'get ' + dapet[v]
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Search Disini ☂️`,
-		description: `⚡ Hai ${name}, Silakan pilih ${command} Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `${command} SEARCH RESULT 🔎`,
+		description: `*Silahkan Hasil Pencarian ${command} Untuk:*\n*📍 Hasil Pencarian:* ${text}\n\n`,
 		footerText: wm
 	}
 	return conn.sendListM(m.chat, button, row, m)

@@ -1,7 +1,7 @@
 let handler = async (m, { args, usedPrefix, command }) => { 
   
- if (!args[0]) throw '📑Usernamenya mana?\n\n*Contoh:* Fangzbotz2007' 
- if (!args[1]) throw 'Repo nya mana?\n\n*Contoh:* .githubdl Fangzbotz2007 v3 
+ if (!args[0]) throw '*MASUKKAN USERNAME-NYA*\n\nExample: Nodaimon' 
+ if (!args[1]) throw '*MASUKKAN JUGA REPO-NYA*\n\nExample: .githubdl Nodaimon BotV2 
   
  let url = `https://github.com/${args[0]}/${args[1]}/archive/refs/heads/main.zip` 
  //ByFangzXD

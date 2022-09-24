@@ -6,7 +6,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 
     if (new Date() * 1 < global.db.data.chats[who].expired) global.db.data.chats[who].expired = false
     else global.db.data.chats[who].expired = false
-    conn.reply(m.chat, `Berhasil menghapus hari kadaluarsa untuk Grup ini`, m)
+    conn.reply(m.chat, `*Berhasil Menghapus Countdown Expiration Untuk Grup Ini*`, m)
 }
 handler.help = ['delesewa']
 handler.tags = ['owner']

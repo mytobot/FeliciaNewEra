@@ -1,9 +1,9 @@
 let handler  = async (m, { conn, usedPrefix: _p }) => {
 let info = `
-     Enak aja mau gratis :v
+     Gak ada yang gratis, kecuali dirimu!!!
 `.trim()
 
-conn.fakeReply(m.chat, info, '0@s.whatsapp.net', '⚠️ *UP PREMIUM DULU SU* ⚠️', 'status@broadcast')
+conn.fakeReply(m.chat, info, '0@s.whatsapp.net', '*Up Premium!!!*', 'status@broadcast')
 }
 handler.help = ['bokepfree']
 handler.tags = ['nsfw']

@@ -10,25 +10,25 @@ let res = await fetch(`https://api.lolhuman.xyz/api/cocofun?apikey=${global.lolk
     let x = await res.json()
   if (args[1] == 'withwm') {
     conn.sendButton(m.chat, x.result.withwm, `*${htki} COCOFUN ${htka}*
-*title:* ${x.result.title}
-*tag:* ${x.result.tag}
-*likes:* ${x.result.likes}
-*dislike:* ${x.result.dislike}
-*views:* ${x.result.views}
-*uploader:* ${x.result.uploader}
-*duration:* ${x.result.duration}
-*dislike:* ${x.result.dislike}`, x.result.title + '.mp4', 'To mp3', '.tomp3', m)
+*ᴛɪᴛʟᴇ:* ${x.result.title}
+*ᴛᴀɢ:* ${x.result.tag}
+*ʟɪᴋᴇ:* ${x.result.likes}
+*ᴅɪsʟɪᴋᴇ:* ${x.result.dislike}
+*ᴠɪᴇᴡs:* ${x.result.views}
+*ᴜᴘʟᴏᴀᴅᴇʀ:* ${x.result.uploader}
+*ᴅᴜʀᴀᴛɪᴏɴ:* ${x.result.duration}
+*ᴅɪsʟɪᴋᴇ:* ${x.result.dislike}`, x.result.title + '.mp4', 'To mp3', '.tomp3', m)
   }
   if (args[1] == 'nowm') {
     conn.sendButton(m.chat, x.result.nowm, `*${htki} COCOFUN ${htka}*
-*title:* ${x.result.title}
-*tag:* ${x.result.tag}
-*likes:* ${x.result.likes}
-*dislike:* ${x.result.dislike}
-*views:* ${x.result.views}
-*uploader:* ${x.result.uploader}
-*duration:* ${x.result.duration}
-*dislike:* ${x.result.dislike}`, x.result.title + '.mp4', 'To mp3', '.tomp3', m)
+*ᴛɪᴛʟᴇ:* ${x.result.title}
+*ᴛᴀɢ:* ${x.result.tag}
+*ʟɪᴋᴇ:* ${x.result.likes}
+*ᴅɪsʟɪᴋᴇ:* ${x.result.dislike}
+*ᴠɪᴇᴡs:* ${x.result.views}
+*ᴜᴘʟᴏᴀᴅᴇʀ:* ${x.result.uploader}
+*ᴅᴜʀᴀᴛɪᴏɴ:* ${x.result.duration}
+*ᴅɪsʟɪᴋᴇ:* ${x.result.dislike}`, x.result.title + '.mp4', 'To mp3', '.tomp3', m)
   }
   }
 handler.help = ['cocofun'].map(v => v + ' <url>')

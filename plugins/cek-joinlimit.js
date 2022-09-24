@@ -3,8 +3,8 @@ let handler = async (m, { conn, args, command }) => {
     let who
     if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.sender
     else who = m.sender
-    if (typeof db.data.users[who] == 'undefined') throw 'Pengguna tidak ada didalam data base'
- await conn.sendButton(m.chat, ${global.db.data.users[who].joinlimit}\n`,hiasan + '\n\n' + , jlimit, [['FANGZ','Fangz']], m, {
+    if (typeof db.data.users[who] == 'undefined') throw '*Pengguna Tidak Ada Didalam Database*'
+ await conn.sendButton(m.chat, ${global.db.data.users[who].joinlimit}\n`,hiasan + '\n\n' + , jlimit, [['么 Kitsuneee','么 Kitsuneee']], m, {
 contextInfo: { externalAdReply :{
                         mediaUrl: '',
                         mediaType: 2,
