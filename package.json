@@ -1,9 +1,9 @@
 {
-    "name": "Aine-Bot",
-    "version": "07.06.98",
-    "description": "Customizable WhatsApp Bot",
-    "depecrated": false,
+    "name": "FangzXD",
+    "version": "2.10.18",
+    "description": "Subscribe YT FangzXD",
     "main": "index.js",
+    "type": "module",
     "directories": {
         "lib": "lib",
         "src": "src",
@@ -11,9 +11,8 @@
     },
     "scripts": {
         "start": "node index.js",
-        "mongo": "node .",
         "test": "node test.js",
-        "test2": "nodemon index.js --server --autocleartmp"
+        "test2": "nodemon index.js"
     },
     "keywords": [
         "termux-whatsapp-bot",
@@ -27,16 +26,16 @@
         "MD",
         "baileys-md"
     ],
-    "homepage": "https://github.com/Aiinne",
+    "homepage": "https://github.com/BochilGaming/games-wabot",
     "author": {
-        "name": "Muhammad Ridwan Reynaldy"
+        "name": "BochilGaming"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Aiinne"
+        "url": "git+https://github.com/BochilGaming/games-wabot.git"
     },
     "bugs": {
-        "url": "https://github.com/Aiinne"
+        "url": "https://github.com/BochilGaming/games-wabot/issues"
     },
     "license": "GPL-3.0-or-later",
     "dependencies": {
