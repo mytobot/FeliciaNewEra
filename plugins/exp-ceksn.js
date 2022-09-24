@@ -10,7 +10,7 @@ import { createHash } from 'crypto'
 let Reg = /\|?(.*)([.|] *?)([0-9]*)$/i
 let handler = async function (m, { conn, text, usedPrefix }) {
   let sn = createHash('md5').update(m.sender).digest('hex')
- await conn.sendButton(m.chat, `*SN:* ${sn}\n`,wm + '\n\n' + titlebot, serialimg, [['THANKS','Ok'],['SALIN SN','.sn']], m, {
+ await conn.sendButton(m.chat, `*SN:* ${sn}\n`,wm + '\n\n' + titlebot, serialimg, [['𝐓𝐇𝐀𝐍𝐊𝐒','Ok'],['𝐂𝐎𝐏𝐘 𝐒𝐍','.sn']], m, {
 contextInfo: { externalAdReply :{
                         mediaUrl: '',
                         mediaType: 2,

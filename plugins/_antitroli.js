@@ -49,11 +49,11 @@ export async function before(m, { conn, isAdmin, isBotAdmin }) {
             includeStarred: false
         }).catch(console.log)
     }
-        await conn.sendButton(m.chat, `*Font Aneh detect!*${isBotAdmin ? '' : '\n\n_Bot bukan admin_'}`, author, ['off antivirtex', '/disable antivirtex'], m)
+        await conn.sendButton(m.chat, `*ODD FONTS DETECTED*${isBotAdmin ? '' : '\n\n_Bot Bukan Admin_'}`, author, ['𝐃𝐈𝐒𝐀𝐁𝐋𝐄 𝐀𝐍𝐓𝐈𝐕𝐈𝐑𝐔𝐒', '/disable antivirtex'], m)
         if (isBotAdmin && bot.restrict) {
        return m.reply('Ok!')
         await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-        } else if (!bot.restrict) return m.reply('Owner disable auto kick!')
+        } else if (!bot.restrict) return m.reply('*Owner Disable Auto Kick*')
     }
     return !0
 }

@@ -8,25 +8,27 @@ export async function before(m, { conn }) {
     if (!canLevelUp(user.level, user.exp, global.multiplier)) {
         let { min, xp, max } = xpRange(user.level, global.multiplier)
         throw `
-Level ${user.level} 📊
+📊Level ${user.level}
 *${user.exp - min} / ${xp}*
-Kurang *${max - user.exp}* lagi! ✨
+Kurang *${max - user.exp}* Lagi
 `.trim()
     }
     let before = user.level * 1
     while (canLevelUp(user.level, user.exp, global.multiplier)) user.level++
     if (before !== user.level) {
-        let teks = `Selamat ${conn.getName(m.sender)} naik 🧬level\n.             ${user.role}`
-        let str = `${conn.getName(m.sender)} naik 🧬level\n.             ${user.role}
+        let teks = `*Selamat ${conn.getName(m.sender)} Naik Level*\n • Role ${user.role}`
+        let str = `*Selamat ${conn.getName(m.sender)} Naik Level*\n • Role ${user.role}
 
-*🎉 C O N G R A T S 🎉*
-*${before}* ➔ *${user.level}* [ *${user.role}* ]
+*📊HAPPY LEVELING*
 
-• 🧬Level Sebelumnya : ${before}
-• 🧬Level Baru : ${user.level}
-• Pada Jam : ${new Date().toLocaleString('id-ID')}
+*Dari Level ${before} Ke Level ${user.level}*
+* • Role${user.role}*
 
-*Note:* _Semakin sering berinteraksi dengan bot Semakin Tinggi level kamu_
+#lb - Untuk Cek Leaderboard
+#my - Untuk Cek Stat Kamu
+
+⌚Time : ${new Date().toLocaleString('id-ID')}
+
 `.trim()
             let knights = await(await import('knights-canvas'))
             let image = await new knights.Up()
@@ -35,9 +37,9 @@ Kurang *${max - user.exp}* lagi! ✨
   let data = image.toBuffer();
             try {
             let img = await levelup(teks, user.level)
-            conn.sendButton(m.chat, str, botdate, img, [['INVENTORY', '.inv']], m)
+            conn.sendButton(m.chat, str, botdate, img, [['𝐈𝐍𝐕𝐄𝐍𝐓𝐎𝐑𝐘', '.inv']], m)
             } catch (e) {
-            conn.sendButton(m.chat, str, botdate, data, [['INVENTORY', '.inv']], m)
+            conn.sendButton(m.chat, str, botdate, data, [['𝐈𝐍𝐕𝐄𝐍𝐓𝐎𝐑𝐘', '.inv']], m)
             }
 
     }

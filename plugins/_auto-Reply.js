@@ -17,36 +17,37 @@ export async function all(m) {
     if (chat.autoReply) {
     // ketika ada yang kirim anu
     if ((m.mtype === 'groupInviteMessage' || m.text.startsWith('https://chat') || m.text.startsWith('Buka tautan ini')) && !m.isBaileys && !m.isGroup) {
-        this.sendButton(m.chat, `${htjava} *Undang Bot ke Grup* ${htjava}
+        this.sendButton(m.chat, `${htjava} *Undang Bot Ke Grup* ${htjava}
 ${dmenub} 7 Hari / Rp 10.000
-${dmenub} 30 Hari / Rp 25.000
+${dmenub} 30 Hari / Rp 30.000
+${dmenub} 90 Hari / Rp 55.000
 ${dmenuf}
-`.trim(), wm, 'OWNER', '.owner', m)
-await this.reply(nomorown + '@s.whatsapp.net', `Ada Yang Mau Nyulik nih :v \n\ndari: @${m.sender.split("@")[0]} \n\npesan: ${m.text}`, m, { mentions: [m.sender] })
+`.trim(), wm, '𝐎𝐖𝐍𝐄𝐑', '.owner', m)
+await this.reply(nomorown + '@s.whatsapp.net', `*Onii-chan Ada Yang Mau Culik Watashi.*\n\n - Dari: @${m.sender.split("@")[0]} \n\n - Pesan: ${m.text}`, m, { mentions: [m.sender] })
     }
     
     // ketika ada yang kirim anu
     if (m.mtype === 'reactionMessage') {
     let caption = `Terdeteksi ${name} @${who.split("@")[0]} Lagi Mengirim Reaction [ ${m.text} ]`
-    this.sendButton(m.chat, caption, wm, null, [[user.banned ? 'Pemilik Bot' : 'Menu', user.banned ? '/owner' : '/menu']], m, { mentions: this.parseMention(caption) })
+    this.sendButton(m.chat, caption, wm, null, [[user.banned ? '𝐎𝐖𝐍𝐄𝐑' : '𝐌𝐄𝐍𝐔', user.banned ? '/owner' : '/menu']], m, { mentions: this.parseMention(caption) })
         }
         
     // ketika ada yang kirim anu
     if (m.mtype === 'paymentMessage') {
     let caption = `Terdeteksi ${name} @${who.split("@")[0]} Lagi Meminta Uang :> [ ${m.text} ]`
-    this.sendButton(m.chat, caption, wm, null, [[user.banned ? 'Pemilik Bot' : 'Menu', user.banned ? '/owner' : '/menu']], m, { mentions: this.parseMention(caption) })
+    this.sendButton(m.chat, caption, wm, null, [[user.banned ? '𝐎𝐖𝐍𝐄𝐑' : '𝐌𝐄𝐍𝐔'', user.banned ? '/owner' : '/menu']], m, { mentions: this.parseMention(caption) })
         }
     
     // ketika ada yang kirim anu
     if (m.mtype === 'productMessage') {
     let caption = `Terdeteksi ${name} @${who.split("@")[0]} Lagi Promosi :> [ ${m.text} ]`
-    this.sendButton(m.chat, caption, wm, null, [[user.banned ? 'Pemilik Bot' : 'Menu', user.banned ? '/owner' : '/menu']], m, { mentions: this.parseMention(caption) })
+    this.sendButton(m.chat, caption, wm, null, [[user.banned ? '𝐎𝐖𝐍𝐄𝐑' : '𝐌𝐄𝐍𝐔', user.banned ? '/owner' : '/menu']], m, { mentions: this.parseMention(caption) })
         }
     
     // ketika ada yang kirim anu
     if (m.mtype === 'orderMessage') {
     let caption = `Terdeteksi ${name} @${who.split("@")[0]} Lagi Meng Order :> [ ${m.text} ]`
-    this.sendButton(m.chat, caption, wm, null, [[user.banned ? 'Pemilik Bot' : 'Menu', user.banned ? '/owner' : '/menu']], m, { mentions: this.parseMention(caption) })
+    this.sendButton(m.chat, caption, wm, null, [[user.banned ? '𝐎𝐖𝐍𝐄𝐑' : '𝐌𝐄𝐍𝐔', user.banned ? '/owner' : '/menu']], m, { mentions: this.parseMention(caption) })
         }
     
     // ketika ada yang kirim anu

@@ -11,9 +11,9 @@ export async function before(m, { conn, args, usedPrefix, command, isAdmin, isBo
     const isAutoJoin = isJoin.exec(m.text)
 
     if (chat.autoJoin && isAutoJoin) {
-        await conn.sendButton(m.chat, `*Bot auto Join Detect!*`, wm, null, [
-                ['MATIKAN AUTO JOIN', `${usedPrefix}off autojoin`],
-                ['BOT JOIN', `${usedPrefix} ${isJoin}`],
+        await conn.sendButton(m.chat, `*Bot Auto Join Detect*`, wm, null, [
+                ['𝐃𝐈𝐒𝐀𝐁𝐋𝐄 𝐀𝐔𝐓𝐎𝐉𝐎𝐈𝐍', `${usedPrefix}off autojoin`],
+                ['𝐁𝐎𝐓 𝐉𝐎𝐈𝐍', `${usedPrefix} ${isJoin}`],
             ], m)
             }
     return !0

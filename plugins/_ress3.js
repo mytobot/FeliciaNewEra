@@ -18,9 +18,9 @@ if (m.isBaileys) return
             await this.sendMessage(m.chat, { sticker : stc, thumbnail: await( await fetch(pp)).buffer() , contextInfo:{  externalAdReply: { showAdAttribution: true,
 mediaType:  1,
 mediaUrl: sig,
-title: 'KENAPA ❔',
+title: '么 Kitsuneee',
 body: bottime,
-sourceUrl: 'https://chat.whatsapp.com/HpxyS6b45SoGIKG7LHddiM',
+sourceUrl: 'https://chat.whatsapp.com/JPXhbeh6DsI6G8guMGKrEQ',
 thumbnail: await( await fetch(pp)).buffer()
   }
  }}, { quoted: m })

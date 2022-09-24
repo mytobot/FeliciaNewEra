@@ -14,16 +14,16 @@ if (command == 'filmanime') {
 	 let jsons = await res.json()
 	 let x = jsons.result
 let hasil = `*${htki} ANIME-SEARCH ${htka}*\n\n📫 Film Dari : ${x.title}
-📮 Genre: : ${x.genre}
-📮 Views: : ${x.views}
-📮 Duration: : ${x.duration}
-📮 Tahun: : ${x.tahun}
-📮 Location: : ${x.location}
-📮 Rilis: : ${x.date_release}
-📮 Bahasa: : ${x.language}
+📀 Genre: : ${x.genre}
+👁️ Views: : ${x.views}
+📹 Duration: : ${x.duration}
+📆 Tahun: : ${x.tahun}
+📍 Location: : ${x.location}
+⏫ Rilis: : ${x.date_release}
+🏳️ Bahasa: : ${x.language}
 ⭐ Rating : ${x.rating}
 
-🎥Link Movie : ${x.link_dl}
+🖇️Link Movie : ${x.link_dl}
 Link : ${x.link}
 
 📖Sinopsis : ${x.desc}`
@@ -47,7 +47,7 @@ if (command == 'film') {
     if (!args[0]) throw `Gunakan format: ${usedPrefix}${command} spiderman`
     try {
 let i = await xfar.Film(args[0])
-let txt = `*${htki} FILM-SEARCH ${htka}*\n\n*📫 Judul :* ${i[0].judul}\n*🎞️  Tipe  :* ${i[0].type}\n*📟 Kualitas :* ${i[0].quality}\n*📮Upload :* ${i[0].upload}\n*🔗 Url :* ${await shortUrl(i[0].link)}\n-----------------------------------------------\n`
+let txt = `*${htki} FILM-SEARCH ${htka}*\n\n*📫 Judul :* ${i[0].judul}\n*🎞️  Tipe  :* ${i[0].type}\n*📟 Kualitas :* ${i[0].quality}\n*⏫Upload :* ${i[0].upload}\n*🔗 Url :* ${await shortUrl(i[0].link)}\n-----------------------------------------------\n`
 
 await conn.sendButton(m.chat, txt, wm, await(await fetch(i[0].thumb)).buffer(), [[' Menu', '/menu']], m, { fileLength: fsizedoc, seconds: fsizedoc, contextInfo: {
           externalAdReply :{

@@ -9,14 +9,13 @@ export function before(m, { isBotAdmin }) {
 
     if (chat.antiBadword && isBadword) {
         user.warning += 1
-        this.sendButton(m.chat, `*📮ᴛᴏxɪᴄ ᴛᴇʀᴅᴇᴛᴇᴋꜱɪ !\nhttp://bīt.ly/ᯤ*
-あ Warning: ${user.warning} / 5 ┊
+        this.sendButton(m.chat, `*TOXIC TERDETEKSI 📡*
 
-[❗] Jika warning mencapai 5 kamu akan *dibanned+kick*
+⚠️ Warning: ${user.warning} / 5
 
-Anda hanya bisa meminta Owner untuk membuka banned-nya !\n\n🌸 Bot By Fangz
-
-“Barang siapa yang beriman kepada Allah dan Hari Akhir maka hendaklah dia berkata baik atau diam” (HR. al-Bukhari dan Muslim).`, wm, [['🎀CEK WARN', '.cekdosa'], ['🎐AUTHOR BOT', '.owner']], m)
+NB: Jika Warning Mencapai 5 Kamu Akan *DIBANNED+KICK*
+Anda Hanya Bisa Meminta Owner Untuk Membuka Banned-nya
+`, wm, [['𝐂𝐄𝐊 𝐖𝐀𝐑𝐍', '.cekdosa'], ['𝐎𝐖𝐍𝐄𝐑', '.owner']], m)
         if (user.warning >= 5) {
             user.banned = true
             if (m.isGroup) {

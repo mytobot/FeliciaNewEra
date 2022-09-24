@@ -12,32 +12,32 @@ const message = {
             templateButtons: [
                 {
                     urlButton: {
-                        displayText: '🌹YT OWNER',
-                        url: 'https://s.id/-1a7RO',
+                        displayText: '𝐁𝐒𝐓𝐀𝐓𝐈𝐎𝐍 𝐎𝐖𝐍𝐄𝐑',
+                        url: 'https://bili.im/EktBYXY',
                     }
                 },
                 {
                     urlButton: {
-                        displayText: '📞 Author',
-                        url: 'https://wa.me/6288215689772',
+                        displayText: '𝐖𝐀 𝐎𝐖𝐍𝐄𝐑',
+                        url: 'https://wa.me/6281347927862',
                     }
                 },
                 {
                     quickReplyButton: {
-                        displayText: '📜MENU',
-                        id: '.m'
+                        displayText: '📝 𝐌𝐄𝐍𝐔',
+                        id: '.menu'
                     }
                 },
                 {
                     quickReplyButton: {
-                        displayText: '🐾PING',
+                        displayText: '⚡ 𝐏𝐈𝐍𝐆',
                         id: '.ping'
                     }
                 },
                 {
                     quickReplyButton: {
-                        displayText: '📛 JANGAN DI KLIK',
-                        id: 'huuu'
+                        displayText: '💰 𝐒𝐄𝐖𝐀 𝐁𝐎𝐓',
+                        id: '.sewabot'
                     }
                 },
             ]

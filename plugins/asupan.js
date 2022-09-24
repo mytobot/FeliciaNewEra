@@ -12,11 +12,11 @@ ${pickRandom(global.bacot)}
             document: { url: donsi },
             jpegThumbnail: await (await fetch(thumb)).buffer(), fileName: '─────〔 𝗔𝗦𝗨𝗣𝗔𝗡 〕─────', mimetype: dpdf, fileLength: fsizedoc, pageCount: fpagedoc, thumb,
             caption: anu,
-            footer: '*CLICK LINK DI ATAS*',
+            footer: '*CLICK THE LINK ABOVE*',
             templateButtons: [
                 {
                     urlButton: {
-                        displayText: 'Website',
+                        displayText: '🌐 𝐖𝐄𝐁𝐒𝐈𝐓𝐄',
                         url: swb
                     }
                 },

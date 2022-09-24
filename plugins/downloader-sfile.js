@@ -15,12 +15,12 @@ try {
 	} else if (text) {
 		let [query, page] = text.split`|`
 		let res = await sfileSearch(query, page)
-		if (!res.length) throw `Query "${text}" not found :/`
-		res = res.map((v) => `*Title:* ${v.title}\n*Size:* ${v.size}\n*Link:* ${v.link}`).join`\n\n`
+		if (!res.length) throw `ǫᴜᴇʀʏ "${text}" not found :/`
+		res = res.map((v) => `*💬 ᴛɪᴛʟᴇ:* ${v.title}\n*📼 sɪᴢᴇ:* ${v.size}\n*🌐 ʟɪɴᴋ:* ${v.link}`).join`\n\n`
 		m.reply(res)
-	} else throw 'Input Query / Sfile Url!'
+	} else throw '*Masukkan Tautan Query/Sfile*'
 	} catch {
-	if (!text) throw '*Masukkan link*\n Example: https://sfile.mobi/1FjpfJwHxC07'
+	if (!text) throw '*MASUKKAN LINK*\n\nExample: https://sfile.mobi/1FjpfJwHxC07'
 let res = await axios('https://violetics.pw/api/downloader/sfile?apikey=beta&url=' + text)
 let json = res.data
 conn.sendMessage(m.chat, { document: { url: json.result.url }, fileName: json.result.title, mimetype: null }, { quoted: m })

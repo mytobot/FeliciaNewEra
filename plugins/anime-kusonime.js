@@ -4,7 +4,7 @@ let handler = async function (m, { text, isPrems, isOwner }) {
 await m.reply(global.wait)
   let res = await fetch('https://ardhixsquerpants.herokuapp.com/api/kuso?q=' + encodeURIComponent(text))
 let json= await res.json()
-  const kanna =  `*judul:* "${json.title}"\n\n*info:* ${json.info}\n\n*sinopsis:* ${json.sinopsis}\n\n*link download:* ${json.link_dl}`
+  const kanna =  `*• ᴊᴜᴅᴜʟ:* "${json.title}"\n\n*• ɪɴғᴏ:* ${json.info}\n\n*• sɪɴᴏᴘsɪs:* ${json.sinopsis}\n\n*• ʟɪɴᴋ ᴅᴏᴡɴʟᴏᴀᴅ:* ${json.link_dl}`
      
      conn.sendHydrated(m.chat, kanna, wm, json.thumb, `${json.link_dl}`, '🎐Link', null, null, [['🌎Menu', '.menu'], [null, null], [null, null]], m)
 }

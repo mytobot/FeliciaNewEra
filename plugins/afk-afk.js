@@ -3,13 +3,12 @@ let handler = async (m, { text }) => {
     user.afk = + new Date
     user.afkReason = text
     conn.sendHydrated(m.chat,
-`*––––––––【 AFK 】––––––––*`,
-`   • ᴀᴡᴀʏ ғʀᴏᴍ ᴋᴇʏʙᴏᴀʀᴅ sᴛᴀʀᴛᴇᴅ •
-
-${conn.getName(m.sender)} is now AFK
+`*MEMASUKI MODE AFK 📵*`,
+`
+${conn.getName(m.sender)} Is Now Afk
 
 ʀᴇᴀsᴏɴ: ${text ? '' + text : 'undefined'}`, null, null, null, null, null, [
-[`ʏɢ ᴀꜰᴋ ᴅɪ ʙᴜʟʟʏ`, `Ok`]
+[`𝐈𝐓𝐒 𝐎𝐊𝐀𝐘`, `𝐍𝐎𝐓 𝐀𝐋𝐋𝐎𝐖𝐄𝐃`]
 ], m)
 }
 handler.help = ['afk [reason]']

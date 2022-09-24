@@ -22,9 +22,9 @@ export async function before(m) {
 			let zippy = download['Zippy']
 			let templateButtons = [{ urlButton: { displayText: 'Source', url }}]
 			let quoted = await conn.sendMessage(m.chat, { image: { url: cover }, caption: `${txt}\n*• Download:*\n${list.join('\n')}`, footer: detailAnime.update, templateButtons })
-			if (/Movie/.test(detailAnime.episode)) return conn.reply(m.chat, 'Bot tidak dapat mengirim file video karena terlalu besar...', quoted)
+			if (/Movie/.test(detailAnime.episode)) return conn.reply(m.chat, '*Bot Tidak Dapat Mengirim File Video Karena Terlalu Besar...*', quoted)
 			let res = await downloadAnime(zippy?.['480p'] || zippy?.['720p'] || zippy?.['360p']).catch(() => null)
-			if (!res) return conn.reply(m.chat, 'Link download belum tersedia...', quoted)
+			if (!res) return conn.reply(m.chat, '*Tautan Unduhan Belum Tersedia...*', quoted)
 			await conn.sendMessage(m.chat, { document: { url: res?.download }, fileName: res?.filename, mimetype: res?.mimetype }, { quoted })
 		}, 5*60*1000) // 10 minutes 10*60*1000
 	}

@@ -11,13 +11,13 @@ let res = await axios('https://violetics.pw/api/downloader/soundcloud?apikey=bet
 let json = res.data
 let dapet = json.result.url
 	let row = Object.values(dapet).map((v, index) => ({
-		title: htjava + '📌 Quality: ' + v.name,
-		description: '\n⌚ Host: ' + json.result.hosting + '\n⏲️ Title: ' + json.result.meta.title + '\n⏲️ Duration: ' + json.result.meta.duration + '\n📎 URL: ' + v.url + '\n\n📎 Player URL: ' + json.result.player.url,
+		title: htjava + '*📹 ǫᴜᴀʟɪᴛʏ:* ' + v.name,
+		description: '\n*👤 ʜᴏsᴛ:* ' + json.result.hosting + '\n*💬 ᴛɪᴛʟᴇ:* ' + json.result.meta.title + '\n*📼 ᴅᴜʀᴀᴛɪᴏɴ:* ' + json.result.meta.duration + '\n*🌐 ᴜʀʟ:* ' + v.url + '\n\n*🌍 ᴘʟᴀʏᴇʀ ᴜʀʟ:* ' + json.result.player.url,
 		rowId: usedPrefix + 'get ' + v.url
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Search Disini ☂️`,
-		description: `⚡ Hai ${name}, Silakan pilih ${command} Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `${command} SEARCH RESULT 🔎`,
+		description: `*Silahkan Hasil Pencarian ${command} Untuk:*\n*📍 Hasil Pencarian:* ${text}\n\n`,
 		footerText: wm
 	}
 	return conn.sendListM(m.chat, button, row, m)
@@ -29,7 +29,7 @@ let dapet = json.result.dlink
 	conn.sendFile(m.chat, json.result.dlink, json.result.title + '.mp3', `
 *${htki} YOUTUBE ${htka}*
 
-*${htjava} Title:* ${json.result.title}
+*${htjava} ᴛɪᴛʟᴇ:* ${json.result.title}
 `.trim(), m, null, { fileLength: fsizedoc, seconds: fsizedoc, mimetype: 'audio/mp4', contextInfo: {
           externalAdReply :{
     mediaUrl: sig,

@@ -6,15 +6,15 @@ export async function before(m) {
 	if (chat && chat.updateAnimeNews) {
 		let latest = chat.latestNews
 		setInterval(async () => {
-			this.logger.info(`Checking anime news for "${m.chat}"`)
+			this.logger.info(`Memeriksa Berita Anime Untuk "${m.chat}"`)
 			let res = await getNews().catch(console.error)
 			let { id, sourceUrl, url, caption } = res
-			if (latest.includes(id)) return this.logger.info(`ID ${id} already sent to "${m.chat}"`)
+			if (latest.includes(id)) return this.logger.info(`ID ${id} Sudah Dikirim Ke "${m.chat}"`)
 			let length = latest[latest.length - 1]
 			latest.push(id)
 			if (latest.indexOf(length) !== -1) latest.splice(latest.indexOf(length), 1)
-			this.logger.info(`Sending anime news to "${m.chat}"`)
-			let templateButtons = [{ urlButton: { displayText: 'Source', url: sourceUrl }}]
+			this.logger.info(`Mengirim Berita Anime Ke "${m.chat}"`)
+			let templateButtons = [{ urlButton: { displayText: '𝐒𝐎𝐔𝐑𝐂𝐄', url: sourceUrl }}]
 			for (let x = 0; x < url.length; x++) {
 				let { mime, data } = await this.getFile(url[x]), type = mime.split('/')[0]
 				if (x == 0) return this.sendMessage(m.chat, { [type]: data, caption, footer: null, templateButtons })

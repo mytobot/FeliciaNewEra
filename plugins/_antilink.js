@@ -12,10 +12,10 @@ export async function before(m, { isAdmin, isBotAdmin }) {
             const linkThisGroup = `https://chat.whatsapp.com/${await this.groupInviteCode(m.chat)}`
             if (m.text.includes(linkThisGroup)) return !0
         }
-        await conn.sendButton(m.chat, `*Group link detect!*${isBotAdmin ? '' : '\n\n_❬Bot Bukan Admin❭'}`, author, ['ଘ OFF ANTILINK', '/disable antilink'], m)
+        await conn.sendButton(m.chat, `*GROUP LINK DETECT*${isBotAdmin ? '' : '\n\n_Bot Bukan Admin_'}`, author, ['𝐃𝐈𝐒𝐀𝐁𝐋𝐄 𝐀𝐍𝐓𝐈𝐋𝐈𝐍𝐊', '/disable antilink'], m)
         if (isBotAdmin && bot.restrict) {
             await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-        } else if (!bot.restrict) return m.reply('Owner disable auto kick!')
+        } else if (!bot.restrict) return m.reply('*Owner Disable Autokick*')
     }
     return !0
 }
