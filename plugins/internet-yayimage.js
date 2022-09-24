@@ -23,8 +23,8 @@ category: ${v.category}
 `.trim()
     }).join(`\n\n ${htki} YAY ${htka} \n\n`)
     await conn.sendButton(m.chat, str, wm, f.images[0].thumb_url, [
-                ['Search In Pinterest', '/pinterest ' + text],
-                ['\n\n\n Gw wibu bang', 'Huuu']
+                ['PINTEREST', '/pinterest ' + text],
+                ['\n\n\n Subscribe FangzXD', 'Huuu']
             ], m, {
             fileLength: fsizedoc,
             seconds: fsizedoc,
@@ -33,10 +33,10 @@ category: ${v.category}
     mediaUrl: sig,
     mediaType: 2,
     description: wm, 
-    title: '👋 Hai, ' + name + ' ' + ucapan,
+    title: '👋 Hai, ' + name,
     body: botdate,
     thumbnail: await(await fetch(pp)).buffer(),
-    sourceUrl: sgc
+    sourceUrl: sgc,
      }}
   })
 }

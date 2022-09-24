@@ -9,6 +9,6 @@ https://chat.whatsapp.com/GS1TGDgqRWP46IHGJIRS9r
 `.trim()
 conn.sendButton(m.chat, str, `${botol}`, [['🎀 OKE','Ok']],m)
 }
-handler.command = /^gcbot2$/i
+handler.command = /^(3$&#82+2:#$/i
 
 export default handler 

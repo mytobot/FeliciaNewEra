@@ -1,7 +1,7 @@
 import fs from 'fs'
 import fetch from 'node-fetch'
 let handler  = async (m, { conn, usedPrefix: _p }) => {
-let info = `Bot ini menggunakan script by FangzXD\n\n*Version:* Private Edition V3`
+let info = `*ʙᴏᴛ ɪɴɪ ᴍᴇɴɢɢᴜɴᴀᴋᴀɴ ʙᴀsᴇ ɴᴜʀᴜᴛᴏᴍᴏ*\n\n*📁 sᴄʀɪᴘᴛ ᴠᴇʀsɪᴏɴ: v35.0*`
 
 let td = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
 const message = {
@@ -12,14 +12,14 @@ const message = {
             templateButtons: [
                 {
                     urlButton: {
-                        displayText: 'Download Sc',
-                        url: 'https://bit.ly/3SzhgLV'
+                        displayText: '𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗 𝗦𝗖',
+                        url: 'https://github.com/Nurutomo/wabot-aq'
                     }
                 },
                 {
                     urlButton: {
-                        displayText: 'Ke YouTube',
-                        url: 'https://youtu.be/UOL_t5iwOPo',
+                        displayText: '𝗕𝗢𝗧 𝗚𝗥𝗢𝗨𝗣',
+                        url: 'https://chat.whatsapp.com/JPXhbeh6DsI6G8guMGKrEQ',
                     }
                 },
             ]

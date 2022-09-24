@@ -35,6 +35,6 @@ wa.me/${numberowner} (Owner)
 }
 handler.help = ['jadibot']
 handler.tags = ['info']
-handler.command = /^(jadibot)$/i
+handler.command = /^(jahwhwiwbvhsuww)$/i
 
 export default handler

@@ -1,6 +1,6 @@
 import fetch from 'node-fetch'
 let handler = async(m, { conn, usedPrefix, text, args, command }) => {
-if (!args[0]) throw `Contoh  ${usedPrefix + command} https://s.id`
+if (!args[0]) throw `*Example:  ${usedPrefix + command} https://s.id*`
 
 	let lis = [
 'https://hadi-api.herokuapp.com/api/ssweb?url=' + args[0] + '&device=tablet&full=on',
@@ -16,26 +16,26 @@ if (!args[0]) throw `Contoh  ${usedPrefix + command} https://s.id`
 'https://api.apiflash.com/v1/urltoimage?access_key=7eea5c14db5041ecb528f68062a7ab5d&wait_until=page_loaded&url=' + args[0]
 ]
 let liss = [
-'hadi-api tablet full on',
-'hadi-api tablet full off',
-'hadi-api desktop full on',
-'hadi-api desktop full off',
-'hadi-api phone full on',
-'hadi-api phone full off',
-'hadi-api original',
-'nurutomo',
-'shot.screenshotapi',
-'api.popcat',
-'api.apiflash'
+'𝗛𝗔𝗗𝗜-𝗔𝗣𝗜 𝗧𝗔𝗕𝗟𝗘𝗧 𝗙𝗨𝗟𝗟 𝗢𝗡',
+'𝗛𝗔𝗗𝗜-𝗔𝗣𝗜 𝗧𝗔𝗕𝗟𝗘𝗧 𝗙𝗨𝗟𝗟 𝗢𝗙𝗙',
+'𝗛𝗔𝗗𝗜-𝗔𝗣𝗜 𝗗𝗘𝗦𝗞𝗧𝗢𝗣 𝗙𝗨𝗟𝗟 𝗢𝗡',
+'𝗛𝗔𝗗𝗜-𝗔𝗣𝗜 𝗗𝗘𝗦𝗞𝗧𝗢𝗣 𝗙𝗨𝗟𝗟 𝗢𝗙𝗙',
+'𝗛𝗔𝗗𝗜-𝗔𝗣𝗜 𝗣𝗛𝗢𝗡𝗘 𝗙𝗨𝗟𝗟 𝗢𝗡',
+'𝗛𝗔𝗗𝗜-𝗔𝗣𝗜 𝗣𝗛𝗢𝗡𝗘 𝗙𝗨𝗟𝗟 𝗢𝗙𝗙',
+'𝗛𝗔𝗗𝗜-𝗔𝗣𝗜 𝗢𝗥𝗜𝗚𝗜𝗡𝗔𝗟',
+'𝗡𝗨𝗥𝗨𝗧𝗢𝗠𝗢',
+'𝗦𝗛𝗢𝗧.𝗦𝗖𝗥𝗘𝗘𝗡𝗦𝗛𝗢𝗧𝗔𝗣𝗜',
+'𝗔𝗣𝗜.𝗣𝗢𝗣𝗖𝗔𝗧',
+'𝗔𝗣𝗜.𝗔𝗣𝗜𝗙𝗟𝗔𝗦𝗛'
 ]
 let row = Object.keys(lis, liss).map((v, index) => ({
-		title: 'By ' + liss[v],
-		description: 'Bot ' + author,
+		title: '𝗕𝗬 ' + liss[v],
+		description: '𝗕𝗢𝗧 ' + author,
 		rowId: usedPrefix + 'get ' + lis[v]
 	}))
 	let button = {
-		buttonText: `☂️ Tema Disini ☂️`,
-		description: `⚡ Silakan pilih tema di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `𝗦𝗖𝗥𝗘𝗘𝗡𝗦𝗛𝗢𝗧 𝗢𝗣𝗧𝗜𝗢𝗡`,
+		description: `*Silahkan pilih opsi screenshot dibawah.*`,
 		footerText: wm
 	}
 	return conn.sendListM(m.chat, button, row, m)

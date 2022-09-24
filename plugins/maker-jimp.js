@@ -7,9 +7,11 @@ let handler = async (m, { conn, text, args, usedPrefix, command }) => {
 
     let q = m.quoted ? m.quoted : m
     let mime = (q.msg || q).mimetype || ''
-    if (!text) return m.reply(`Balas gambar dengan perintah
-    ${usedPrefix + command} effect
-*List effect:*
+    if (!text) return m.reply(`*MAKER JIMP🎨*
+
+*Example: Balas Image Dengan Caption ${usedPrefix + command} effect*
+
+*LIST EFFECT:*
 • blur
 • brightness
 • circle
@@ -30,11 +32,11 @@ let handler = async (m, { conn, text, args, usedPrefix, command }) => {
   let thm = args[0]
 
     let images = `https://violetics.pw/api/jimp/${thm}?apikey=beta&img=${url}`
-    let caption = `*⎔┉━「 ${command} 」━┉⎔*
-🤠 *Query* : ${thm}`
+    let caption = `*${command}*
+*ǫᴜᴇʀʏ* : ${thm}`
   await conn.sendButton(m.chat, caption, wm, images, [
-                ['Next', `${usedPrefix + command}`],
-                ['Menu', `${usedPrefix}menu`]
+                ['𝗡𝗘𝗫𝗧', `${usedPrefix + command}`],
+                ['𝗠𝗘𝗡𝗨', `${usedPrefix}menu`]
             ], m, fdoc)
             }
 //lo mau apa??

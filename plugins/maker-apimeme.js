@@ -5,9 +5,11 @@ let urut = text.split`|`
   let thm = urut[0]
   let text1 = urut[1]
   let text2 = urut[2]
-if (!text) throw `Contoh penggunaan ${usedPrefix}${command} id|teks1|teks2
-*${htki} TEMA ${htka}*
+if (!text) throw `*MAKER APIMEME 🎨*
 
+*Example;: ${usedPrefix}${command} id|teks1|teks2*
+
+*${htki} TEMA ${htka}*
 1st-World-Canadian-Problems
 2nd-Term-Obama
 10-Guy
@@ -1012,5 +1014,9 @@ conn.sendButton(m.chat, `Random *${command}*`, author, res, [['🔄 Next 🔄', 
 
 }
 handler.command = /^(makerapimeme)$/i
+handler.tags = ['internet']
+handler.help = ['makerapimeme']
+handler.limit = true
+handler.group = true
 
 export default handler

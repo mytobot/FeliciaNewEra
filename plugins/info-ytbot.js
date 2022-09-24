@@ -17,7 +17,7 @@ contextInfo: { externalAdReply :{
 }
 
 
-handler.help = ['ytbot']
-handler.tags = ['info']
-handler.command = ['ytbot']
+handler.help = ['jehdg']
+handler.tags = ['jshsvs']
+handler.command = ['hrjdjfhj']
 export default handler

@@ -9,9 +9,12 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
   let mime = (q.msg || q).mimetype || ''
   if (!mime) throw 'Fotonya Mana?'
   if (!/image\/(jpe?g|png)/.test(mime)) throw `Tipe ${mime} tidak didukung!`
-    if (!text) return m.reply(`Balas gambar dengan perintah
-    ${usedPrefix + command} effect
-*List effect:*
+    if (!text) return m.reply(`MAKER PHOTOMAKER 🎨*
+
+Balas Gambar Dengan Perintah
+*${usedPrefix + command} effect*
+
+*LIST EFFECT:*
 2colors-canvas
 3d-wall
 100_dollars
@@ -445,18 +448,19 @@ yo`)
     let url = await uploadImage(img)
     
     let images = `https://violetics.pw/api/photomaker/${encodeURIComponent(text)}?apikey=beta&image=${encodeURIComponent(url)}`
-    let caption = `*⎔┉━「 ${command} 」━┉⎔*
-🤠 *Query* : ${url}`
+    let caption = `*${command}*
+*ǫᴜᴇʀʏ* : ${url}`
   await conn.sendButton(m.chat, caption, wm, images, [
-                ['Next', `${usedPrefix + command}`],
-                ['Menu', `${usedPrefix}menu`]
+                ['𝗡𝗘𝗫𝗧', `${usedPrefix + command}`],
+                ['𝗠𝗘𝗡𝗨', `${usedPrefix}menu`]
             ], m, fdoc)
             }
 //lo mau apa??
 handler.help = ['phmaker'].map(v => v + ' <caption|reply>')
 handler.tags = ['maker']
 handler.command = /^(phmaker)$/i
-
+handler.register = true
+handler.limit = true
 export default handler
 
 const isUrl = (text) => {

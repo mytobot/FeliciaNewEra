@@ -2,7 +2,7 @@ let handler = async(m, { conn, usedPrefix, command, text }) => {
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 let pp = await conn.profilePictureUrl(who).catch(_ => hwaifu.getRandom())
 let name = await conn.getName(who)
-if (!text) throw `Gunakan contoh ${usedPrefix + command} hello`
+if (!text) throw `*Example: ${usedPrefix + command} hello*`
 
 let urut = text.split`|`
   let teksnya = urut[0]
@@ -16,8 +16,8 @@ let row = Object.keys(lis).map((v, index) => ({
 		rowId: usedPrefix + 'oxy ' + lis[v] + ' ' + text
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Disini ☂️`,
-		description: `⚡ ${name} Silakan pilih ${command} di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `𝗖𝗛𝗢𝗢𝗦𝗘 𝗠𝗔𝗞𝗘𝗥 𝗢𝗣𝗧𝗜𝗢𝗡`,
+		description: `*• ${name} Silakan Pilih ${command} Di Tombol Di Bawah...*.\n\n\n`,
 		footerText: wm
 	}
 	return await conn.sendListM(m.chat, button, row, m)
@@ -31,8 +31,8 @@ let row = Object.keys(lis).map((v, index) => ({
 		rowId: usedPrefix + 'oxy2 ' + lis[v] + '|' + teksnya + '|' + teksnya2
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Disini ☂️`,
-		description: `⚡ ${name} Silakan pilih ${command} di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `𝗖𝗛𝗢𝗢𝗦𝗘 𝗠𝗔𝗞𝗘𝗥 𝗢𝗣𝗧𝗜𝗢𝗡`,
+		description: `*• ${name} Silakan Pilih ${command} Di Tombol Di Bawah...*.\n\n\n`,
 		footerText: wm
 	}
 	return await conn.sendListM(m.chat, button, row, m)
@@ -103,8 +103,8 @@ let row = Object.keys(lis).map((v, index) => ({
 		rowId: usedPrefix + 'oxyx ' + lis[v] + ' ' + text
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Disini ☂️`,
-		description: `⚡ ${name} Silakan pilih ${command} di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `𝗖𝗛𝗢𝗢𝗦𝗘 𝗠𝗔𝗞𝗘𝗥 𝗢𝗣𝗧𝗜𝗢𝗡`,
+		description: `*• ${name} Silakan Pilih ${command} Di Tombol Di Bawah...*.\n\n\n`,
 		footerText: wm
 	}
 	return await conn.sendListM(m.chat, button, row, m)
@@ -118,8 +118,8 @@ let row = Object.keys(lis).map((v, index) => ({
 		rowId: usedPrefix + 'oxyx2 ' + lis[v] + '|' + teksnya + '|' + teksnya2
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Disini ☂️`,
-		description: `⚡ ${name} Silakan pilih ${command} di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `𝗖𝗛𝗢𝗢𝗦𝗘 𝗠𝗔𝗞𝗘𝗥 𝗢𝗣𝗧𝗜𝗢𝗡`,
+		description: `*• ${name} Silakan Pilih ${command} Di Tombol Di Bawah...*.\n\n\n`,
 		footerText: wm
 	}
 	return await conn.sendListM(m.chat, button, row, m)
@@ -162,8 +162,8 @@ let row = Object.keys(lis).map((v, index) => ({
 		rowId: usedPrefix + 'pfunia ' + lis[v] + ' ' + text
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Disini ☂️`,
-		description: `⚡ ${name} Silakan pilih ${command} di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `𝗖𝗛𝗢𝗢𝗦𝗘 𝗠𝗔𝗞𝗘𝗥 𝗢𝗣𝗧𝗜𝗢𝗡`,
+		description: `*• ${name} Silakan Pilih ${command} Di Tombol Di Bawah...*.\n\n\n`,
 		footerText: wm
 	}
 	return await conn.sendListM(m.chat, button, row, m)
@@ -183,8 +183,8 @@ let row = Object.keys(lis).map((v, index) => ({
 		rowId: usedPrefix + 'pfunia2 ' + lis[v] + '|' + teksnya + '|' + teksnya2
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Disini ☂️`,
-		description: `⚡ ${name} Silakan pilih ${command} di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `𝗖𝗛𝗢𝗢𝗦𝗘 𝗠𝗔𝗞𝗘𝗥 𝗢𝗣𝗧𝗜𝗢𝗡`,
+		description: `*• ${name} Silakan Pilih ${command} Di Tombol Di Bawah...*.\n\n\n`,
 		footerText: wm
 	}
 	return await conn.sendListM(m.chat, button, row, m)
@@ -227,8 +227,8 @@ let row = Object.keys(lis).map((v, index) => ({
 		rowId: usedPrefix + 'textpro ' + lis[v] + ' ' + text
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Disini ☂️`,
-		description: `⚡ ${name} Silakan pilih ${command} di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `𝗖𝗛𝗢𝗢𝗦𝗘 𝗠𝗔𝗞𝗘𝗥 𝗢𝗣𝗧𝗜𝗢𝗡`,
+		description: `*• ${name} Silakan Pilih ${command} Di Tombol Di Bawah...*.\n\n\n`,
 		footerText: wm
 	}
 	return await conn.sendListM(m.chat, button, row, m)
@@ -247,8 +247,8 @@ let row = Object.keys(lis).map((v, index) => ({
 		rowId: usedPrefix + 'textpro2 ' + lis[v] + '|' + teksnya + '|' + teksnya2
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Disini ☂️`,
-		description: `⚡ ${name} Silakan pilih ${command} di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `𝗖𝗛𝗢𝗢𝗦𝗘 𝗠𝗔𝗞𝗘𝗥 𝗢𝗣𝗧𝗜𝗢𝗡`,
+		description: `*• ${name} Silakan Pilih ${command} Di Tombol Di Bawah...*.\n\n\n`,
 		footerText: wm
 	}
 	return await conn.sendListM(m.chat, button, row, m)
@@ -469,8 +469,8 @@ let row = Object.keys(lis).map((v, index) => ({
 		rowId: usedPrefix + 'textprox ' + lis[v] + ' ' + text
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Disini ☂️`,
-		description: `⚡ ${name} Silakan pilih ${command} di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `𝗖𝗛𝗢𝗢𝗦𝗘 𝗠𝗔𝗞𝗘𝗥 𝗢𝗣𝗧𝗜𝗢𝗡`,
+		description: `*• ${name} Silakan Pilih ${command} Di Tombol Di Bawah...*.\n\n\n`,
 		footerText: wm
 	}
 	return await conn.sendListM(m.chat, button, row, m)
@@ -513,8 +513,8 @@ let row = Object.keys(lis).map((v, index) => ({
 		rowId: usedPrefix + 'textprox2 ' + lis[v] + '|' + teksnya + '|' + teksnya2
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Disini ☂️`,
-		description: `⚡ ${name} Silakan pilih ${command} di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `𝗖𝗛𝗢𝗢𝗦𝗘 𝗠𝗔𝗞𝗘𝗥 𝗢𝗣𝗧𝗜𝗢𝗡`,
+		description: `*• ${name} Silakan Pilih ${command} Di Tombol Di Bawah...*.\n\n\n`,
 		footerText: wm
 	}
 	return await conn.sendListM(m.chat, button, row, m)
@@ -565,8 +565,8 @@ let row = Object.keys(lis).map((v, index) => ({
 		rowId: usedPrefix + 'epho ' + lis[v] + ' ' + text
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Disini ☂️`,
-		description: `⚡ ${name} Silakan pilih ${command} di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `𝗖𝗛𝗢𝗢𝗦𝗘 𝗠𝗔𝗞𝗘𝗥 𝗢𝗣𝗧𝗜𝗢𝗡`,
+		description: `*• ${name} Silakan Pilih ${command} Di Tombol Di Bawah...*.\n\n\n`,
 		footerText: wm
 	}
 	return await conn.sendListM(m.chat, button, row, m)
@@ -584,8 +584,8 @@ let row = Object.keys(lis).map((v, index) => ({
 		rowId: usedPrefix + 'epho2 ' + lis[v] + '|' + teksnya + '|' + teksnya2
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Disini ☂️`,
-		description: `⚡ ${name} Silakan pilih ${command} di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `𝗖𝗛𝗢𝗢𝗦𝗘 𝗠𝗔𝗞𝗘𝗥 𝗢𝗣𝗧𝗜𝗢𝗡`,
+		description: `*• ${name} Silakan Pilih ${command} Di Tombol Di Bawah...*.\n\n\n`,
 		footerText: wm
 	}
 	return await conn.sendListM(m.chat, button, row, m)
@@ -882,8 +882,8 @@ let row = Object.keys(lis).map((v, index) => ({
 		rowId: usedPrefix + 'ephotox ' + lis[v] + ' ' + text
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Disini ☂️`,
-		description: `⚡ ${name} Silakan pilih ${command} di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `𝗖𝗛𝗢𝗢𝗦𝗘 𝗠𝗔𝗞𝗘𝗥 𝗢𝗣𝗧𝗜𝗢𝗡`,
+		description: `*• ${name} Silakan Pilih ${command} Di Tombol Di Bawah...*.\n\n\n`,
 		footerText: wm
 	}
 	return await conn.sendListM(m.chat, button, row, m)
@@ -961,8 +961,8 @@ let row = Object.keys(lis).map((v, index) => ({
 		rowId: usedPrefix + 'ephotox2 ' + lis[v] + '|' + teksnya + '|' + teksnya2
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Disini ☂️`,
-		description: `⚡ ${name} Silakan pilih ${command} di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `𝗖𝗛𝗢𝗢𝗦𝗘 𝗠𝗔𝗞𝗘𝗥 𝗢𝗣𝗧𝗜𝗢𝗡`,
+		description: `*• ${name} Silakan Pilih ${command} Di Tombol Di Bawah...*.\n\n\n`,
 		footerText: wm
 	}
 	return await conn.sendListM(m.chat, button, row, m)
@@ -971,4 +971,6 @@ let row = Object.keys(lis).map((v, index) => ({
 handler.help = ['maker 1-14']
 handler.tags = ['maker']
 handler.command = /^maker(1[0-4]|1|[2-9])$/i
+handler.limit = true
+handler.register = true
 export default handler

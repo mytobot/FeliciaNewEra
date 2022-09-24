@@ -8,11 +8,14 @@ let q = m.quoted ? m.quoted : m
 let mime = (q.msg || q).mimetype || ''
 
   if (command == 'edit1') {
-    if (!mime) return m.reply(`Balas gambar dengan perintah`)
-    if (!text) return m.reply(`Balas gambar dengan perintah
-    ${usedPrefix + command} efek
-    *List efek:*
-    ps4
+    if (!mime) return m.reply(`Balas Gambar Dengan Perintah`)
+    if (!text) return m.reply(`*MAKER EDIT1 🎨*
+
+Balas Gambar Dengan Perintah
+*${usedPrefix + command} efek*
+
+*LIST EFEK:*
+ps4
 gay
 joke
 jail
@@ -60,21 +63,24 @@ missionpassed`)
   let img = await q.download?.()
   let url = await uploadImage(img)
     let images = `https://api-xcoders.xyz/api/maker/animeface?url=${url}&apikey=${global.xckey}`
-    let caption = `*⎔┉━「 ${command} 」━┉⎔*
-🤠 *Query* : ${url}`
+    let caption = `*${command}*
+*ǫᴜᴇʀʏ* : ${url}`
   await conn.sendButton(m.chat, caption, wm, images, [
-                ['Next', `${usedPrefix + command}`],
-                ['Menu', `${usedPrefix}menu`]
+                ['𝗡𝗘𝗫𝗧', `${usedPrefix + command}`],
+                ['𝗠𝗘𝗡𝗨', `${usedPrefix}menu`]
             ], m, fdoc)
             }
    if (command == 'edit2') {
    let q = m.quoted ? m.quoted : m
     let mime = (q.msg || q).mimetype || ''
-    if (!mime) return m.reply(`Balas gambar dengan perintah`)
-    if (!text) return m.reply(`Balas gambar dengan perintah
-    ${usedPrefix + command} efek
-    *List Efek:*
-    opinion
+    if (!mime) return m.reply(`*Balas Gambar Dengan Perintah*`)
+    if (!text) return m.reply(`*MAKER EDIT2 🎨*
+
+Balas Gambar Dengan Perintah
+*${usedPrefix + command} efek*
+
+*LIST EFEK:*
+opinion
 facebook
 captcha`)
 
@@ -83,19 +89,22 @@ captcha`)
   let thm = args[0]
   let text1 = args.slice(1).join(' ')
     let images = `https://api-xcoders.xyz/api/maker/${thm}?text=${text1}&url=${url}&apikey=${global.xckey}`
-    let caption = `*⎔┉━「 ${command} 」━┉⎔*
-🤠 *Query* : ${thm}`
+    let caption = `*${command}*
+*ǫᴜᴇʀʏ* : ${thm}`
   await conn.sendButton(m.chat, caption, wm, images, [
-                ['Next', `${usedPrefix + command}`],
-                ['Menu', `${usedPrefix}menu`]
+                ['𝗡𝗘𝗫𝗧', `${usedPrefix + command}`],
+                ['𝗠𝗘𝗡𝗨', `${usedPrefix}menu`]
             ], m, fdoc)
             }
           
           if (command == 'edit3') {
-    if (!text) return m.reply(`Balas gambar dengan perintah
-    ${usedPrefix + command} efek
-    *List Efek:*
-    ttp
+    if (!text) return m.reply(`*MAKER EDIT3 🎨*
+
+Balas Gambar Dengan Perintah
+*${usedPrefix + command} efek*
+    
+*LIST EFEK:*
+ttp
 ttp3
 attp
 tahta
@@ -112,11 +121,11 @@ ssmap`)
   let thm = args[0]
   let text1 = args.slice(1).join(' ')
     let images = `https://api-xcoders.xyz/api/maker/${thm}?text=${text1}&apikey=${global.xckey}`
-    let caption = `*⎔┉━「 ${command} 」━┉⎔*
-🤠 *Query* : ${thm}`
+    let caption = `*${command}*
+*ǫᴜᴇʀʏ* : ${thm}`
   await conn.sendButton(m.chat, caption, wm, images, [
-                ['Next', `${usedPrefix + command}`],
-                ['Menu', `${usedPrefix}menu`]
+                ['𝗡𝗘𝗫𝗧', `${usedPrefix + command}`],
+                ['𝗠𝗘𝗡𝗨', `${usedPrefix}menu`]
             ], m, fdoc)
             }
           
@@ -124,7 +133,8 @@ ssmap`)
 //lo mau apa??
 handler.help = ['edit1', 'edit2', 'edit3'].map(v => v + ' <text>')
 handler.command = ['edit1', 'edit2', 'edit3']
-
+handler.register = true
+handler.limit = true
 handler.tags = ['maker']
 export default handler
 

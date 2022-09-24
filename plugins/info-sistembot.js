@@ -3,7 +3,7 @@ let info = `
      Sistem Bot
 `.trim()
 
-conn.fakeReply(m.chat, info, '0@s.whatsapp.net', '🌸 *BERJALAN DENGAN BAIK* 🌸', 'status@broadcast')
+conn.fakeReply(m.chat, info, '0@s.whatsapp.net', 'sᴇʀᴠᴇʀ ɪs ʀᴜɴɴɪɴɢ ɴᴏʀᴍᴀʟʟʏ', 'status@broadcast')
 }
 handler.help = ['botstats']
 handler.tags = ['info']

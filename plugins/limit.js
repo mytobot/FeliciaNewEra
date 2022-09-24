@@ -6,7 +6,7 @@ let list = Object.entries(global.db.data.users)
 	list.map(([user, data], i) => (Number(data.limit = lim)))
 		conn.reply(m.chat, `*berhasil direset ${lim} / user*`, m)
 		}
-    let thumbLimit = `https://telegra.ph/file/39146a151c83b2f015dbe.jpg`
+    let thumbLimit = `https://telegra.ph/file/3e073590a6a8ca0dfc632.jpg`
 		
     let who
     if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.sender
@@ -15,17 +15,13 @@ let list = Object.entries(global.db.data.users)
     let ke2 = global.db.data.users[who].exp
     let ke3 = global.db.data.users[who].money
     
-    conn.sendButton(m.chat, bottime,  `LIMIT YANG MAMU MILIKI
-🎫️Sisa Limit
-*${ke1}*
+    conn.sendButton(m.chat, bottime,  `*JUMLAH LIMIT KAMU ${ke1}*
 
--------------------
 
-🎟️Sisa Join limit
-*${ke2}*
+🎫 Sisa Join Limit *${ke2}*
 `, thumbLimit, [
-        ['BUY LIMIT', '.buylimit'],
-        ['TOPUP', `${usedPrefix}topup`]
+        ['𝗕𝗨𝗬 𝗟𝗜𝗠𝗜𝗧', '.buylimit'],
+        ['𝗧𝗢𝗣 𝗨𝗣', `${usedPrefix}topup`]
     ], m, {quoted:{key : {participant : '0@s.whatsapp.net'},message: {documentMessage: {title: bottime,jpegThumbnail: Buffer.alloc(0)}}}})
 }
 handler.help = ['limit [@user]']

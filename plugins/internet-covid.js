@@ -3,13 +3,13 @@ let handler = async (m, { text }) => {
   let res = await fetch(global.API('https://covid19.mathdro.id', '/api/countries/'+ (text)))
   if (!res.ok) throw await res.text()
   let json = await res.json()
-  if (!json.confirmed) throw 'Negara?'
+  if (!json.confirmed) throw '*Example: #covid Indonesia*'
   if (json.confirmed) m.reply(`
-🌏Negara : ${text}
-✅Terkonfirmasi : ${json.confirmed.value}
-📉Sembuh : ${json.recovered.value}
-☠️Meninggal : ${json.deaths.value}
-💌Update Info : ${json.lastUpdate}
+*🌏 ᴄᴏᴜɴᴛʀʏ:* ${text}
+*✅ ᴄᴏɴғɪʀᴍᴇᴅ:* ${json.confirmed.value}
+*📉 ʜᴇᴀʟᴇᴅ:* ${json.recovered.value}
+*☠️ ᴅɪᴇ:* ${json.deaths.value}
+*📁 ɪɴғᴏ ᴜᴘᴅᴀᴛᴇ:* ${json.lastUpdate}
 `.trim())
   else throw json
 }

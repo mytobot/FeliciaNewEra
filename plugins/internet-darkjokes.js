@@ -4,11 +4,11 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 let pp = await conn.profilePictureUrl(who).catch(_ => hwaifu.getRandom())
 let name = await conn.getName(who)
-let caption = `*⎔┉━「 Random darkjoke 」━┉⎔*
-🤠 *Query* : ${command}`
+let caption = `*DARKJOKE*
+*🔎 ǫᴜᴇʀʏ* : ${command}`
 try {
         let images = `https://api-xcoders.xyz/api/random/darkjoke?apikey=${global.xckey}`
-        await conn.sendButton(m.chat, caption, wm, images, [['Darkjoke','.darkjoke']] , m, {
+        await conn.sendButton(m.chat, caption, wm, images, [['NEXT','.darkjoke'] , ['TERTAWA','huuu']], m, {
             fileLength: fsizedoc,
             seconds: fsizedoc,
             jpegThumbnail: Buffer.alloc(0), contextInfo: {
@@ -24,7 +24,7 @@ try {
   })
         } catch {
         let res = await bo.Darkjokes()
-await conn.sendButton(m.chat, caption, wm, res, [['Darkjoke','.darkjoke']] , m, {
+await conn.sendButton(m.chat, hiasan, caption, res, [['NEXT','.darkjoke'] , ['TERTAWA','huuu']], m, {
             fileLength: fsizedoc,
             seconds: fsizedoc,
             jpegThumbnail: Buffer.alloc(0), contextInfo: {
@@ -32,7 +32,7 @@ await conn.sendButton(m.chat, caption, wm, res, [['Darkjoke','.darkjoke']] , m, 
     mediaUrl: sig,
     mediaType: 2,
     description: wm, 
-    title: '👋 Hai, ' + name + ' ' + ucapan,
+    title: '👋 Hai, ' + name,
     body: botdate,
     thumbnail: await(await fetch(pp)).buffer(),
     sourceUrl: sgc

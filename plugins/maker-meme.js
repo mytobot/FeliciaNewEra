@@ -159,5 +159,6 @@ await conn.sendHydrated(m.chat, caption, wm, url, null, null, null, null, [
 handler.help = ['meme 1-11']
 handler.command = /^meme(1[01]|1|[2-9])$/i
 handler.tags = ['maker']
-
+handler.limit = true
+handler.register = true
 export default handler

@@ -8,7 +8,7 @@ let handler = async (m, { conn }) => {
 handler.help = ['simpcard']
 handler.tags = ['maker']
 handler.limit = true
-
+handler.register = true
 handler.command = /^(simpcard)$/i
 
 export default handler

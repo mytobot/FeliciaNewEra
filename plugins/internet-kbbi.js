@@ -1,7 +1,7 @@
 import { kbbi } from '@bochilteam/scraper'
 
 let handler = async (m, { text, usedPrefix, command }) => {
-    if (!text) throw `Example use ${usedPrefix}${command} halo`
+    if (!text) throw `*Example: ${usedPrefix}${command} Hai*`
     const res = await kbbi(text)
     m.reply(`
 ${res.map(v => `
@@ -10,9 +10,9 @@ ${res.map(v => `
 ${v.means.map(v => '- ' + v).join('\n`')}
 `).join('\n').trim()}
 
-Note:
-p = Partikel: kelas kata yang meliputi kata depan, kata sambung, kata seru, kata sandang, ucapan salam
-n = Nomina: kata benda
+ɴᴏᴛᴇ:
+ᴘ = ᴘᴀʀᴛɪᴋᴇʟ: ᴋᴇʟᴀs ᴋᴀᴛᴀ ʏᴀɴɢ ᴍᴇʟɪᴘᴜᴛɪ ᴋᴀᴛᴀ ᴅᴇᴘᴀɴ, ᴋᴀᴛᴀ sᴀᴍʙᴜɴɢ, ᴋᴀᴛᴀ sᴇʀᴜ, ᴋᴀᴛᴀ sᴀɴᴅᴀɴɢ, ᴜᴄᴀᴘᴀɴ sᴀʟᴀᴍ
+ɴ = ɴᴏᴍɪɴᴀ: ᴋᴀᴛᴀ ʙᴇɴᴅᴀ
 `.trim())
 }
 handler.help = ['kbbi <teks>']

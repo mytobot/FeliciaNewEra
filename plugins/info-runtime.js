@@ -1,5 +1,6 @@
 import fs from 'fs'
 let handler = async (m, { conn, args, command }) => {
+    let imgr = flaaa.getRandom()
 	let _muptime
     if (process.send) {
       process.send('uptime')
@@ -9,7 +10,7 @@ let handler = async (m, { conn, args, command }) => {
       }) * 1000
     }
     let muptime = clockString(_muptime)
- await conn.sendButton(m.chat, `${muptime}\n`,wm + '\n\n' + after, runtime, [['WOWW','Fangz']], m, {
+ await conn.sendButton(m.chat, `${muptime}\n`,wm + '\n\n' + after, `${imgr + command}`, [['SEWA BOT','.sewa'],['MENU', '.menu']], m, {
 contextInfo: { externalAdReply :{
                         mediaUrl: '',
                         mediaType: 2,
@@ -32,5 +33,5 @@ function clockString(ms) {
   let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000) % 24
   let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
   let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
-  return [d, ' *Hari ☀️*\n ', h, ' *Jam 🕐*\n ', m, ' *Menit ⏰*\n ', s, ' *Detik ⏱️* '].map(v => v.toString().padStart(2, 0)).join('')
+  return [d, ' *ᴅᴀʏ* ', h, ' *ʜᴏᴜʀ* ', m, ' *ᴍɪɴᴜᴛᴇ* ', s, ' *sᴇᴄᴏɴᴅ* '].map(v => v.toString().padStart(2, 0)).join('')
 }

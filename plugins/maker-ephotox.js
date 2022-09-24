@@ -1,8 +1,11 @@
 let handler = async(m, { conn, text, args, usedPrefix, command }) => {
 let fdoc = {quoted:{key : {participant : '0@s.whatsapp.net'},message: {documentMessage: {title: `${command}`}}}}
 
-  if (!text) return m.reply(`Example : ${usedPrefix + command} bee helo
-  *List Efek:*
+  if (!text) return m.reply(`*MAKER EPHOTOX🎨*
+
+*Example : ${usedPrefix + command} bee helo*
+
+*LIST EFEK:*
 3d-crack-text-effect-online
 3d-underwater
 3d-wood
@@ -292,11 +295,11 @@ let thm = args[0]
   let text1 = args.slice(1).join(' ')
   
         let images = `https://violetics.pw/api/ephoto360/${thm}?apikey=beta&text=${text1}`
-        let caption = `*⎔┉━「 ${command} 」━┉⎔*
-🤠 *Query* : ${thm}`
+        let caption = `*${command}*
+*ǫᴜᴇʀʏ* : ${thm}`
   await conn.sendButton(m.chat, caption, wm, images, [
-                ['Next', `${usedPrefix + command}`],
-                ['Menu', `${usedPrefix}menu`]
+                ['𝗡𝗘𝗫𝗧', `${usedPrefix + command}`],
+                ['𝗠𝗘𝗡𝗨', `${usedPrefix}menu`]
             ], m, fdoc)
             }
 

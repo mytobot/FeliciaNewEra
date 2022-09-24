@@ -5,7 +5,7 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 let pp = await conn.profilePictureUrl(who).catch(_ => hwaifu.getRandom())
 let name = await conn.getName(who)
-if (!args[0]) throw `Masukkan paramenter
+if (!args[0]) throw `Masukkan Paramenter
 
 List:
 kanji
@@ -64,9 +64,9 @@ let pesan = `*Result :*`
 		let res = await fetch('https://kanjiapi.dev/v1/' + args[0] + '/' + encodeURIComponent(x))
 		let json = await res.json()
 		let { reading, main_kanji, name_kanji } = json
-		pesan += `\n\nReading : ${reading}\n`
-		pesan += `Main Kanji : ${main_kanji}\n`
-		pesan += `Name Kanji : ${name_kanji}\n`
+		pesan += `\n\n*ʀᴇᴀᴅɪɴɢ:* ${reading}\n`
+		pesan += `*ᴍᴀɪɴ ᴋᴀɴᴊɪ:* ${main_kanji}\n`
+		pesan += `*ɴᴀᴍᴇ ᴋᴀɴᴊɪ:* ${name_kanji}\n`
 		pesan += `${cmenuf}`
 	}
 	await conn.relayMessage(m.chat,  {

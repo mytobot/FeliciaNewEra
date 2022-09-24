@@ -1,8 +1,7 @@
-import fetch from 'node-fetch'
-
 let handler = async (m, { conn, isOwner }) => {
 	let groups = Object.values(await conn.groupFetchAllParticipating())
 	
+	let imgr = flaaa.getRandom()
 	let str = Object.keys(groups).map((i, index) => {
         return `*${dmenut}* ${1 + index}
 *${dmenub} Name :* ${groups[i].subject}
@@ -22,7 +21,7 @@ ${isOwner ? `*${dmenub} isBotAdmin :* [ ${!!groups[i].participants.find(v => v.i
 *${dmenub} Size :* ${groups[i].size}
 ${dmenuf}`.trim()
     }).join('\n\n')
-    await conn.sendButton(m.chat, logo, str, author, 'B A C K', '.menu', m, {
+    await conn.sendButton(m.chat, bottime, str, `${imgr + 'Group List'}`, [['B A C K', '.menu'],['LIST PC', '.listpc']],m)
 }
 
 handler.menugroup = ['groups', 'grouplist']

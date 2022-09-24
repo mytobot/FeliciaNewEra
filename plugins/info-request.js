@@ -1,11 +1,10 @@
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
 let text = `${htki} *REQUEST* ${htka}
 
-
-        Klik link di bawah ini
+        Klik Link Di Bawah Ini
 `
 const templateButtons = [
-    {index: 1, urlButton: {displayText: 'Link', url: 'darmapryanda1@gmail.com'}},
+    {index: 1, urlButton: {displayText: 'Link', url: 'wa.me/6281347927862'}},
 ]
 let tm = {
 text: text,

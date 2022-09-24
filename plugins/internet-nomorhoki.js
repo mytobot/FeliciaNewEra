@@ -6,22 +6,26 @@ let handler = async (m, { conn, text, args, usedPrefix, command }) => {
     const result = await nomorhoki(text)
     
 let nohoki = `
-*NOMOR:* ${result.nomer}
-*ANGKA BAGUA SHUZI:* ${result.angka_bagua_shuzi}
+*HOCKY NUMBER*
 
-*POSITIF:* ${result.positif.positif}
-*KEKAYAAN:* ${result.positif.kekayaan}
-*KESEHATAN:* ${result.positif.kesehatan}
-*CINTA:* ${result.positif.cinta}
-*KESTABILAN:* ${result.positif.kestabilan}
+*ɴᴏᴍᴏʀ:* ${result.nomer}
+*ᴀɴɢᴋᴀ ʙᴀɢᴜᴀ sʜᴜᴢɪ:* ${result.angka_bagua_shuzi}
 
-*NEGATIF:* ${result.negatif.negatif}
-*PERSELISIHAN:* ${result.negatif.perselisihan}
-*KEHILANGAN:* ${result.negatif.kehilangan}
-*MALAPETAKA:* ${result.negatif.malapetaka}
-*KEHANCURAN:* ${result.negatif.Kehancuran}
+*POSITIVE Aura*
+*ᴘᴏsɪᴛɪғ:* ${result.positif.positif}
+*ᴋᴇᴋᴀʏᴀᴀɴ:* ${result.positif.kekayaan}
+*ᴋᴇsᴇʜᴀᴛᴀɴ:* ${result.positif.kesehatan}
+*ᴄɪɴᴛᴀ:* ${result.positif.cinta}
+*ᴋᴇsᴛᴀʙɪʟᴀɴ:* ${result.positif.kestabilan}
+
+*NEGATIVE Aura*
+*ɴᴇɢᴀᴛɪғ:* ${result.negatif.negatif}
+*ᴘᴇʀsᴇʟɪsɪʜᴀɴ:* ${result.negatif.perselisihan}
+*ᴋᴇʜɪʟᴀɴɢᴀɴ:* ${result.negatif.kehilangan}
+*ᴍᴀʟᴀᴘᴇᴛᴀᴋᴀ:* ${result.negatif.malapetaka}
+*ᴋᴇʜᴀɴᴄᴜʀᴀɴ:* ${result.negatif.Kehancuran}
 `
-await conn.sendButton(m.chat, nohoki, wm, [['menu', '.menu']], m)
+await conn.sendButton(m.chat, nohoki, wm, [['MENU', '.menu']], m)
 }
 
 handler.help = ['nomorhoki'].map(v => v + ' <Apa>')

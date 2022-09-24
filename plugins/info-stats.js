@@ -13,16 +13,18 @@ let handler = async (m, { conn }) => {
 		groups = chats.filter(([a]) => a.endsWith('@g.us')),
 		session = fs.statSync(authFile),
 		txt = `
+*🌐 BOT STATISTICS 🌐*
+
 *BOT:*
-- ${groups.length} Group Chats
-- ${chats.length - groups.length} Personal Chats
-- ${chats.length} Total Chats
+- ${groups.length} ɢʀᴏᴜᴘ ᴄʜᴀᴛs
+- ${chats.length - groups.length} ᴘᴇʀsᴏɴᴀʟ ᴄʜᴀᴛs
+- ${chats.length} ᴛᴏᴛᴀʟ ᴄʜᴀᴛs
 
 *SERVER:*
-- Platform: ${process.platform}
-- Nodejs: ${process.version}
-- Session Size: ${formatSize(session.size)}
-- Memory: ${formatSize(os.totalmem() - os.freemem())} / ${formatSize(os.totalmem())}
+- ᴘʟᴀᴛғᴏʀᴍ: ${process.platform}
+- ɴᴏᴅᴇᴊs: ${process.version}
+- sᴇssɪᴏɴ sɪᴢᴇ: ${formatSize(session.size)}
+- ᴍᴇᴍᴏʀʏ: ${formatSize(os.totalmem() - os.freemem())} / ${formatSize(os.totalmem())}
 `
 	m.reply(txt.trim())
 }

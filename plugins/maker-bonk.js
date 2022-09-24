@@ -15,5 +15,6 @@ handler.help = handler.alias = ['bonk']
 handler.tags = ['maker']
 handler.command = /^(bonk)$/i
 handler.limit = true
+handler.group = true
 
 export default handler
