@@ -4,10 +4,10 @@ import FormData from 'form-data'
 let handler = async (m) => {
 
 try {
- await m.reply('Sedang membuat...')
+ await m.reply('*[⏳] Currently Mem...')
   let q = m.quoted ? m.quoted : m
   let mime = (q.msg || q).mimetype || ''
-  if (!mime) throw 'Fotonya Mana?'
+  if (!mime) throw '*[❗] Reply/Balas Gambar Dengan Caption #hd*'
   if (!/image\/(jpe?g|png)/.test(mime)) throw `Tipe ${mime} tidak didukung!`
   let img = await q.download()
   let body = new FormData
@@ -17,9 +17,9 @@ try {
     body
   })
   if (res.status !== 200) throw await res.json()
-  await conn.sendFile(m.chat, await res.buffer(), 'hd.jpg', 'Nihh,, Hade kan?', m)
+  await conn.sendFile(m.chat, await res.buffer(), 'hd.jpg', '*Finished Improving Image Quality*', m)
 } catch (e) {
-  m.reply('Ada yang Erorr!')
+  m.reply('```404 ERROR```')
  }
 }
 handler.help = ['hd', 'enhance']

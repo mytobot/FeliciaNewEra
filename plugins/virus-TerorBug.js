@@ -12,9 +12,9 @@ let handler  = async (m, { conn, args, text, command, usedPrefix: _p, participan
 
 	const from = m.key.remoteJid
 	//const participants = m.isGroup ? await groupMetadata.participants : ''
-	let q = `Bug Tag From ${author}\n${text}`
+	let q = `*Bug Tag From ${author}*\n${text}`
 	let sections = [{
-		title: `Recoded by ${packname}`,
+		title: `Recoded By ${packname}`,
 		rows: [
 			{ title: 'Bug PDF', rowId: `${_p + command} pdf ${text}` },
 			{ title: 'Bug VN', rowId: `${_p + command} vn ${text}` },
@@ -29,7 +29,7 @@ let handler  = async (m, { conn, args, text, command, usedPrefix: _p, participan
 		]
 	}]
 	let listMessage = {
-		text: '*[ List Bug ]*\n\n*Note :* Jangan Gunakan Secara Sembarangan',
+		text: '*NB:* Jangan Gunakan Secara Sembarangan*',
 		footer: packname,
 		buttonText: 'Silahkan Klik Di Sini',
 		sections
@@ -145,7 +145,7 @@ let handler  = async (m, { conn, args, text, command, usedPrefix: _p, participan
 			"firstImageId": 1,
 			"salePriceAmount1000": fsizedoc,
 			"retailerId": `${packname}`,
-			"url": "wa.me/62881037044211"
+			"url": "wa.me/6288215689772"
 		},
 			"businessOwnerJid": "62881037044211@s.whatsapp.net",
 		}
@@ -242,11 +242,11 @@ let handler  = async (m, { conn, args, text, command, usedPrefix: _p, participan
 			if (!/[01]/.test(command)) return conn.sendMessage(m.chat, listMessage, m)
 			throw false
 	}
-	m.reply(`Berhasil Mengirim ${type} Di Nomer ${text}@s.whatsapp.net`)
+	m.reply(`*Berhasil Mengirim ${type} Di Nomer ${text}@s.whatsapp.net*`)
 }
 
-handler.menugroup = ['terorbug <nomer>']
-handler.tagsgroup = ['owner', 'General']
+handler.help = ['terorbug <nomer>']
+handler.tags = ['virus']
 handler.command = /^terorbug$/i
 
 handler.premium = true

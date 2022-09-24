@@ -1,8 +1,8 @@
 let handler = async (m, { conn, usedPrefix: _p, args, text, usedPrefix}) => {
 	
-	if (!m.quoted) throw 'Balas Chatnya !'
-	if (text.length > 2) throw 'Cuma Untuk 1 Emoji!'
-	if (!text) throw `📍 Contoh Penggunaan :\n${usedPrefix}react 🗿`
+	if (!m.quoted) throw '*[❗] Format Salah, Perintah Ini Untuk Mereact Pesan*\n\n*Example: ${usedPrefix}react 👤*'
+	if (text.length > 2) throw '*[❗] Maksimal 1 Emoji*'
+	if (!text) throw `*[❗] Format Salah, Perintah Ini Untuk Mereact Pesan*\n\n*Example: ${usedPrefix}react 👤*'
 conn.relayMessage(m.chat, { reactionMessage: {
 key: {
  id: m.quoted.id,
@@ -14,5 +14,6 @@ key: {
  handler.help = ['react <emoji>']
 handler.tags = ['tools']
 handler.command = /^(react)$/i
-
+handler.register = true
+handler.limit = true
 export default handler

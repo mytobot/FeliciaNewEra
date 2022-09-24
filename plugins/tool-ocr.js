@@ -10,10 +10,11 @@ let handler = async (m, { conn }) => {
 		if (res.status !== 200) throw res.statusText
 		let json = await res.json()
 		m.reply(json?.ParsedResults?.[0]?.ParsedText)
-	} else throw 'Reply an image!'
+	} else throw '*[❗] Format Salah, Perintah Ini Untuk Menyalin Teks Digambar Menjadi Teks Biasa*\n\nExample : #ocr <reply image>'
 }
 handler.help = ['ocr']
 handler.tags = ['tools']
 handler.command = /^ocr$/i
-
+handler.register = true
+handler.limit = true
 export default handler

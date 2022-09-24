@@ -4,11 +4,14 @@ const tld = 'cn'
 
 let handler = async (m, { args, usedPrefix, command }) => {
     let err = `
-Contoh:
-${usedPrefix + command} <lang> [text]
-${usedPrefix + command} id your messages
+*[❗] Format Salah, Perintah Ini Untuk Menerjemahkan Berbagai Bahasa
 
-Daftar bahasa yang didukung: https://cloud.google.com/translate/docs/languages
+Example:
+*${usedPrefix + command} <lang> [text]*
+*${usedPrefix + command} id I love kitsune*
+
+Daftar Bahasa Yang Didukung: 
+*https://cloud.google.com/translate/docs/languages*
 `.trim()
 
     let lang = args[0]
@@ -39,5 +42,6 @@ Daftar bahasa yang didukung: https://cloud.google.com/translate/docs/languages
 handler.help = ['translate'].map(v => v + ' <lang> <teks>')
 handler.tags = ['tools']
 handler.command = /^(tr(anslate)?)$/i
-
+handler.register = true
+handler.limit = true
 export default handler

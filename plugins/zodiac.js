@@ -1,8 +1,8 @@
 let handler = (m, { usedPrefix, command, text }) => {
-    if (!text) throw `contoh:\n${usedPrefix + command} 2002 02 25`
+    if (!text) throw `*Example:\n${usedPrefix + command} 2002 02 25*`
 
     const date = new Date(text)
-    if (date == 'Invalid Date') throw date
+    if (date == '*[❗] Tanggal Salah*') throw date
     const d = new Date()
     const [tahun, bulan, tanggal] = [d.getFullYear(), d.getMonth() + 1, d.getDate()]
     const birth = [date.getFullYear(), date.getMonth() + 1, date.getDate()]
@@ -12,19 +12,22 @@ let handler = (m, { usedPrefix, command, text }) => {
     const age = ageD.getFullYear() - new Date(1970, 0, 1).getFullYear()
 
     const birthday = [tahun + (+ new Date(1970, bulan - 1, tanggal) > + new Date(1970, birth[1] - 1, birth[2])), ...birth.slice(1)]
-    const cekusia = bulan === birth[1] && tanggal === birth[2] ? `Selamat ulang tahun yang ke-${age} ðŸ¥³` : age
+    const cekusia = bulan === birth[1] && tanggal === birth[2] ? `*Selamat Ulang Tahun Yang Ke-${age}*` : age
 
     const teks = `
-Lahir : ${birth.join('-')}
-Ultah Mendatang : ${birthday.join('-')}
-Usia : ${cekusia}
-Zodiak : ${zodiac}
+𝗭𝗢𝗗𝗜𝗔𝗖 𝗖𝗛𝗘𝗖𝗞
+
+*ʟᴀʜɪʀ:* ${birth.join('-')}
+*ᴜʟᴛᴀʜ ᴍᴇɴᴅᴀᴛᴀɴɢ:* ${birthday.join('-')}
+*ᴜsɪᴀ:* ${cekusia}
+*ᴢᴏᴅɪᴀᴋ:* ${zodiac}
 `.trim()
     m.reply(teks)
 }
 handler.help = ['zodiac *2002 02 25*']
 handler.tags = ['tools']
-
+handler.register = true
+handler.limit = true
 handler.command = /^zodia[kc]$/i
 
 export default handler 

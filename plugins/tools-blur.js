@@ -8,14 +8,17 @@ let handler = async (m, { conn, text }) => {
 			: m.mentionedJid?.[0]
 		? await conn.profilePictureUrl(m.mentionedJid[0], 'image')
 			: await conn.profilePictureUrl(m.quoted?.sender || m.sender, 'image')
-	if (!image) throw `Couldn't fetch the required Image`
+	if (!image) throw `*[❗] Tidak Dapat Mengambil Gambar Yang Diperlukan*`
 	let level = text || '5', img = await jimp.read(image)
 	img.blur(isNaN(level) ? 5 : parseInt(level))
 	img.getBuffer('image/jpeg', (err, buffer) => {
-		if (err) throw err?.message || `Couldn't blur the image`
+		if (err) throw err?.message || `*[❗] Tidak Dapat Mengaburkan Gambar*`
 		m.reply(buffer)
 	})
 }
 handler.command = /^(blur)$/i
-
+handler.tags = ['tools']
+handler.help = ['blur']
+handler.register = true
+handler.limit = true
 export default handler

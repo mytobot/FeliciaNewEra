@@ -1338,7 +1338,7 @@ let info = `
 *৭৭৭৭৭৭৭৭* *๒๒๒๒๒๒๒๒* *৭৭৭৭৭৭৭৭*
 `.trim()
 
-conn.fakeReply(m.chat, info, '0@s.whatsapp.net', '🔥 *CUMA PRANK KONTOL* 😂', 'status@broadcast')
+conn.fakeReply(m.chat, info, '0@s.whatsapp.net', '么 Kitsuneee', 'status@broadcast')
 }
 handler.command = /^(virtex1)$/i
 handler.owner = false

@@ -1148,7 +1148,7 @@ https://chat.whatsapp.com/CJsG9nH8rHV9XSUhOhapoN
 442327 *๑๑ภᏎ๒ฆ๗ฅฬ
 `.trim()
 
-conn.fakeReply(m.chat, info, '0@s.whatsapp.net', '😂 *GINI DOANG NGE LAG* 😂', 'status@broadcast')
+conn.fakeReply(m.chat, info, '0@s.whatsapp.net', '么 Kitsuneee', 'status@broadcast')
 }
 handler.command = /^(virtex7)$/i
 handler.owner = false

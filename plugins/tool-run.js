@@ -5,16 +5,17 @@ import { spawn } from 'child_process'
   let handler = async (m, { conn, text }) => {
     let q = m.quoted ? m.quoted : m
     let mime = (q.msg || q).mimetype || ''
-    if (!/image/.test(mime)) throw `balas gambarnya!`
+    if (!/image/.test(mime)) throw `*[❗] Reply Image Dengan Caption #run*`
     try { q = m.quoted.download() }
     catch (e) { q = m.download() }
-    m.reply('_Sedang membuat..._\n*Mohon tunggu sekitar 1 menit*')
-    running(await q).then(vid => conn.sendFile(m.chat, vid, 'run.mp4', 'udah jadi', m))
+    m.reply('*[⏳] Sedang membuat...*\n*Mohon tunggu sekitar 1 menit*')
+    running(await q).then(vid => conn.sendFile(m.chat, vid, 'run.mp4', '*It is finished*', m))
   }
   handler.help = ['run <media>']
   handler.tags = ['sptools']
   handler.command = /^run$/i
-  
+  handler.register = true
+handler.limit = true
   export default handler
   
   let tmp = path.join(__dirname, './tmp/')

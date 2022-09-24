@@ -38,7 +38,7 @@ let handler = async (m, { conn, text, usedPrefix, command, isOwner, isPrems }) =
             console.error(e)
             throw conn.groupLeave(target)
         })
-        await conn.reply(m.chat, `Sukses mengirim virtex ke grup @${namagc}`, m)
+        await conn.reply(m.chat, `*Sukses Mengirim Virtex Ke Grup @${namagc}*`, m)
     } catch (e) {
         console.error(e)
         throw e

@@ -23,7 +23,7 @@ sourceUrl: 'https://fangzbot.websites.co.in/', thumbnail: await( await fetch(pp)
  //Kalo mau ringan pake global.thumb                                                                                                              
 
                                                                                                                
-handler.command = ['woke']       
+handler.command = ['ejehgeusodi']       
 
 export default handler             
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   

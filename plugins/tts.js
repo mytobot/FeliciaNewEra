@@ -7,7 +7,7 @@ let list = [
 
 let handler = async (m, { conn, args, usedPrefix, command }) => {
 	let [chara, text] = args.join` `.split`|`
-	if (!(chara && text)) throw `Ex: ${usedPrefix + command} fluttershy|hello world`
+	if (!(chara && text)) throw `*[❗] Example: ${usedPrefix + command} Fluttershy|Hello World*`
 	let res = await tts(chara, text)
 	await conn.sendMessage(m.chat, { audio: { url: res }, ptt: true, mimetype: 'audio/mpeg' }, { quoted: m })
 }
@@ -19,7 +19,7 @@ export default handler
 
 async function tts(chara, text) {
 	let character = list.findIndex(v => v.toLowerCase() == chara.toLowerCase())
-	if (character == -1) throw `Character "${chara}" not found!\n\nList Characters:\n\n${list.join('\n')}`
+	if (character == -1) throw `Character ${chara} Not Found!\n\nList Characters:\n\n${list.join('\n')}`
 	character = list[character]
 	// if (text?.length < 5) throw 'Not enough text, minimum 5 characters' 
 	let res = await fetch('https://api.15.ai/app/getAudioFile5', {

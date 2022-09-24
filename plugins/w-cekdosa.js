@@ -4,9 +4,9 @@ let handler = async (m) => {
     let who = m.mentionedJid && m.mentionenJid ? m.mentionedJid : m.fromMe ? conn.user.jid : m.sender
     let mentionedJid = [m.sender]
     let username = conn.getName(who)
-    let str = `*▸ Dosa* ${username} *:* _${user.warning} / 100_
+    let str = `*• ᴅᴏsᴀ* ${username}\n*${user.warning}/100*
 `.trim()
-    conn.sendButton(m.chat, str, `${botol}`, [[`—‹ Tobat ›—`, `.maaf`]], m)
+    conn.sendButton(m.chat, str, `${botol}`, [[`𝗧𝗢𝗕𝗔𝗧`, `.maaf`]], m)
     conn.reply(str)
 }
 handler.help = [`cekdosa`]

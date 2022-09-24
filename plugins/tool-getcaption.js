@@ -1,6 +1,6 @@
 let handler = async (m, { conn }) => {
 	let caption = null
-	if (!m.quoted) throw 'Reply a message!'
+	if (!m.quoted) throw '*[❗] Balas Pesan*'
 	if (/template/.test(m.quoted.mtype)) caption = m.quoted.mediaMessage[Object.keys(m.quoted.mediaMessage)[0]].caption 
 	else if (/product/.test(m.quoted.mtype)) caption = m.quoted.product.title + '\n' + m.quoted.product.description
 	else if (/order/.test(m.quoted.mtype)) caption = m.quoted.message

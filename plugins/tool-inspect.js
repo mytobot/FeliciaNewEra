@@ -18,16 +18,16 @@ let handler = async (m, { conn, command, text }) => {
   })
   if (!res) throw res
   let caption = `
-Group Link Inspector
+*GROUP LINK INSPECTOR*
 
-${res.id}
-*Judul:* ${res.subject}
-*Dibuat* oleh @${res.id.split('-')[0]} pada *${formatDate(res.creation * 1000)}*${res.subjectOwner ? `
-*Judul diubah* oleh @${res.subjectOwner.split`@`[0]} pada *${formatDate(res.subjectTime * 1000)}*`: ''}${res.descOwner ? `
-*Deskripsi diubah* oleh @${res.descOwner.split`@`[0]} pada *${formatDate(res.descTime * 1000)}*` : ''}
-*Jumlah Member:* ${res.size}
-*Member yang diketahui join*: ${res.participants ? '\n' + res.participants.map((user, i) => ++i + '. @' + user.id.split`@`[0]).join('\n').trim() : 'Tidak ada'}
-${res.desc ? `*Deskripsi:*
+*${res.id}*
+*ᴊᴜᴅᴜʟ:* ${res.subject}
+*ᴅɪʙᴜᴀᴛ ᴏʟᴇʜ:* @${res.id.split('-')[0]} pada *${formatDate(res.creation * 1000)}*${res.subjectOwner ? `
+*ᴊᴜᴅᴜʟ ᴅɪᴜʙᴀʜ ᴏʟᴇʜ:* @${res.subjectOwner.split`@`[0]} pada *${formatDate(res.subjectTime * 1000)}*`: ''}${res.descOwner ? `
+*ᴅᴇsᴋʀɪᴘsɪ ᴅɪᴜʙᴀʜ ᴏʟᴇʜ:* @${res.descOwner.split`@`[0]} pada *${formatDate(res.descTime * 1000)}*` : ''}
+*ᴊᴜᴍʟᴀʜ ᴍᴇᴍʙᴇʀ:* ${res.size}
+*ᴍᴇᴍʙᴇʀ ʏᴀɴɢ ᴅɪᴋᴇᴛᴀʜᴜɪ ᴊᴏɪɴ*: ${res.participants ? '\n' + res.participants.map((user, i) => ++i + '. @' + user.id.split`@`[0]).join('\n').trim() : 'Tidak ada'}
+${res.desc ? `*ᴅᴇsᴋʀɪᴘsɪ:*
 ${res.desc}` : '*Tidak ada Deskripsi*'}
 
 *JSON Version*

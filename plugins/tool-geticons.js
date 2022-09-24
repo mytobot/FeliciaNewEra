@@ -4,7 +4,7 @@ import { sticker } from '../lib/sticker.js'
 let handler = async(m, { conn, usedPrefix, text, args, command }) => {
 
 if (command == 'gettenor') {
-if (!text) throw `Contoh penggunaan ${usedPrefix}${command} pentol|2`
+if (!text) throw `Contoh Penggunaan ${usedPrefix}${command} pentol|2`
 let urut = text.split`|`
   let text1 = urut[0]
   let text2 = urut[1]
@@ -15,7 +15,7 @@ let urut = text.split`|`
 
     for (let i = 0; i < ter.length; i++) {
         let out = ter[i].media[0].mp4.url
-        await conn.sendButton(m.chat, `*Nih tenor ${text1} nya*`, wm, out, [
+        await conn.sendButton(m.chat, `*Tenor ${text1}*`, wm, out, [
                 ['To Sticker', `${usedPrefix}s`]
             ], m)
     }
@@ -39,5 +39,8 @@ if (!text) throw `Contoh penggunaan ${usedPrefix}${command} https://t.me/addstic
   
 }
 handler.command = ['gettenor', 'getteles', 'urltopdf']
-
+handler.tags = ['tools']
+handler.help = ['gettenor']
+handler.register = true
+handler.limit = true
 export default handler

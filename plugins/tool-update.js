@@ -1,7 +1,7 @@
 import { execSync } from 'child_process'
 import fs from 'fs'
 let handler = async (m, { conn, text, isROwner }) => {
-if (!text) throw `Masukkan Link Repo Github Bot Ini`
+if (!text) throw `*[❗] Masukkan Link Repo Github Bot Ini*`
   if (global.conn.user.jid == conn.user.jid) {
     let stdout = execSync('git remote set-url origin ' + text + ' ' + '&& git pull ' + (text ? ' ' + text : ''))
     if (isROwner) fs.readdirSync('plugins').map(v => global.reload('', v))

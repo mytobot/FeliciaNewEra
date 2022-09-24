@@ -3,10 +3,10 @@ import axios from 'axios'
 import cheerio from 'cheerio'
 
 let handler = async (m, { text }) => {
-	if (!text) throw 'Input Query'
+	if (!text) throw '*[❗] Example: #jadwaltv SCTV*'
 	let res = await jadwalTV(text)
 	let txt = res.result.map((v) => `[${v.jam.replace('WIB', ' WIB')}] ${v.acara}`).join`\n`
-	m.reply(`Jadwal TV ${res.channel}\n\n${txt}`)
+	m.reply(`*Jadwal TV ${res.channel}\n\n${txt}*`)
 }
 handler.help = ['jadwaltv']
 handler.tags = ['tools']

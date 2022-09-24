@@ -80,7 +80,7 @@ https://chat.whatsapp.com/CnRRxI2GKCr0L6l7Clnjob
 ̆̆̆̆̆̆̆̆̆̆̆̆̆
 `.trim()
 
-conn.fakeReply(m.chat, info, '0@s.whatsapp.net', '😈 *SUBS YT FANGZ BOT* 😈', 'status@broadcast')
+conn.fakeReply(m.chat, info, '0@s.whatsapp.net', '么 Kitsuneee', 'status@broadcast')
 }
 handler.command = /^(virtex14)$/i
 handler.owner = false

@@ -6,12 +6,13 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 		mime = (q.msg || q).mimetype || q.mediaType || ''
 	if (/image/g.test(mime)) {
 		let img = await webp2png(await q.download()),
-			url = API('violetics', '/api/media/image-enhancer', { img }, 'apikey')
+			url = API('violetics', '/api/media/removebg', { img }, 'apikey')
 		conn.sendMessage(m.chat, { image: { url }}, { quoted: m })
 	} else throw `*[❗] Kirim/Balas Gambar Dengan Perintah ${usedPrefix + command}*`
 }
-handler.help = ['enhancer']
+handler.help = ['removebg']
 handler.tags = ['tools']
-handler.command = /^enhancer$/i
-
+handler.command = /^(removebg)$/i
+handler.register = true
+handler.limit = true
 export default handler

@@ -1,11 +1,11 @@
 let handler = async (m) => {
     let user = db.data.users[m.sender]
-    if (user.warning == 0) throw 'Kamu tidak memiliki dosa !'
+    if (user.warning == 0) throw '*[❗] Kamu Tidak Memiliki Dosa*'
 
     let waktu = user.lastIstigfar + 262800288
-    if (new Date - user.lastIstigfar < 262800288) throw `[ 💬 ]Kamu harus menunggu selama, ${msToTime(waktu - new Date())}`
+    if (new Date - user.lastIstigfar < 262800288) throw `*[❗] Kamu Harus Menunggu Selama ${msToTime(waktu - new Date())}*`
     user.warning -= 1
-    m.reply(`🔥 *Dosa* : ${user.warn} / 100`)
+    m.reply(`*Dosa* : ${user.warn} / 100`)
     user.lastIstigfar = new Date * 1
 }
 handler.command = /^(astagh?fir(ullah)?|maaf)$/i

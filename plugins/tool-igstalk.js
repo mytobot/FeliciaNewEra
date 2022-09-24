@@ -2,16 +2,16 @@ import cheerio from 'cheerio'
 import fetch from 'node-fetch'
 
 let handler = async (m, { conn, text }) => {
-  if (!text) throw 'Input username'
+  if (!text) throw '*Example: #igstalk katyhusaclara*'
   let res = await igStalk(text)
   if (!res) throw res
   let caption = `
-👤*Name:* ${res.name}
-📝*Username:* ${res.username}
-💌*Followers:* ${res.followersH}
-❤️*Following:* ${res.followingH}
-📷*Posts:* ${res.postsH}
-📑*Bio:*
+👤*ɴᴀᴍᴇ:* ${res.name}
+📝*ᴜsᴇʀɴᴀᴍᴇ:* ${res.username}
+💌*ғᴏʟʟᴏᴡᴇʀs:* ${res.followersH}
+❤️*ғᴏʟʟᴏᴡɪɴɢ:* ${res.followingH}
+📷*ᴘᴏsᴛs:* ${res.postsH}
+📑*ʙɪᴏ:*
 ${res.description}
 `.trim()
   if (res.profilePic) return conn.sendMessage(m.chat, { image: { url: res.profilePic }, caption }, { quoted: m })

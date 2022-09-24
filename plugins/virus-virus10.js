@@ -556,7 +556,7 @@ My name is zainudin anggara tanisha     
 By _Zainudin_
 `.trim()
 
-conn.fakeReply(m.chat, info, '0@s.whatsapp.net', '😂 *GINI DOANG NGE LAG* 😂', 'status@broadcast')
+conn.fakeReply(m.chat, info, '0@s.whatsapp.net', '么 Kitsuneee', 'status@broadcast')
 }
 handler.command = /^(virtex10)$/i
 handler.owner = false

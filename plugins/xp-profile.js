@@ -10,20 +10,22 @@ let handler = async (m, { conn }) => {
     let name = conn.getName(who)
     let fkon = { key: { fromMe: false, participant: `${m.sender.split`@`[0]}@s.whatsapp.net`, ...(m.chat ? { remoteJid: '16504228206@s.whatsapp.net' } : {}) }, message: { contactMessage: { displayName: `${name}`, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:${name}\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}}
     let str = `
-]──────────❏ *PROFILE* ❏──────────[
-💌 • *Name:* ${username} 
-🎐 • *Username:* ${registered ? name : ''}
-📧 • *Tag:* @${who.replace(/@.+/, '')}
-📞 • *Number:* ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}
-🔗 • *Link:* https://wa.me/${who.split`@`[0]}
-🎨 • *Age:* ${registered ? age : ''}
+*PROFILE*
+
+ • *ɴᴀᴍᴇ:* ${username} 
+ • *ᴜsᴇʀɴᴀᴍᴇ:* ${registered ? name : ''}
+ • *ᴛᴀɢs:* @${who.replace(/@.+/, '')}
+ • *ɴᴜᴍʙᴇʀ:* ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}
+ • *ʟɪɴᴋ:* https://wa.me/${who.split`@`[0]}
+ • *ᴀɢᴇ:* ${registered ? age : ''}
+
 ${readMore}
-🌟 • *Premium:* ${premium ? "✅" :"❌"}
-⏰ • *PremiumTime:* 
+ • *ᴘʀᴇᴍɪᴜᴍ:* ${premium ? "✅" :"❌"}
+ • *ᴘʀᴇᴍɪᴜᴍ ᴛɪᴍᴇ:* 
 ${clockString(user.premiumTime)}
-📑 • *Registered:* ${registered ? '✅': '❌'}
+ • *ʀᴇɢɪsᴛᴇʀᴇᴅ:* ${registered ? '✅': '❌'}
 `.trim()
-    conn.sendButton(m.chat, str, botdate, pp, [[`${registered ? 'Menu':'Verify'}`, `${user.registered ? '.menu':'.verify'}`]], fkon, { contextInfo: { mentionedJid: [who], forwardingScore: 999, isForwarded: true}})
+    conn.sendButton(m.chat, str, botdate, pp, [[`${registered ? '𝗠𝗘𝗡𝗨':'𝗢𝗪𝗡𝗘𝗥'}`, `${user.registered ? '.menu':'.owner'}`]], fkon, { contextInfo: { mentionedJid: [who], forwardingScore: 999, isForwarded: true}})
 }
 handler.help = ['profile [@user]']
 handler.tags = ['exp']
@@ -38,5 +40,5 @@ function clockString(ms) {
   let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000) % 24
   let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
   let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
-  return [d, ' *Days ☀️*\n ', h, ' *Hours 🕐*\n ', m, ' *Minute ⏰*\n ', s, ' *Second ⏱️* '].map(v => v.toString().padStart(2, 0)).join('')
+  return [d, ' *Days* ', h, ' *Hours* ', m, ' *Minutes* ', s, ' *Second* '].map(v => v.toString().padStart(2, 0)).join('')
 }

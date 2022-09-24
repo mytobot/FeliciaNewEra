@@ -2,7 +2,7 @@ let limit = 80
 import fetch from 'node-fetch'
 import { youtubedl, youtubedlv2, youtubedlv3 } from '@bochilteam/scraper';
 let handler = async (m, { conn, args, isPrems, isOwner }) => {
-  if (!args || !args[0]) throw 'Uhm... urlnya mana?'
+  if (!args || !args[0]) throw '*[❗]  Format Salah*\n\nExample:\n*#ytmp3 https://youtu.be/8UVNT4wvIGY*'
   let chat = global.db.data.chats[m.chat]
   const isY = /y(es)/gi.test(args[1])
   const { thumbnail, audio: _audio, title } = await youtubedl(args[0]).catch(async _ => await youtubedlv2(args[0])).catch(async _ => await youtubedlv3(args[0]))
@@ -28,20 +28,20 @@ let handler = async (m, { conn, args, isPrems, isOwner }) => {
   if (!isY && !isLimit) await conn.sendFile(m.chat, thumbnail, 'thumbnail.jpg', `
 *${htki} YOUTUBE ${htka}*
 
-*${htjava} Title:* ${title}
-*${htjava} Type:* mp3
-*${htjava} Filesize:* ${audio.fileSizeH}
+*${htjava} ᴛɪᴛʟᴇ:* ${title}
+*${htjava} ᴛʏᴘᴇ:* Mp3
+*${htjava} ғɪʟᴇ sɪᴢᴇ:* ${audio.fileSizeH}
 
-*L O A D I N G. . .*
+*ᴀᴜᴅɪᴏ ɪs sᴇɴᴅɪɴɢ...*
 `.trim(), m)
   if (!isLimit) await conn.sendFile(m.chat, source, title + '.mp3', `
 *${htki} YOUTUBE ${htka}*
 
-*${htjava} Title:* ${title}
-*${htjava} Type:* mp3
-*${htjava} Filesize:* ${audio.fileSizeH}
+*${htjava} ᴛɪᴛʟᴇ:* ${title}
+*${htjava} ᴛʏᴘᴇ:* Mp3
+*${htjava} ғɪʟᴇ sɪᴢᴇ:* ${audio.fileSizeH}
 
-*L O A D I N G. . .*
+*ᴀᴜᴅɪᴏ ɪs sᴇɴᴅɪɴɢ...*
 `.trim(), m, null, {
     asDocument: chat.useDocument
   })

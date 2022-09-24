@@ -6,14 +6,14 @@ let handler = async (m, { conn, args, usedPrefix }) => {
         if (warning < 5) {
             global.db.data.users[ban].warning += 1
             m.reply(`*berhasil Warn!*`)
-            conn.sendButton(ban, hiasan, '*Kamu di warn oleh moderator, dan sekarang kamu punya ' + (warning + 1) + ' warn. Ingat Jika kamu mendapat warn 5 kali kamu akan otomatis ke banned*', thumbWarn, [['Customer Service', usedPrefix + 'report']], null)
+            conn.sendButton(ban, hiasan, '*[❗] Kamu Di Warn Oleh Moderator, Dan Sekarang Kamu Punya ' + (warning + 1) + ' Warn.\n\n*⚠️ Ingat Jika Kamu Mendapat Warn 5× Kamu Akan Otomatis Ke Banned*', thumbWarn, [['𝗥𝗨𝗟𝗘𝗦', usedPrefix + 'rules']], null)
         } else if (warning == 5) {
             global.db.data.users[ban].banned = true
             global.db.data.users[ban].warning = 0
-            m.reply('*Dia sudah kebanned, karena mendapatkan 5 warn*')
-            conn.sendButton(ban, hiasan, '*Kamu ke banned karena telah mendapatkan 5 kali warning*', thumbBanned, [['Owner', usedPrefix + 'owner']], null)
+            m.reply('*Dia Sudah Kebanned, Karena Mendapatkan 5 Warn*')
+            conn.sendButton(ban, hiasan, '*[❗] Kamu Ke Banned Karena Telah Mendapatkan 5 Kali Warning*', thumbBanned, [['𝗢𝗪𝗡𝗘𝗥', usedPrefix + 'owner']], null)
         }
-    } else conn.reply(m.chat, '*Siapa yang mau di Warn?\nTag orangnya*', m)
+    } else conn.reply(m.chat, '*Siapa Yang Mau Di Warn?\nTag orangnya*', m)
 }
 handler.help = ['warn @tag']
 handler.tags = ['owner', 'moderator']

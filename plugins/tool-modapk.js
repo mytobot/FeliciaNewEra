@@ -104,5 +104,6 @@ let handler = async m => m.reply(`
 handler.help = ['modapk']
 handler.tags = ['tools']
 handler.command = /^(modapk)$/i
-
+handler.register = true
+handler.limit = true
 export default handler 
