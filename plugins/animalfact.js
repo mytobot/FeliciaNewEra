@@ -6,16 +6,16 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 *${usedPrefix}${command} <nama hewan>*
 contoh:
 *${usedPrefix}${command} <dog>*\n
-┌〔 Opsi 〕
-├ dog
-├ cat
-├ panda
-├ fox
-├ red_panda
-├ koala
-├ birb
-├ raccoon
-├ kangaroo
+┌〔 *OPSI* 〕
+├ Dog
+├ Cat
+├ Panda
+├ Fox
+├ Red_panda
+├ Koala
+├ Birb
+├ Raccoon
+├ Kangaroo
 ├ 
 └────
 `.trim();
