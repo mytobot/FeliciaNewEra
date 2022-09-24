@@ -1,10 +1,10 @@
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
 let text = `${htki} RULES ${htka}
 
- > *BANNED + BLOK PERMANEN* :
-┃• Merusak Nama Baik Bot
-┃• Meniru/Menyalin Teks² Pesan Pada Bot Tanpa Izin
-┃• Spam Menu Ga Jelas
+*BANNED + BLOK PERMANEN* :
+• Merusak Nama Baik Bot
+• Meniru/Menyalin Teks² Pesan Pada Bot Tanpa Izin
+• Spam Menu Ga Jelas
 `
 const templateButtons = [
     {index: 1, urlButton: {displayText: 'Youtube', url: 'https://youtube.com/channel/UCACHvReRmw2fxgMutPFCBWg'}},
@@ -18,7 +18,7 @@ image: {url: fla + 'Donasi'}
 conn.sendMessage(m.chat, tm, m)
 }
 handler.tags = ['info']
-handler.command = /^banpermanen$/i
+handler.command = /^kehegsjsj$/i
 
 export default handler
 

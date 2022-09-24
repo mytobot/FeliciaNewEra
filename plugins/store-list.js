@@ -8,16 +8,17 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 	}))
 	let button = {
 		buttonText: 'LIST STORE',
-		description: 'Berikut daftar Menu yg Ada di List store...',
+		description: 'Berikut Daftar Menu Yang Ada Di List Store...',
 		footerText: wm
 	}
 	if (msg[0]) return await conn.sendListM(m.chat, button, row, m)
-	else throw `\nbelum ada Menu yg Ada di list store.\nketik *${usedPrefix + command} <teks>* untuk menambahkan daftar menu.\n`
+	else throw `\n*[❗] Belum Ada Menu Yang Ada Di List Store.*\nKetik *${usedPrefix + command} <teks>* Untuk Menambahkan Daftar Menu.\n`
 }
 handler.help = ['list']
 handler.tags = ['store']
 handler.command = /^list$/i
-
+handler.register = true
+handler.limit = true
 export default handler
 
 

@@ -12,13 +12,13 @@ let res = await axios('https://violetics.pw/api/downloader/linesticker?apikey=be
 let json = res.data
 let dapet = json.result.sticker
 	let row = Object.keys(dapet).map((v, index) => ({
-		title: `📌 Line Sticker: ${1 + index}`,
-		description: '\n⏲️ Title: ' + json.result.title,
+		title: `*ʟɪɴᴇ sᴛɪᴄᴋᴇʀ:* ${1 + index}`,
+		description: '\n*ᴛɪᴛʟᴇ:* ' + json.result.title,
 		rowId: usedPrefix + 'get ' + dapet[v]
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Search Disini ☂️`,
-		description: `⚡ Hai ${name}, Silakan pilih ${command} Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `${command} 𝗢𝗣𝗧𝗜𝗢𝗡`,
+		description: `*Pilih Opsi Dibawah...*`,
 		footerText: wm
 	}
 	return conn.sendListM(m.chat, button, row, m)
@@ -26,12 +26,12 @@ let dapet = json.result.sticker
 	const json = await stickerLine(args[0])
 	let row = Object.values(json).map((v, index) => ({
 		title: index + v.title,
-		description: '\n• Link: ' + v.sticker,
+		description: '\n*sᴛɪᴄᴋᴇʀ:* ' + v.sticker,
 		rowId: usedPrefix + 'fetchsticker ' + v.sticker + ' lib'
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Search Disini ☂️`,
-		description: `⚡ Silakan pilih ${command} Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `${command} 𝗢𝗣𝗧𝗜𝗢𝗡`,
+		description: `*Pilih Opsi Dibawah...*`,
 		footerText: wm
 	}
 	return await conn.sendListM(m.chat, button, row, m)

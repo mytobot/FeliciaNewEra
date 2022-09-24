@@ -2,22 +2,22 @@ let handler = async (m, { conn, usedPrefix, args, command }) => {
   conn.war = conn.war ? conn.war : {}
   conn.war2 = conn.war2 ? conn.war2 : {}
 
-  if (!args[0] || args[0] == "help") return m.reply(`*❏  W A R - Z O N E*
+  if (!args[0] || args[0] == "help") return m.reply(`*⚔️ W A R - Z O N E ⚔️*
 
-[1] War Zone adalah game perang dengan sistem _turn attack_ atau menyerang secara bergiliran
-[2] Permainan dapat dimulai dengan 1v1 sampai dengan 5v5
-[3] Modal perang adalah harta rampasan perang jika tim kamu menang
-[4] Setiap pemain akan mendapatkan 5000 HP (Health Point)
-[5] Keberhasilan menyerang tergantung level kamu dengan level musuh yang akan diserang
-[6] Kesempatan menyerang adalah 40 detik, lebih dari itu dianggap AFK (pengurangan 2500 HP)
-[7] Sebuah tim akan menang jika tim lawan kalah semua (HP <= 0) dan mendapatkan harta rampasan perang
+[1] ᴡᴀʀ ᴢᴏɴᴇ ᴀᴅᴀʟᴀʜ ɢᴀᴍᴇ ᴘᴇʀᴀɴɢ ᴅᴇɴɢᴀɴ sɪsᴛᴇᴍ ᴛᴜʀɴ ᴀᴛᴛᴀᴄᴋ ᴀᴛᴀᴜ ᴍᴇɴʏᴇʀᴀɴɢ sᴇᴄᴀʀᴀ ʙᴇʀɢɪʟɪʀᴀɴ
+[2] ᴘᴇʀᴍᴀɪɴᴀɴ ᴅᴀᴘᴀᴛ ᴅɪᴍᴜʟᴀɪ ᴅᴇɴɢᴀɴ 1ᴠ1 sᴀᴍᴘᴀɪ ᴅᴇɴɢᴀɴ 5ᴠ5
+[3] ᴍᴏᴅᴀʟ ᴘᴇʀᴀɴɢ ᴀᴅᴀʟᴀʜ ʜᴀʀᴛᴀ ʀᴀᴍᴘᴀsᴀɴ ᴘᴇʀᴀɴɢ ᴊɪᴋᴀ ᴛɪᴍ ᴋᴀᴍᴜ ᴍᴇɴᴀɴɢ
+[4] sᴇᴛɪᴀᴘ ᴘᴇᴍᴀɪɴ ᴀᴋᴀɴ ᴍᴇɴᴅᴀᴘᴀᴛᴋᴀɴ 5000 ʜᴘ (ʜᴇᴀʟᴛʜ ᴘᴏɪɴᴛ)
+[5] ᴋᴇʙᴇʀʜᴀsɪʟᴀɴ ᴍᴇɴʏᴇʀᴀɴɢ ᴛᴇʀɢᴀɴᴛᴜɴɢ ʟᴇᴠᴇʟ ᴋᴀᴍᴜ ᴅᴇɴɢᴀɴ ʟᴇᴠᴇʟ ᴍᴜsᴜʜ ʏᴀɴɢ ᴀᴋᴀɴ ᴅɪsᴇʀᴀɴɢ
+[6] ᴋᴇsᴇᴍᴘᴀᴛᴀɴ ᴍᴇɴʏᴇʀᴀɴɢ ᴀᴅᴀʟᴀʜ 40 ᴅᴇᴛɪᴋ, ʟᴇʙɪʜ ᴅᴀʀɪ ɪᴛᴜ ᴅɪᴀɴɢɢᴀᴘ ᴀғᴋ (ᴘᴇɴɢᴜʀᴀɴɢᴀɴ 2500 ʜᴘ)
+[7] sᴇʙᴜᴀʜ ᴛɪᴍ ᴀᴋᴀɴ ᴍᴇɴᴀɴɢ ᴊɪᴋᴀ ᴛɪᴍ ʟᴀᴡᴀɴ ᴋᴀʟᴀʜ sᴇᴍᴜᴀ (ʜᴘ <= 0) ᴅᴀɴ ᴍᴇɴᴅᴀᴘᴀᴛᴋᴀɴ ʜᴀʀᴛᴀ ʀᴀᴍᴘᴀsᴀɴ ᴘᴇʀᴀɴɢ
 
-*❏  C O M M A N D S*
-*${usedPrefix + command} join A/B* = join game
-*${usedPrefix + command} left* = left game
-*${usedPrefix + command} money 10xx* = uang taruhan
-*${usedPrefix + command} player* = player game
-*${usedPrefix + command} start* = start game`)
+*COMMAND 💬*
+*${usedPrefix + command} join A/B* = Join Game
+*${usedPrefix + command} left* = Left Game
+*${usedPrefix + command} money 10000* = Uang Taruhan
+*${usedPrefix + command} player* = Player Game
+*${usedPrefix + command} start* = Start Game`)
 
 
   if (args[0] == "money"){

@@ -1,10 +1,10 @@
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
 let text = `${htki} RULES ${htka}
 
-> Minta maaf ke owner agar tidak terkena pelanggaran 
+*Minta Maaf Ke Owner Agar Tidak Terkena Pelanggaran*
 `
 const templateButtons = [
-    {index: 1, urlButton: {displayText: 'Youtube', url: 'https://youtube.com/channel/UCACHvReRmw2fxgMutPFCBWg'}},
+    {index: 1, urlButton: {displayText: 'BOT GROUP', url: 'https://chat.whatsapp.com/JPXhbeh6DsI6G8guMGKrEQ'}},
 ]
 let tm = {
 text: text,

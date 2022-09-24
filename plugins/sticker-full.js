@@ -29,12 +29,10 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 		m.reply(stiker)
 	}
 }
-handler.help = ['stiker','s']
+handler.help = ['sfull']
 handler.tags = ['sticker']
-handler.alias = ['stiker', 'sticker', 'sgif', 'stikergif', 'stickergif']
-handler.command = /^s(tic?ker)?(gif)?$/i
-handler.register = true
-handler.limit = true
+handler.command = /^sfull$/i
+
 export default handler
 
 const isUrl = (text) => text.match(new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&/=]*)(jpe?g|gif|png)/, 'gi'))
@@ -42,8 +40,8 @@ const isUrl = (text) => text.match(new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%
 async function createSticker(img, url, packName, authorName, quality) {
 	let stickerMetadata = {
 		type: 'full',
-		pack: stickpack,
-		author: stickauth,
+		pack: packName,
+		author: authorName,
 		quality
 	}
 	return (new Sticker(img ? img : url, stickerMetadata)).toBuffer()
@@ -113,4 +111,3 @@ async function mp4ToWebp(file, stickerMetadata) {
 	})
 	return Buffer.from((await res.text()).split(';base64,')[1], 'base64')
 }
-

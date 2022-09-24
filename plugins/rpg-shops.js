@@ -1,22 +1,22 @@
 
-const potion = 20000
-const Spotion = 100 
-const Bdiamond = 100000
-const Sdiamond = 1000
-const Bcommon = 100000
+const potion = 15000
+const Spotion = 1000 
+const Bdiamond = 70000
+const Sdiamond = 7000
+const Bcommon = 60000
 const Scommon = 1000
-const Suncommon = 100
-const Buncommon = 100000
-const Bmythic = 100000
-const Smythic = 1000
-const Blegendary = 200000
-const Slegendary = 5000
+const Suncommon = 2000
+const Buncommon = 70000
+const Bmythic = 90000
+const Smythic = 3000
+const Blegendary = 120000
+const Slegendary = 4449
 const Bsampah = 120
-const Ssampah = 5
-const Bkayu = 1000
-const Skayu = 400
+const Ssampah = 100
+const Bkayu = 4000
+const Skayu = 100
 const Bbotol = 300
-const Sbotol = 50
+const Sbotol = 1000
 const Bkaleng = 400
 const Skaleng = 100
 const Bkardus = 400
@@ -82,8 +82,8 @@ const Smakanancentaur = 10000
 const Bhealtmonster = 20000
 const Bpet = 150000
 const Spet = 1000
-const Blimit = 25000
-const Slimit = 20000
+const Blimit = 20000
+const Slimit = 15000
 const Bexp = 550
 const Baqua = 5000
 const Saqua = 1000
@@ -95,7 +95,7 @@ const Bsword = 150000
 const Ssword = 15000
 const Bumpan = 1500
 const Sumpan = 100
-const Bpancingan = 5000000
+const Bpancingan = 500000
 const Spancingan = 500000
 const Bbatu = 500
 const Sbatu = 100
@@ -111,103 +111,123 @@ let handler  = async (m, { conn, command, args, usedPrefix, owner }) => {
     let jualbeli = (args[0] || '').toLowerCase()
     let nomors = m.sender
     const Kchat = `
-Penggunaan ${usedPrefix}shop <Buy|sell> <item> <jumlah>
-Contoh penggunaan: *${usedPrefix}shop buy potion 1*
+*RPG ITEM FIGURE 🛍️*
 
-============================
-*Kebutuhan   |  Harga Beli*
-Limit:     ${Blimit}
-TiketM:     ${Bhealtmonster}
-Cupon:     ${Btiketcoin}
-KoinExpg:     ${Bkoinexpg}
+Cara Penggunaan:
+*${usedPrefix}shop <buy|sell> <item> <jumlah>*
+Example: 
+*${usedPrefix}shop buy potion 1*
 
-*Kebutuhan   |  Harga Jual*
-Limit:     ${Slimit}
-============================
-*Bibit Buah   |  Harga Beli*
-BibitPisang:       ${Bbibitpisang}
-BibitAnggur:       ${Bbibitanggur}
-BibitMangga:       ${Bbibitmangga}
-BibitJeruk:       ${Bbibitjeruk}
-BibitApel:       ${Bbibitapel}
-Gardenboxs:     ${Bgardenboxs}
-============================
-*Barang   |  Harga Beli*
-Potion:       ${potion}
-Diamond:     ${Bdiamond}
-Common:     ${Bcommon}
-Uncommon:  ${Buncommon}
-Mythic:     ${Bmythic}
-Legendary: ${Blegendary}
-Sampah:     ${Bsampah}
-Armor:       ${armor}
-String:       ${Bstring}
-Iron:       ${Biron}
-Sword:       ${Bsword}
-Batu:       ${Bbatu}
-Botol:       ${Bbotol}
-Kaleng:       ${Bkaleng}
-Kardus:       ${Bkardus}
-Kayu:       ${Bkayu}
-Berlian:       ${Bberlian}
-Emas:       ${Bemasbiasa}
+                      *ITEM 1*
+┏━━━━━━━━━━━━━━━━━━⎔
+┇ *ITEM      |     HARGA BELI*
+┠• Limit:           ${Blimit}
+┠• TiketM:        ${Bhealtmonster}
+┠• Cupon:         ${Btiketcoin}
+┠• KoinExpg:   ${Bkoinexpg}
+┇
+┇ *ITEM      |     HARGA JUAL*
+┠• Limit:           ${Slimit}
+┗━━━━━━━━━━━━━━━━━━⎔
 
-*Barang   | Harga Jual*
-Potion:       ${Spotion}
-Diamond:     ${Sdiamond}
-Common:     ${Scommon}
-Uncommon:  ${Suncommon}
-Mythic:     ${Smythic}
-Legendary: ${Slegendary}
-Sampah:     ${Ssampah}
-String:       ${Sstring}
-Iron:       ${Siron}
-Sword:       ${Ssword}
-Batu:       ${Sbatu}
-Botol:       ${Sbotol}
-Kaleng:       ${Skaleng}
-Kardus:       ${Skardus}
-Kayu:       ${Skayu}
-Berlian:       ${Sberlian}
-Emas:       ${Semasbiasa}
-============================
-*List Makanan:*
+                    *ITEM 2*
+┏━━━━━━━━━━━━━━━━━━⎔
+┇ *BIBIT       |      HARGA BELI*
+┠• BibitPisang:   ${Bbibitpisang}
+┠• BibitAnggur:  ${Bbibitanggur}
+┠• BibitMangga: ${Bbibitmangga}
+┠• BibitJeruk:     ${Bbibitjeruk}
+┠• BibitApel:       ${Bbibitapel}
+┠• Gardenboxs:  ${Bgardenboxs}
+┗━━━━━━━━━━━━━━━━━━⎔
 
-*Makanan | Harga Beli*
-Pisang:       ${Bpisang}
-Anggur:       ${Banggur}
-Mangga:       ${Bmangga}
-Jeruk:       ${Bjeruk}
-Apel:       ${Bapel}
-MakananPet:       ${Bmakananpet}
-MakananNaga:       ${Bmakanannaga}
-MakananKyubi:       ${Bmakanankyubi}
-MakananGriffin:       ${Bmakanangriffin}
-MakananPhonix:       ${Bmakananphonix}
-MakananCentaur:       ${Bmakanancentaur}
+                     *ITEM 3*
+┏━━━━━━━━━━━━━━━━━━⎔
+┇ *ITEM      |     HARGA BELI*
+┠• Potion:         ${potion}
+┠• Diamond:    ${Bdiamond}
+┠• Common:    ${Bcommon}
+┠• Uncommon:${Buncommon}
+┠• Mythic:         ${Bmythic}
+┠• Legendary:  ${Blegendary}
+┠• Sampah:      ${Bsampah}
+┠• Armor:         ${armor}
+┠• String:         ${Bstring}
+┠• Iron:            ${Biron}
+┠• Sword:        ${Bsword}
+┠• Batu:           ${Bbatu}
+┠• Botol:          ${Bbotol}
+┠• Kaleng:       ${Bkaleng}
+┠• Kardus:       ${Bkardus}
+┠• Kayu:           ${Bkayu}
+┠• Berlian:       ${Bberlian}
+┠• Emas:         ${Bemasbiasa}
+┇
+┇ *ITEM      |     HARGA JUAL*
+┠• Potion:         ${Spotion}
+┠• Diamond:    ${Sdiamond}
+┠• Common:    ${Scommon}
+┠• Uncommon:${Suncommon}
+┠• Mythic:        ${Smythic}
+┠• Legendary: ${Slegendary}
+┠• Sampah:     ${Ssampah}
+┠• String:         ${Sstring}
+┠• Iron:            ${Siron}
+┠• Sword:        ${Ssword}
+┠• Batu:           ${Sbatu}
+┠• Botol:          ${Sbotol}
+┠• Kaleng:       ${Skaleng}
+┠• Kardus:       ${Skardus}
+┠• Kayu:          ${Skayu}
+┠• Berlian:       ${Sberlian}
+┠• Emas:         ${Semasbiasa}
+┗━━━━━━━━━━━━━━━━━━⎔
 
-*Makanan | Harga Jual*
-Pisang:       ${Spisang}
-Anggur:       ${Sanggur}
-Mangga:       ${Smangga}
-Jeruk:       ${Sjeruk}
-Apel:       ${Sapel}
-MakananPet:       ${Smakananpet}
-MakananNaga       ${Smakanannaga}
-MakananKyubi:       ${Smakanankyubi}
-MakananGriffin:       ${Smakanangriffin}
-MakananPhonix:       ${Smakananphonix}
-MakananCentaur:       ${Smakanancentaur}
-============================
-*Minuman | Harga Beli*
-Aqua:       ${Baqua}
+                      *ITEM 4*
+┏━━━━━━━━━━━━━━━━━━⎔
+┇ *JAJAN   |     HARGA BELI*
+┇
+┠• Pisang:                  ${Bpisang}
+┠• Anggur:                 ${Banggur}
+┠• Mangga:                ${Bmangga}
+┠• Jeruk:                    ${Bjeruk}
+┠• Apel:                      ${Bapel}
+┠• MakananPet:        ${Bmakananpet}
+┠• MakananNaga:     ${Bmakanannaga}
+┠• MakananKyubi:     ${Bmakanankyubi}
+┠• MakananGriffin:    ${Bmakanangriffin}
+┠• MakananPhonix:  ${Bmakananphonix}
+┠• MakananCentaur:${Bmakanancentaur}
+┇
+┇ *JAJAN      |     HARGA JUAL*
+┠• Pisang:                   ${Spisang}
+┠• Anggur:                  ${Sanggur}
+┠• Mangga:                ${Smangga}
+┠• Jeruk:                     ${Sjeruk}
+┠• Apel:                       ${Sapel}
+┠• MakananPet:        ${Smakananpet}
+┠• MakananNaga      ${Smakanannaga}
+┠• MakananKyubi:     ${Smakanankyubi}
+┠• MakananGriffin:    ${Smakanangriffin}
+┠• MakananPhonix:  ${Smakananphonix}
+┠• MakananCentaur:${Smakanancentaur}
+┗━━━━━━━━━━━━━━━━━━⎔
 
-*Minuman | Harga Jual*
-Aqua:       ${Saqua}
-============================
-*Fishing | Harga Beli*
-Pancingan:       ${Bpancingan}
-Umpan:       ${Bumpan}
+                      *ITEM 5*
+┏━━━━━━━━━━━━━━━━━━⎔
+┇ *MINUMAN    |   HARGA BELI*
+┠• Aqua:                 ${Baqua}
+┇
+┇ *MINUMAN    |   HARGA JUAL*
+┠• Aqua:                 ${Saqua}
+┗━━━━━━━━━━━━━━━━━━⎔
+
+                      *ITEM 6*
+┏━━━━━━━━━━━━━━━━━━⎔
+┇*FISHING.     |     HARGA BELI*
+┠• Pancingan:      ${Bpancingan}
+┠• Umpan:            ${Bumpan}
+┗━━━━━━━━━━━━━━━━━━⎔
 `.trim()
     try {
         if (/shop|toko/i.test(command)) {

@@ -1,6 +1,6 @@
 const { generateWAMessageFromContent } = (await import('@adiwajshing/baileys')).default
 let handler = async (m, { conn, text }) => {
-	if (!text) throw 'masukan teks';
+	if (!text) throw 'Masukan Teks';
 	let obj = {
 		requestPaymentMessage: {
 			amount1000: 2000 + '00.000',

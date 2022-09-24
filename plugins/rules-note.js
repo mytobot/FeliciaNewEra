@@ -1,51 +1,39 @@
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
 let text = `${htki} RULES ${htka}
 
-––––––◸ *RULES* ◿––––––
+––––––[ *RULES* ]––––––
 
-_Kebijakan privasi atau Private without being in public_
+_Kebijakan Privasi Atau Private Without Being In Public_
 
 
 
-• *Kebijakan Privasi:*
-1. WhatsApp Bot tidak akan merekam data riwayat chat user.
-2. WhatsApp Bot tidak akan menyebarkan nomor users.
-3. WhatsApp Bot tidak akan menyimpan media yang dikirimkan oleh users.
-4. WhatsApp Bot tidak akan menyalah gunakan data data users.
-5. Owner WhatsApp Bot berhak melihat data riwayat chat users.
-6. Owner WhatsApp Bot berhak melihat status users.
-7. Owner WhatsApp Bot dapat melihat riwayat chat, dan media yang dikirimkan users.
+• *KEBIJAKAN PRIVASI:*
+1. WhatsApp Bot Tidak Akan Merekam Data Riwayat Chat User.
+2. WhatsApp Bot Tidak Akan Menyebarkan Nomor Users.
+3. WhatsApp Bot Tidak Akan Menyimpan Media Yang Dikirimkan Oleh Users.
+4. WhatsApp Bot Tidak Akan Menyalah Gunakan Data Data Users.
+5. Owner WhatsApp Bot Berhak Melihat Data Riwayat Chat Users.
+6. Owner WhatsApp Bot Berhak Melihat Status Users.
+7. Owner WhatsApp Bot Dapat Melihat Riwayat Chat, Dan Media Yang Dikirimkan Users.
 
-• Jika ada bug/eror di website kami saya mohon untuk Report nya, tanpa biaya dan aman
 
-_Cara penggunaan Fangz BOT Agar terhindar dari Suspand_
+• *PERATURAN WHATSAPP BOT:*
+1. Users Dilarang Menelpon Maupun VC Nomor Bot.
+2. Users Dilarang Mengirimkan Berbagai Bug, Virtex, Dll Ke Nomor Bot.
+3. Users Diharap Tidak Melakukan Spam Dalam Penggunaan Bot.
+4. Users Diharap Untuk Tidak Menyalah Gunakan Fitur-Fitur Bot.
 
-• *Peraturan WhatsApp Bot:*
-1. Users dilarang menelpon maupun memvideo call nomor bot.
-2. Users dilarang mengirimkan berbagai bug, virtex, dll ke nomor bot.
-3. Users diharap tidak melakukan spam dalam penggunaan bot.
-4. Users dilarang menambahkan nomor bot secara illegal, untuk menambahkan silahkan hubungi Owner.
-5. Users diharap untuk tidak menyalah gunakan fitur fitur bot.
 
-• *Note:*
-1. Jika ada yang menjual/beli/sewa bot atas nomor ini, harap segera hubungi owner!
-2. Jika ingin donasi bisa langsung aja ya social payment Dana 
-3. Ketik .sewa Jika Ingin SewaBot 
+• *SYARAT KETENTUAN WHATSAPP BOT:*
 
-•Agar terhindar dari Suspand/Ban kalian bisa membaca juga di Peraturan kami.
-
-•Perlu kalian tahu bahwa kami menjaga Privasi dari data-data anda!
-
-• *Syarat Ketentuan WhatsApp Bot:*
-
-1. WhatsApp Bot akan keluar dari group jika ada salah satu member melanggar peraturan.
-2. WhatsApp Bot dapan mem-ban users secara sepihak terlepas dari users salah atau tidak.
-3. WhatsApp Bot tidak akan bertanggungjawab atas apapun yang users lakukan terhadap fitur bot.
-4. WhatsApp Bot akan memberlakukan hukuman: block atau ban terhadap users yang melanggar peraturan.
-5. WhatsApp Bot bertanggung jawab atas kesalahan fatal dalam programing maupun owner.
+1. WhatsApp Bot Akan Keluar Dari Group Jika Ada Salah Satu Member Melanggar Peraturan.
+2. WhatsApp Bot Dapat Mem-ban Users Secara Sepihak Terlepas Dari Users Salah Atau Tidak.
+3. WhatsApp Bot Tidak Akan Bertanggungjawab Atas Apapun Yang Users Lakukan Terhadap Fitur Bot.
+4. WhatsApp Bot Akan Memberlakukan Hukuman: Block Atau Ban Terhadap Users Yang Melanggar Peraturan.
+5. WhatsApp Bot Bertanggung Jawab Atas Kesalahan Fatal Dalam Programing Maupun Owner.
 `
 const templateButtons = [
-    {index: 1, urlButton: {displayText: 'Youtube', url: 'https://youtube.com/channel/UCACHvReRmw2fxgMutPFCBWg'}},
+    {index: 1, urlButton: {displayText: 'BOT GROUP', url: 'https://chat.whatsapp.com/JPXhbeh6DsI6G8guMGKrEQ'}},
 ]
 let tm = {
 text: text,

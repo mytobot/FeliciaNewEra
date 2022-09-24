@@ -4,7 +4,7 @@ let handler = async (m, { conn, text }) => {
   if (id in conn.math) {
     clearTimeout(conn.math[id][3])
     delete conn.math[id]
-    m.reply('Hmmm...ngecheat?')
+    m.reply('*Hmmm*')
   }
   let val = text
     .replace(/[^0-9\-\/+*×÷πEe()piPI/]/g, '')
@@ -34,5 +34,6 @@ handler.help = ['calc <expression>']
 handler.tags = ['tools']
 handler.command = /^(calc(ulat(e|or))?|kalk(ulator)?)$/i
 handler.exp = 5
-
+handler.register = true
+handler.limit = true
 export default handler

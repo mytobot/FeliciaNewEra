@@ -3,9 +3,9 @@ import fetch from 'node-fetch'
 let handler = async (m, { conn, usedPrefix, args, command }) => {
 	let type = (args[1] || '').toLowerCase()
     let _type = (args[1] || '').toLowerCase()
-    if (!args[0]) return m.reply('Apikeynya mana?')
+    if (!args[0]) return m.reply('*[❗] Example: #cekapi BeliSendirKntl*')
   
-  let cek = '「🔎」ᴍᴇɴᴄᴀʀɪ ᴀᴘɪᴋᴇʏ...'
+  let cek = '*🔎 ᴍᴇɴᴄᴀʀɪ ᴀᴘɪᴋᴇʏ...*'
 try {
     if (/cekapi(key)?|cekkey/i.test(command)) {
       const count = args[1] && args[1].length > 0 ? Math.min(99999999, Math.max(parseInt(args[1]), 1)) : !args[1] || args.length < 3 ? 1 : Math.min(1, count)
@@ -15,7 +15,7 @@ try {
          let xteam = await (await fetch(`https://api.xteam.xyz/cekey?APIKEY=${args[0]}`)).json().catch(v => 'error')
          await m.reply(cek)
          if (xteam == 'error') {
-m.reply(`Maaf restapi ini sedang error, harap coba lagi nanti`)
+m.reply(`Maaf Restapi Ini Sedang Error, Harap Coba Lagi Nanti`)
 } else { 
 if (xteam.response == "Only alphanumeric!") return m.reply('Only alphanumeric!')
  if (xteam.response == "Apikey tidak ditemukan, silahkan daftar atau beli ke developer untuk mendapatkan apikey yang valid!") return m.reply('ɪɴᴠᴀʟɪᴅ ᴀᴘɪᴋᴇʏ !')
@@ -48,7 +48,7 @@ conn.reply(m.chat, `• *ᴛʏᴘᴇ:* XTEAM
 } else m.reply('ɪɴᴠᴀʟɪᴅ ᴀᴘɪᴋᴇʏ !')
             break
           default:
-            return conn.sendButton(m.chat, `*${htki} CEK APIKEY ${htka}*`, 'sᴇʟᴇᴄᴛ ᴛʏᴘᴇ ᴀᴘɪᴋᴇʏ ʜᴇʀᴇ!', null, [['xᴛᴇᴀᴍ', `.cekapi ${args[0]} xteam`],['ʟᴏʟʜᴜᴍᴀɴ', `.cekapi ${args[0]} lolhuman`]],m)
+            return conn.sendButton(m.chat, `*${htki} CEK APIKEY ${htka}*`, 'CHOOSE THE TYPE OF APIKEY', null, [['xᴛᴇᴀᴍ', `.cekapi ${args[0]} xteam`],['ʟᴏʟʜᴜᴍᴀɴ', `.cekapi ${args[0]} lolhuman`]],m)
         }
     } else if (/enchant|enchan/i.test(command)) {
       const count = args[2] && args[2].length > 0 ? Math.min(99999999, Math.max(parseInt(args[2]), 1)) : !args[2] || args.length < 4 ? 1 :Math.min(1, count)
@@ -69,5 +69,6 @@ conn.reply(m.chat, `• *ᴛʏᴘᴇ:* XTEAM
 handler.help = ['cekapikey']
 handler.tags = ['internet', 'tools']
 handler.command = /^(cek(key|api))$/i
-
+handler.register = true
+handler.limit = true
 export default handler

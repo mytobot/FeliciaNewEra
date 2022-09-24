@@ -7,25 +7,21 @@ if (command == 'sewabot') {
     let name = await conn.getName(who)
     let caption = `👋 Hai *${name} @${who.split("@")[0]}*,
 
-*• UP PREMIUM •*
+*UPGRADE TO PREMIUM USERS*
         
-⩩ 𝗣𝗔𝗬♡
-┈┈┈┈┈┈┈         ͜͡               𖤣
-➘
-    ◐ Dana            ☁︎     ♡
-    ◐ Gopay
-    ◐ Ovo        இ
-    ◐ Qris
-✧
-┬ 📮 Note :
-│ ɪ ᴍᴀʏ ʙᴇ ꜱʟᴏᴡ ᴛᴏ ʀᴇꜱᴘᴏɴᴅ ˄.  ̫.˄
-╰━━━━━━━━━━━━━━━━┈─◂
-⌕ ❙❘❙❙❘❙❚❙❘❙❙❚❙❘❙❘❙❚❙❘❙❙❚❙❘❙❙❘❙❚❙❘ ⌕
+*Premium Price List 🛒*
+ • Bottom = IDR 5.000 (1 Minggu)
+ • Middle = IDR 15.000 (1 Bulan)
+ • Superior = IDR 25.000 (2 Bulan)
+ • Endless = IDR 50.000 (Permanen)
 
-wa.me/${nomorown}
-*Bukan Bot!!!*
-Tapi
-*Owner nya ${conn.user.name}*
+Kenapa Harus Up Ke Premium?
+*⭐Kelebihan Dapat Menggunakan Fitur Premium*
+
+
+Berminat? Hubungi.
+*wa.me/${nomorown}*
+
 `
   await conn.relayMessage(m.chat,  {
     requestPaymentMessage: {

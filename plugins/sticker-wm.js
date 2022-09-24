@@ -2,15 +2,15 @@ import { addExif } from '../lib/sticker.js'
 
 
 let handler = async (m, { conn, text }) => {
-  if (!m.quoted) throw 'Quoted the sticker!'
+  if (!m.quoted) throw '*[❗] Reply Stickernya*'
   let stiker = false
   try {
     let [packname, ...author] = text.split('|')
     author = (author || []).join('|')
     let mime = m.quoted.mimetype || ''
-    if (!/webp/.test(mime)) throw 'Reply sticker!'
+    if (!/webp/.test(mime)) throw 'Reply Sticker!'
     let img = await m.quoted.download()
-    if (!img) throw 'Reply a sticker!'
+    if (!img) throw 'Reply a Sticker!'
     stiker = await addExif(img, packname || '', author || '')
   } catch (e) {
     console.error(e)
@@ -22,7 +22,7 @@ let handler = async (m, { conn, text }) => {
 }
 handler.help = ['wm <packname>|<author>']
 handler.tags = ['sticker']
-handler.command = /^wm$/i
+handler.command = /^wm|swm|stickerwm|wmsticker|stikerwm|wmstiker$/i
 handler.premium = true
 
 export default handler

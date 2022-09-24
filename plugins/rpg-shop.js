@@ -490,9 +490,9 @@ ${usedPrefix}transfer ${paymentMethod} ${(listItems[item][paymentMethod] * total
     }
 }
 
-handler.help = ['buy', 'sell'].map(v => v + ' [item] [count]')
-handler.tags = ['rpg']
-handler.command = /^(buy|sell)$/i
+handler.help = ['jsshzh', 'sell'].map(v => v + ' [item] [count]')
+handler.tags = ['jshzv']
+handler.command = /^(jsksvx|jekwkwb)$/i
 
 handler.disabled = false
 

@@ -8,7 +8,7 @@ handler.before = async function (m) {
     let tie = false
     if (m.sender == room.p2 && /^(acc(ept)?|terima|gas|oke?|tolak|gamau|nanti|ga(k.)?bisa)/i.test(m.text) && m.isGroup && room.status == 'wait') {
       if (/^(tolak|gamau|nanti|ga(k.)?bisa)/i.test(m.text)) {
-        this.reply(m.chat, `@${room.p2.split`@`[0]} menolak suit, suit dibatalkan`, m)
+        this.reply(m.chat, `*@${room.p2.split`@`[0]} Menolak Suit Dan Suit Dibatalkan*`, m)
         delete this.suit[room.id]
         return !0
       }
@@ -16,24 +16,24 @@ handler.before = async function (m) {
       room.asal = m.chat
       clearTimeout(room.waktu)
       //delete room[room.id].waktu
-      m.reply(`Suit telah dikirimkan ke chat
+      m.reply(`Suit Telah Dikirimkan Ke Chat
 @${room.p.split`@`[0]} dan 
 @${room.p2.split`@`[0]}
 
-Silahkan pilih suit di chat masing"
-klik wa.me/${conn.user.jid.split`@`[0]}`, m.chat, 
+Silahkan Pilih Suit Di Chat Masing-Masing
+Klik wa.me/${conn.user.jid.split`@`[0]}`, m.chat, 
          {
           mentions: [room.p, room.p2]
         }
       )
 
-      if (!room.pilih) this.sendButton(room.p, `Silahkan pilih Menang +${room.poin}XP\nKalah -${room.poin_lose}XP`, wm, null, [[ 'Batu🗿', 'Batu'], ['Kertas📄', 'Kertas'], ['Gunting✂️', 'Gunting']], m)
-      if (!room.pilih2) this.sendButton(room.p2, `Silahkan pilih Menang +${room.poin}XP\nKalah -${room.poin_lose}XP`, wm, null, [['Batu🗿', 'Batu'], ['Kertas📄', 'Kertas'], ['Gunting✂️', 'Gunting']], m)
+      if (!room.pilih) this.sendButton(room.p, `Silahkan Pilih Menang +${room.poin}XP\nKalah -${room.poin_lose}XP`, wm, null, [[ '𝗦𝗧𝗢𝗡𝗘🗿', 'Batu'], ['𝗣𝗔𝗣𝗘𝗥📄', 'Kertas'], ['𝗦𝗖𝗜𝗦𝗦𝗢𝗥✂️', 'Gunting']], m)
+      if (!room.pilih2) this.sendButton(room.p2, `Silahkan Pilih Menang +${room.poin}XP\nKalah -${room.poin_lose}XP`, wm, null, [['𝗦𝗧𝗢𝗡𝗘🗿', 'Batu'], ['𝗣𝗔𝗣𝗘𝗥📄', 'Kertas'], ['𝗦𝗖𝗜𝗦𝗦𝗢𝗥✂️', 'Gunting']], m)
       room.waktu_milih = setTimeout(() => {
-        if (!room.pilih && !room.pilih2) this.reply(m.chat, `Kedua pemain tidak niat main,\nSuit dibatalkan`)
+        if (!room.pilih && !room.pilih2) this.reply(m.chat, `*[❗] Kedua Pemain Tidak Niat Main*\n*Suit Dibatalkan*`)
         else if (!room.pilih || !room.pilih2) {
           win = !room.pilih ? room.p2 : room.p
-          this.reply(m.chat, `@${(room.pilih ? room.p2 : room.p).split`@`[0]} tidak memilih suit, game berakhir`, m)
+          this.reply(m.chat, `*@${(room.pilih ? room.p2 : room.p).split`@`[0]} Tidak Memilih Suit Dan Suit Dibatalkan*`, m)
           db.data.users[win == room.p ? room.p : room.p2].exp += room.poin
           db.data.users[win == room.p ? room.p2 : room.p].exp -= room.poin_lose
         }
@@ -50,14 +50,14 @@ klik wa.me/${conn.user.jid.split`@`[0]}`, m.chat,
     if (jwb && reg.test(m.text) && !room.pilih && !m.isGroup) {
       room.pilih = reg.exec(m.text.toLowerCase())[0]
       room.text = m.text
-      m.reply(`Kamu telah memilih ${m.text} ${!room.pilih2 ? `\n\nMenunggu lawan memilih` : ''}`)
-      if (!room.pilih2) this.reply(room.p2, '_Lawan sudah memilih_\nSekarang giliran kamu', 0)
+      m.reply(`Kamu Telah Memilih ${m.text} ${!room.pilih2 ? `\n\n*Menunggu Lawan Memilih*` : ''}`)
+      if (!room.pilih2) this.reply(room.p2, '_LAWAN SUDAH MEMILIH_\nSekarang Giliran Kamu', 0)
     }
     if (jwb2 && reg.test(m.text) && !room.pilih2 && !m.isGroup) {
       room.pilih2 = reg.exec(m.text.toLowerCase())[0]
       room.text2 = m.text
-      m.reply(`Kamu telah memilih ${m.text} ${!room.pilih ? `\n\nMenunggu lawan memilih` : ''}`)
-      if (!room.pilih) this.reply(room.p, '_Lawan sudah memilih_\nSekarang giliran kamu', 0)
+      m.reply(`Kamu Telah Memilih ${m.text} ${!room.pilih ? `\n\n*Menunggu Lawan Memilih*` : ''}`)
+      if (!room.pilih) this.reply(room.p, '_LAWAN SUDAH MEMILIH_\nSekarang Giliran Kamu', 0)
     }
     let stage = room.pilih
     let stage2 = room.pilih2
@@ -71,7 +71,7 @@ klik wa.me/${conn.user.jid.split`@`[0]}`, m.chat,
       else if (k.test(stage) && g.test(stage2)) win = room.p2
       else if (stage == stage2) tie = true
       this.reply(room.asal, `
-_*Hasil Suit*_${tie ? '\nSERI' : ''}
+*HASIL SUIT* ${tie ? '\nSERI' : ''}
 
 @${room.p.split`@`[0]} (${room.text}) ${tie ? '' : room.p == win ? ` Menang \n+${room.poin}XP` : ` Kalah \n-${room.poin_lose}XP`}
 @${room.p2.split`@`[0]} (${room.text2}) ${tie ? '' : room.p2 == win ? ` Menang \n+${room.poin}XP` : ` Kalah \n-${room.poin_lose}XP`}

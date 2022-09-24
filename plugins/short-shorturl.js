@@ -1,5 +1,3 @@
-// ❗ ATUR APIKEYNYA DULU SEBELUM LAPOR OWNER!
-
 import fetch from 'node-fetch'
 
 let handler = async (m, { conn, usedPrefix, args }) => {
@@ -7,7 +5,7 @@ let handler = async (m, { conn, usedPrefix, args }) => {
     let caption = 'Silahkan Pilih Type Urlnya kak'
 const sections = [
    {
-	title: htki + " TYPE URL " + htka,
+	title: "TYPE URL",
 	rows: [
 	    {title: "TinyUrl", rowId: ".short " + args[0] + " tinyurl"},
 	    {title: "LinkPoi", rowId: ".short " + args[0] + " linkpoi"},
@@ -29,16 +27,12 @@ if (!args[0]) return m.reply('Linknya mana?')
 if (!args[0].startsWith('https://')) throw 'Masukan Url Dengan Awalan *https://*'
 if (!args[1]) return conn.sendMessage(m.chat, listMessage, { quoted: m })
 
-let tesk = '*TAUTAN:* '
-let pros = '*[⏳] Converting...*'
+let tesk = '*TAUTAN* '
+let pros = '*Converting...*'
 //TINY
 if (args[1] == "tinyurl") {
-try {
 	let tiny = await (await fetch(`https://hardianto.xyz/api/short/tinyurl?url=${args[0]}&apikey=hardianto`)).json()
 m.reply(pros).then(_ => conn.reply(m.chat, `${tesk}${tiny.result}`,m))
-} catch {
-m.reply(pros).then(_ => conn.reply(m.chat, `${tesk}${await shortUrl(args[0])}`,m))
-}
 }
 //--------------
 
@@ -51,14 +45,14 @@ if (args[1] == "linkpoi") {
 
 //BITLY
 if (args[1] == "bitly") {
-	let bit = await (await fetch(`https://api.xteam.xyz/shorturl/bitly?url=${args[0]}&APIKEY=${xteamkey}`)).json()
+	let bit = await (await fetch(`https://api.xteam.xyz/shorturl/bitly?url=${args[0]}&APIKEY=f04c164fdec6c033`)).json()
 	m.reply(pros).then(_=> conn.reply(m.chat, `${tesk}${bit.result.link}`,m))
 }
 //------------
 
 //OuO
 if (args[1] == "ouo") {
-	let ouo = await (await fetch(`https://api.lolhuman.xyz/api/ouoshortlink?apikey=${lolkey}&url=${args[0]}`)).json()
+	let ouo = await (await fetch(`https://api.lolhuman.xyz/api/ouoshortlink?apikey=SGWN&url=${args[0]}`)).json()
 	m.reply(pros).then(_=> conn.reply(m.chat, `${tesk}${ouo.result}`,m))
 	}
 }
@@ -67,8 +61,3 @@ handler.tags = ['internet']
 handler.command = /^(short(url)?)$/i
 
 export default handler
-
-async function shortUrl(url) {
-	let res = await fetch(`https://tinyurl.com/api-create.php?url=${url}`)
-	return await res.text()
-}

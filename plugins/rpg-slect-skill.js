@@ -20,20 +20,19 @@ var bintang = {
    
    let skil = text.trim().toLowerCase() // to filter text
      
-   if (!skill.includes(skil)) throw `Select *skill🃏* what do you want/pilih skill apa yg kamu inginkan:\n\n${skill.map(skil => `› ${skil}`).join('\n')}
+   if (!skill.includes(skil)) throw `*SELECTION OF SPECIAL SKILLS*\n\nPilih Skill Apa Yang Kamu Inginkan:\n\n${skill.map(skil => `› ${skil}`).join('\n')}
 
-     How To use/Cara menggunakan:
-     ${usedPrefix + command} <nameskill>
-     
-     Example/Contoh:
-     ${usedPrefix + command} necromancer
+     Cara Penggunaan:
+     *${usedPrefix + command} <nameskill>*
+     Example:
+     *${usedPrefix + command} necromancer*
      `
 
     if (user.skill == "") {
     user.skill = skil
-    m.reply(`Anda telah memilih Skill ${skil}`)
+    m.reply(`*Anda Telah Memilih Skill ${skil}*`)
     } else if (user.skill) {
-    m.reply(`Anda Sudah Punya skill ${user.skill} Tidak bisa diganti`)
+    m.reply(`*Anda Sudah Punya Skill ${user.skill} Tidak Bisa Diganti*\nSilahkan Reinkarnasi Jika Ingin Ganti`)
    }
 
 }

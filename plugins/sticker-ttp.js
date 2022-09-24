@@ -8,7 +8,8 @@ let handler = async (m, { conn, text }) => {
 }
 handler.help = ['ttp <teks>']
 handler.tags = ['sticker']
-
+handler.register = true
+handler.limit = true
 handler.command = /^ttp$/i
 
 export default handler

@@ -50,5 +50,6 @@ if (command == 'wall') {
   }
 handler.command = handler.help = ['wall', 'wall2', 'wall3', 'unsplash', 'walls']
 handler.tags = ['Wallpaper']
-
+handler.register = true
+handler.limit = true
 export default handler

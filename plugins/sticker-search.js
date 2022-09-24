@@ -4,15 +4,14 @@ import { sticker } from '../lib/sticker.js'
  let handler = async (m, { conn, args, usedPrefix, command }) => { 
      // TODO: add stickerly 
      const isTele = /tele/i.test(command) 
-     if (!args[0]) throw `*ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ʀᴇᴛʀɪᴇᴠᴇ sᴛɪᴄᴋᴇʀs ғʀᴏᴍ ${isTele ? 'Tele.' : 'sᴇᴀʀᴄʜ.*'} 
- Note: ʀᴇsᴜʟᴛ ɴᴏᴛ ᴀᴄᴄᴜʀᴀᴛᴇ. 
+     if (!args[0]) throw `*Perintah Ini Untuk Mencari Sticker Dari Telegram ${isTele ? 'Tele.' : 'sᴇᴀʀᴄʜ.*'} 
+*Note: Hasil Tidak Akurat*
   
- =========================== 
- ★ ᴜsᴀɢᴇ: 
- ${usedPrefix + command} <name> 
+ Cara Penggunaan:
+ *${usedPrefix + command} <name>"
   
- ★ ᴇxᴀᴍᴩʟᴇ: 
- ${usedPrefix + command} naruto` 
+ Contoh:
+ *${usedPrefix + command} naruto*` 
      const json = await (isTele ? stickerTelegram : stickerLine)(args[0]) 
      m.reply(` 
  *ᴛᴏᴛᴀʟ sᴛɪᴄᴋᴇʀ:* ${(json[0]?.stickers || json).length} 

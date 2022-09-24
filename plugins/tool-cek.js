@@ -5,7 +5,7 @@ import fetch from 'node-fetch'
 let handler = async (m, { conn, usedPrefix }) => {
   let q = m.quoted ? m.quoted : m
   let mime = (q.msg || q).mimetype || ''
-  if (!mime) throw `Reply Foto/Kirim Foto Dengan Caption ${usedPrefix}wait`
+  if (!mime) throw `*[❗] Reply Foto/Kirim Foto Dengan Caption ${usedPrefix}wait*`
   if (!/image\/(jpe?g|png)/.test(mime)) throw `Mime ${mime} tidak support`
   let img = await q.download()
   await m.reply('Searching Anime Titles...')
@@ -17,7 +17,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     },
     body: JSON.stringify({ image: anime }),
   })
-  if (!response.ok) throw 'Gambar tidak ditemukan!'
+  if (!response.ok) throw '*[❗] Gambar Tidak Ditemukan*'
   let result = await response.json()
   let { is_adult, title, title_chinese, title_romaji, episode, season, similarity, filename, at, tokenthumb, anilist_id } = result.docs[0]
   let link = `https://media.trace.moe/video/${anilist_id}/${encodeURIComponent(filename)}?t=${at}&token=${tokenthumb}`

@@ -80,7 +80,7 @@ let jln4 = `
 `
 
 let hsl = `
-*《 Hasil grab ${name} 》*
+*HASIL GRAB ${name}*
 
  *💎 = [ ${hmsil1} ] Diamond*
  *⛓️ = [ ${hmsil2} ] Iron*
@@ -92,7 +92,7 @@ let hsl = `
  *🌑 = [ ${hmsil8} ] Sand*
  *✉️ = [ ${hmsil9} ] Exp*
  
- Stamina anda berkurang -20
+ Stamina Anda Berkurang -20
 `
 
 user.diamond += hmsil1
@@ -108,7 +108,7 @@ user.diamond += hmsil1
 	
 setTimeout(() => {
                      conn.sendButton(m.chat, hsl, wm, null, [
-		['Inventory', '/inv']
+		['𝗜𝗡𝗩𝗘𝗡𝗧𝗢𝗥𝗬', '/inv']
 	], m)
                      }, 27000) 
                
@@ -137,7 +137,7 @@ setTimeout(() => {
                      }, 10000) 
                      
                      setTimeout(() => {
-                     conn.sendHydrated(m.chat, `🔍 ${name} Mencari Area grab.....`, botdate, null, null, null, null, null, [
+                     conn.sendHydrated(m.chat, `*🔍 ${name} Mencari Area Grab...*`, botdate, null, null, null, null, null, [
       [null, null]
     ], null)
                      }, 0) 
@@ -154,5 +154,5 @@ function clockString(ms) {
   let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000) % 24
   let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
   let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
-  return ['\n' + d, ' *Days ☀️*\n ', h, ' *Hours 🕐*\n ', m, ' *Minute ⏰*\n ', s, ' *Second ⏱️* '].map(v => v.toString().padStart(2, 0)).join('')
+  return ['\n' + d, ' *Days* ', h, ' *Hours* ', m, ' *Minute* ', s, ' *Second* '].map(v => v.toString().padStart(2, 0)).join('')
 }

@@ -176,10 +176,10 @@ let res = await fetch(`https://api.lolhuman.xyz/api/smoji3/${text}?apikey=${glob
 ]
 
 const listMessage = {
-  text: `⚡ Silakan pilih tema di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+  text: `*Silakan Pilih Tema Di Tombol Di Bawah...* `,
   footer: global.wm,
   title: `⎔───「 ${command} 」───⎔`,
-  buttonText: `☂️ Tema Disini ☂️`,
+  buttonText: `THEMES HERE`,
   sections
 }
 conn.sendMessage(m.chat, listMessage, fdoc)

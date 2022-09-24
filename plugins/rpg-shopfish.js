@@ -1,67 +1,69 @@
 
-const Bhiu = 1500
-const Shiu = 400
-const Bikan = 500
-const Sikan = 50
-const Bdory = 800
-const Sdory = 200
-const Borca = 1500
-const Sorca = 400
-const Bpaus = 2000
-const Spaus = 900
-const Bcumi = 1400
-const Scumi = 300
-const Bgurita = 1600
-const Sgurita = 500
-const Bbuntal = 700
-const Sbuntal = 100
-const Budang = 500
-const Sudang = 50
-const Blumba = 1500
-const Slumba = 400
-const Blobster = 800
-const Slobster = 200
-const Bkepiting = 700
-const Skepiting = 150
+const Bhiu = 2800
+const Shiu = 1400
+const Bikan = 300
+const Sikan = 150
+const Bdory = 2400
+const Sdory = 1200
+const Borca = 2800
+const Sorca = 1400
+const Bpaus = 3800
+const Spaus = 1900
+const Bcumi = 2600
+const Scumi = 1300
+const Bgurita = 3000
+const Sgurita = 1500
+const Bbuntal = 2200
+const Sbuntal = 1100
+const Budang = 300
+const Sudang = 150
+const Blumba = 2800
+const Slumba = 1400
+const Blobster = 2400
+const Slobster = 1200
+const Bkepiting = 2300
+const Skepiting = 1150
 let handler  = async (m, { conn, command, args, usedPrefix, DevMode }) => {
     let type = (args[0] || '').toLowerCase()
     let _type = (args[1] || '').toLowerCase()
     let jualbeli = (args[0] || '').toLowerCase()
     const Kaine = `
-${usedPrefix}shopfish <buy|sell> <item> <jumlah>
+*RPG FISH MARKET 🎏*
 
-Contoh penggunaan: *${usedPrefix}shopfish buy hiu 1*
+Cara Pengfunaan:
+*${usedPrefix}shopfish <buy|sell> <item> <jumlah>*
+Example: 
+*${usedPrefix}shopfish buy hiu 1*
 
-============================
-
-*Fishing | Harga Beli*
-Hiu: ${Bhiu}
-Ikan: ${Bikan}
-Dory: ${Bdory}
-Orca: ${Borca}
-Paus: ${Bpaus}
-Cumi: ${Bcumi}
-Gurita: ${Bgurita}
-Buntal: ${Bbuntal}
-Udang: ${Budang}
-Lumba²: ${Blumba}
-Lobster: ${Blobster}
-Kepiting: ${Bkepiting}
-
-
-*Fishing | Harga Jual*
-Hiu: ${Shiu}
-Ikan: ${Sikan}
-Dory: ${Sdory}
-Orca: ${Sorca}
-Paus: ${Spaus}
-Cumi: ${Scumi}
-Gurita: ${Sgurita}
-Buntal: ${Sbuntal}
-Udang: ${Sudang}
-Lumba²: ${Slumba}
-Lobster: ${Slobster}
-Kepiting: ${Skepiting}
+┏━━━━━━━━━━━━━━━━━━⎔
+┇ *FISHING | HARGA BELI*
+┠• Hiu: ${Bhiu}
+┠• Ikan: ${Bikan}
+┠• Dory: ${Bdory}
+┠• Orca: ${Borca}
+┠• Paus: ${Bpaus}
+┠• Cumi: ${Bcumi}
+┠• Gurita: ${Bgurita}
+┠• Buntal: ${Bbuntal}
+┠• Udang: ${Budang}
+┠• Lumba²: ${Blumba}
+┠• Lobster: ${Blobster}
+┠• Kepiting: ${Bkepiting}
+┇
+┇ *FISHING | HARGA JUAL*
+┠• Hiu: ${Shiu}
+┠• Ikan: ${Sikan}
+┠• Dory: ${Sdory}
+┠• Orca: ${Sorca}
+┠• Paus: ${Spaus}
+┠• Cumi: ${Scumi}
+┠• Gurita: ${Sgurita}
+┠• Buntal: ${Sbuntal}
+┠• Udang: ${Sudang}
+┠• Lumba²: ${Slumba}
+┠• Lobster: ${Slobster}
+┠• Kepiting: ${Skepiting}
+┗━━━━━━━━━━━━━━━━━━⎔
 `.trim()
 
     try {

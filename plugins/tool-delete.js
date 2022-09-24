@@ -7,7 +7,7 @@ let handler = function (m) {
 }
 handler.help = ['del', 'delete']
 handler.tags = ['tools']
-
+handler.register = true
 handler.command = /^del(ete)?$/i
 
 export default handler

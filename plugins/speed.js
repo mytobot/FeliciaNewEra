@@ -50,19 +50,17 @@ let handler = async (m, { conn, usedPrefix, isRowner}) => {
   })
 
   let old = performance.now()
-  await m.reply(`「▰▰▰▱▱▱▱▱▱▱」Loading...`)
+  await m.reply(`*⚡ Testing Response Speed*`)
   let neww = performance.now()
   let speed = neww - old
   let caption = `${htki} S P E E D ${htka}
 ${Math.round(neww - old)} ms
-${speed} ms
+*${speed} Ms*
 
-${htjava} R U N T I M E
-${muptime}
 `
 await conn.sendHydrated(m.chat, hiasan, caption, thumbnailUrl.getRandom(), swb, 'Support Me', null, null, [
-[`DOWNLOAD`, `${usedPrefix}testspeed`],
-[`STATISTIC`, `${usedPrefix}botinfo`]
+[`𝗕𝗢𝗧 𝗦𝗘𝗥𝗩𝗘𝗥 𝗦𝗣𝗘𝗘𝗗`, `${usedPrefix}testspeed`],
+[`𝗕𝗢𝗧 𝗦𝗧𝗔𝗧𝗜𝗦𝗧𝗜𝗖𝗦`, `${usedPrefix}botinfo`]
 ], m)
 }
 handler.help = ['ping', 'speed']

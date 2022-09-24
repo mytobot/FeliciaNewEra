@@ -7,35 +7,18 @@ if (command == 'sewabot') {
     let name = await conn.getName(who)
     let caption = `👋 Hai *${name} @${who.split("@")[0]}*,
 
-*• SEWA BOT & UP TO PREMIUM •*
+*RENT A BOT TO YOUR GROUP*
         
-║ ┅ ๑————————————๑
-║┊ ⌲ *Hemat* = _5k/grup (1 minggu)_
-║┊ ⌲ *Normal* = _15k/grup (1 bulan)_
-║┊ ⌲ *Standar* = _45k/grup (3 bulan)_
-║┊ ⌲ *Pro* = _65k/grup (5 bulan)_                                                                      ║┊ ⌲ *Permanen* = _80k/grup_
-╰═ ┅ ═══════
+*Rent Price List 🛒*
+ • Bottom = IDR 5.000 (1 Minggu)
+ • Middle = IDR 15.000 (1 Bulan)
+ • Superior = IDR 25.000 (2 Bulan)
 
+Kenapa Harus Sewa Bot Ini?
+*⭐ Bisa Join Ke Grupmu*
 
-༅ _*FITUR BOT*
-
-✧ *Virtex Menu✅*
-✧ *Menu Keren✅*
-✧ *Anti Link✅*
-✧ *Button Menu✅*
-✧ *Anti Sticker✅*
-✧ *Anti Toxic↗️*
-✧ *DLL*
-
-_Total Fitur:_ 560++
-
-◪ _Order Here_
-       ➘
-
-wa.me/${nomorown}
-*Bukan Bot!!!*
-Tapi
-*Owner nya ${conn.user.name}*
+Berminat? Hubungi.
+*wa.me/${nomorown}*
 `
   await conn.relayMessage(m.chat,  {
     requestPaymentMessage: {

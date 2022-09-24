@@ -9,15 +9,15 @@ let xx = await f.json()
 let v = xx.result
 let teks = v.map(v => {
 return `
-Album id : ${v.album_id}
-ID : *${v.id}*
-Judul : *${v.name}*
-Album : ${v.album_name}
-Artist : ${v.artist_list.name}
-Img : ${v.images.url}
-Vip : *${v.vip_flag}*
+ᴀʟʙᴜᴍ: ${v.album_id}
+ɪᴅ: *${v.id}*
+ᴊᴜᴅᴜʟ: *${v.name}*
+ᴀʟʙᴜᴍ: ${v.album_name}
+ᴀʀᴛɪsᴛ: ${v.artist_list.name}
+ɪᴍɢ: ${v.images.url}
+ᴠɪᴘ: *${v.vip_flag}*
       `.trim()
-  }).filter(v => v).join('\n\n▣═━–〈 *SEARCH* 〉–━═▣\n\n')
+  }).filter(v => v).join('\n\n*SEARCH*\n\n')
   m.reply(teks)
             }
 
@@ -26,13 +26,13 @@ if (!text) throw `Contoh:
 ${usedPrefix + command} gustixa`
 let f = await fetch(`https://api.lolhuman.xyz/api/jooxplay?apikey=${global.lolkey}&query=${text}`)
 let x = await f.json()
-let teks = `*Result:*
-*singer:* ${x.result.info.singer}
-*song:* ${x.result.info.song}
-*album:* ${x.result.info.album}
-*date:* ${x.result.info.date}
-*duration:* ${x.result.info.duration}
-*duration:* ${x.result.lirik}
+let teks = `*RESULT*\n
+*sɪɴɢᴇʀ:* ${x.result.info.singer}
+*sᴏɴɢs:* ${x.result.info.song}
+*ᴀʟʙᴜᴍ:* ${x.result.info.album}
+*ᴅᴀᴛᴇ:* ${x.result.info.date}
+*ᴅᴜʀᴀᴛɪᴏɴ:* ${x.result.info.duration}
+*ᴅᴜʀᴀᴛɪᴏɴ:* ${x.result.lirik}
 `
   await conn.sendButton(m.chat, teks, wm, x.result.image, [
                 ['Search!', `${usedPrefix}jooxs ${text}`],
@@ -44,5 +44,6 @@ let teks = `*Result:*
 
 handler.command = handler.help = ['jooxs', 'jooxp']
 handler.tags = ['tools']
-
+handler.register = true
+handler.limit = true
 export default handler

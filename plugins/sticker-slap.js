@@ -14,4 +14,6 @@ conn.sendFile(m.chat, stiker, null, { asSticker: true })
 handler.help = ['slap']
 handler.tags = ['general']
 handler.command = /^slap/i
+handler.register = true
+handler.limit = true
 export default handler

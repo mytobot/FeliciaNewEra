@@ -5,7 +5,7 @@ let handler = async(m, { conn, text }) => {
     if (!text) return conn.reply(m.chat, 'Masukan Teksnya', m)
 
 	axios.get(`https://some-random-api.ml/binary?text=${text}`).then ((res) => {
-	 	let hasil = `Teks : ${text}\nBinary : ${res.data.binary}`
+	 	let hasil = `ᴛᴇᴋs : ${text}\nʙɪɴᴀʀʏ : ${res.data.binary}`
 
     conn.reply(m.chat, hasil, m)
 	})

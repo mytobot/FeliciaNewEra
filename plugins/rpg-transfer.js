@@ -10,10 +10,12 @@ async function handler(m, { conn, args, usedPrefix, command }) {
     if (confirmation[m.sender]) return m.reply('Kamu sedang melakukan transfer!')
     let user = global.db.data.users[m.sender]
     const item = items.filter(v => v in user && typeof user[v] == 'number')
-    let lol = `Use format ${usedPrefix}${command} [type] [value] [number]
-example ${usedPrefix}${command} money 9999 @user
+    let lol = `Format:
+*${usedPrefix}${command} [type] [value] [number]*
+Example:
+*${usedPrefix}${command} money 9999 @Tags*
 
-📍 Transferable items
+*SUPPORTING ITEMS*
 ${item.map(v => `${rpg.emoticon(v)}${v}`.trim()).join('\n')}
 `.trim()
     const type = (args[0] || '').toLowerCase()
@@ -24,18 +26,18 @@ ${item.map(v => `${rpg.emoticon(v)}${v}`.trim()).join('\n')}
     if (!(who in global.db.data.users)) return m.reply(`User ${who} not in database`)
     if (user[type] * 1 < count) return m.reply(`Your *${rpg.emoticon(type)}${type}${special(type)}* is less *${count - user[type]}*`)
     let confirm = `
-Are you sure you want to transfer\n\n🧾Jumlah: *${count}*\n🎁Tipe: ${rpg.emoticon(type)}${type}${special(type)}\n👤Penerima: *@${(who || '').replace(/@s\.whatsapp\.net/g, '')}*\n
-Timeout *60* detik
+*Apakah Kamu Yakin Ingin Transfer?*\n\n🧾 Jumlah: *${count}*\n🎁 Tipe: ${rpg.emoticon(type)}${type}${special(type)}\n👤Penerima: *@${(who || '').replace(/@s\.whatsapp\.net/g, '')}*\n
+TIMEOUT *60* DETIK
 `.trim()
     let c = global.bottime
-    conn.sendButton(m.chat, c, confirm, `${imgr + 'Transfer'}`, [['LANJUT'], ['BATAL']], m, { mentions: [who] })
+    conn.sendButton(m.chat, c, confirm, `${imgr + 'Transfer'}`, [['𝗖𝗢𝗡𝗧𝗜𝗡𝗨𝗘'], ['𝗖𝗔𝗡𝗖𝗘𝗟']], m, { mentions: [who] })
     confirmation[m.sender] = {
         sender: m.sender,
         to: who,
         message: m,
         type,
         count,
-        timeout: setTimeout(() => (m.reply('Waktu Transfer selesai !'), delete confirmation[m.sender]), 60 * 1000)
+        timeout: setTimeout(() => (m.reply('*Waktu Transfer Selesai*'), delete confirmation[m.sender]), 60 * 1000)
     }
 }
 
@@ -57,11 +59,11 @@ handler.before = async m => {
         let _previous = _user[type] * 1
         user[type] -= count * 1
         _user[type] += count * 1
-        if (previous > user[type] * 1 && _previous < _user[type] * 1) m.reply(`Succes transfer *${count}* ${rpg.emoticon(type)}${type}${special(type)} to *@${(to || '').replace(/@s\.whatsapp\.net/g, '')}*`, null, { mentions: [to] })
+        if (previous > user[type] * 1 && _previous < _user[type] * 1) m.reply(`*✔️ Succes Transfer ${count} ${rpg.emoticon(type)}${type}${special(type)} To @${(to || '').replace(/@s\.whatsapp\.net/g, '')}*`, null, { mentions: [to] })
         else {
             user[type] = previous
             _user[type] = _previous
-            m.reply(`Failted to transfer *${count}* ${rpg.emoticon(type)}${type}${special(type)} to *@${(to || '').replace(/@s\.whatsapp\.net/g, '')}*`, null, { mentions: [to] })
+            m.reply(`Failted To Transfer *${count}* ${rpg.emoticon(type)}${type}${special(type)} to *@${(to || '').replace(/@s\.whatsapp\.net/g, '')}*`, null, { mentions: [to] })
         }
         clearTimeout(timeout)
         delete confirmation[sender]
@@ -71,7 +73,8 @@ handler.before = async m => {
 handler.help = ['transfer', 'tf'].map(v => v + ' [type] [jumlah] [@tag]')
 handler.tags = ['rpg']
 handler.command = /^(transfer|tf)$/i
-
+handler.register = true
+handler.limit = true
 handler.disabled = false
 
 export default handler
