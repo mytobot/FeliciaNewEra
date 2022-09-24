@@ -815,11 +815,11 @@ esteh: 0,
                 else
                     m.exp += xp
                 if (!isPrems && plugin.limit && global.db.data.users[m.sender].limit < plugin.limit * 1) {
-                    this.sendButton(m.chat, `[❗] *Limit Anda Habis, Beberapa Command Tidak Bisa Di Akses*`, author, null, [['Buy Limit', '/buy limit'], ['Cheat Limit', '/ngechit']] , m)
+                    this.sendButton(m.chat, `*LIMIT IS NOT ENOUGH*\n\nSilahkan beli limit untuk menggunakan fitur ini.\n\nCara beli:\n - #buy limit <amount>\nContoh:\n - #buy limit 17`, author, null, [['Buy Limit 1 🎟️', '/buy limit'], ['Buy Limit 5🎟️', '/buy limit 5']] , m)
                     continue // Limit habis
                 }
                 if (plugin.level > _user.level) {
-                    this.sendButton(m.chat, `[💬] Diperlukan level *${plugin.level}* untuk menggunakan perintah ini. Level kamu *${_user.level}🎋*\n*${plugin.level}* level is required to use this command. Your level is *${_user.level}🎋*`, author, null,[['Ok', 'ok']] , m)
+                    this.sendButton(m.chat, `*LEVELS NOT ENOUGH*\n\nDiperlukan level *${plugin.level}* untuk menggunakan perintah ini.\n\n📊Level Kamu *${_user.level}*`, author, null,[['Ok', 'ok']] , m)
                     continue // If the level has not been reached
                 }
                 let extra = {
@@ -861,7 +861,7 @@ esteh: 0,
                             for (let [jid] of global.owner.filter(([number, _, isDeveloper]) => isDeveloper && number)) {
                                 let data = (await conn.onWhatsApp(jid))[0] || {}
                                 if (data.exists)
-                                    m.reply(`*📮HAY OWNER*\n\n_Laporan Eror terdeteksi_\n\nEROR DI 🗂️ Plugin:* ${m.plugin}\n*📤 Dari:* ${m.sender}\n*🗳️ID:* ${m.chat}\n*📑 Command Eror:* ${usedPrefix}${command} ${args.join(' ')}\n⚠️ *Logs Eror:*\n\n\`\`\`${text}\`\`\``.trim(), data.jid)
+                                    m.reply(`*HI MY LORD*\n\n_Laporan Eror Terdeteksi_\n\nEROR DI 🗂️ Plugin:* ${m.plugin}\n*📤 Dari:* ${m.sender}\n*🗳️ID:* ${m.chat}\n*📑 Command Eror:* ${usedPrefix}${command} ${args.join(' ')}\n⚠️ *Logs Eror:*\n\n\`\`\`${text}\`\`\``.trim(), data.jid)
                             }
                         m.reply(text)
                     }
@@ -875,7 +875,7 @@ esteh: 0,
                         }
                     }
                     if (m.limit)
-                        m.reply(' ️Kamu menggunakan fitur limit\n╰► - 1 Limit') // lain kali jangan lupa tanda kurung nya ya! ... fixed by Fokusdotid (Fokus ID)
+                        m.reply('*Used 1 Limit 🎟️*') // lain kali jangan lupa tanda kurung nya ya! ... fixed by Fokusdotid (Fokus ID)
                 }
                 break
             }
@@ -1030,7 +1030,7 @@ Untuk mematikan fitur ini, ketik
 *.off antidelete*
 
 Untuk menghapus pesan yang dikirim BOT, reply pesan dengan perintah
-*.delete*`, author, [['OFF FITURE', '.off antidelete'],['MENU', '.menu']], msg, adReply)
+*.delete*`, author, [['Turn Off', '.off antidelete'],['Menu', '.menu']], msg, adReply)
         this.copyNForward(msg.chat, msg).catch(e => console.log(e, msg))
     } catch (e) {
         console.error(e)
@@ -1041,34 +1041,34 @@ Untuk menghapus pesan yang dikirim BOT, reply pesan dengan perintah
 dfail
  */
 global.dfail = (type, m, conn) => {
-    let nmsr = `👋 Hai *@${m.sender.split("@")[0]}*, `
+    let nmsr = `*Mohon Maaf @${m.sender.split("@")[0]}*, `
     let msg = {
-        rowner: `*${htki} 𝗜𝗡𝗙𝗢 ${htka}*\n
-${nmsr} Perintah ini hanya dapat digunakan oleh *OWWNER* !`,
-        owner: `*${htki} 𝗜𝗡𝗙𝗢 ${htka}*\n
-${nmsr} Perintah ini hanya dapat digunakan oleh *Owner Bot* !`,
-        mods: `*${htki} 𝗜𝗡𝗙𝗢 ${htka}*\n
-${nmsr} Perintah ini hanya dapat digunakan oleh *Moderator* !`,
-        premium: `*${htki} 𝗜𝗡𝗙𝗢 ${htka}*\n
-${nmsr} Perintah ini hanya untuk member *Premium* !`,
-        group: `*${htki} 𝗜𝗡𝗙𝗢 ${htka}*\n
-${nmsr} Perintah ini hanya dapat digunakan di grup !`,
-        private: `*${htki} 𝗜𝗡𝗙𝗢 ${htka}*\n
-${nmsr} Perintah ini hanya dapat digunakan di Chat Pribadi !`,
-        admin: `*${htki} 𝗜𝗡𝗙𝗢 ${htka}*\n
-${nmsr} Perintah ini hanya untuk *Admin* grup !`,
-        botAdmin: `*${htki} 𝗜𝗡𝗙𝗢 ${htka}*\n
-${nmsr} Jadikan bot sebagai *Admin* untuk menggunakan perintah ini !`,
-        unreg: `*${htki} 𝗦𝗘𝗥𝗩𝗘𝗥 ${htka}*\n
-${nmsr} Silahkan daftar ke database terlebih dahulu untuk menggunakan bot ini lebih lanjut *Ketik:*\n\n*#daftar nama.umur*\n\nContoh: *#daftar Fangz.15*`,
-        nsfw: `*${htki} 𝗜𝗡𝗙𝗢 ${htka}*\n
-${nmsr} NSFW tidak aktif, Silahkan hubungi Team Bot Discussion untuk mengaktifkan fitur ini !`,
-        rpg: `*${htki} 𝗜𝗡𝗙𝗢 ${htka}*\n
-${nmsr} RPG tidak aktif, Silahkan hubungi Team Bot Discussion Untuk mengaktifkan fitur ini !`,
-        restrict: `*${htki} 𝗜𝗡𝗙𝗢 ${htka}*\n
-${nmsr} Fitur ini di *disable* !`
+        rowner: `𝗖𝗠𝗗 𝗥𝗲𝗷𝗲𝗰𝘁𝗲𝗱\n
+${nmsr} *Perintah ini hanya dapat digunakan oleh OWNER!*`,
+        owner: `𝗖𝗠𝗗 𝗥𝗲𝗷𝗲𝗰𝘁𝗲𝗱\n
+${nmsr} *Perintah ini hanya dapat digunakan oleh OWNER!*`,
+        mods: `𝗖𝗠𝗗 𝗥𝗲𝗷𝗲𝗰𝘁𝗲𝗱\n
+${nmsr} *Perintah ini hanya dapat digunakan oleh MODERATOR!*`,
+        premium: `𝗖𝗠𝗗 𝗥𝗲𝗷𝗲𝗰𝘁𝗲\n
+${nmsr} *Perintah ini hanya untuk user PREMIUM!*`,
+        group: `𝗖𝗠𝗗 𝗥𝗲𝗷𝗲𝗰𝘁𝗲𝗱\n
+${nmsr} *Perintah ini hanya dapat digunakan di GRUP!*\n\nhttps://chat.whatsapp.com/JPXhbeh6DsI6G8guMGKrEQ`,
+        private: `𝗖𝗠𝗗 𝗥𝗲𝗷𝗲𝗰𝘁𝗲𝗱\n
+${nmsr} *Perintah ini hanya dapat digunakan di CHAT PRIBADI!*`,
+        admin: `𝗖𝗠𝗗 𝗥𝗲𝗷𝗲𝗰𝘁𝗲𝗱\n
+${nmsr} *Perintah ini hanya untuk ADMIN GRUP!*`,
+        botAdmin: `𝗖𝗠𝗗 𝗥𝗲𝗷𝗲𝗰𝘁𝗲𝗱\n
+${nmsr} *Jadikan bot sebagai ADMIN untuk menggunakan perintah ini!*`,
+        unreg: `𝗡𝗢𝗧 𝗥𝗘𝗚𝗜𝗦𝗧𝗘𝗥𝗘𝗗\n
+${nmsr} *Silahkan daftar ke database terlebih dahulu untuk menggunakan bot ini.*\n\n*Ketik: #daftar nama.umur*\nContoh: *#daftar Kitsune.17*`,
+        nsfw: `𝗖𝗠𝗗 𝗥𝗲𝗷𝗲𝗰𝘁𝗲𝗱*\n
+${nmsr} NSFW tidak aktif, Silahkan hubungi owner  untuk mengaktifkan fitur ini!`,
+        rpg: `𝗖𝗠𝗗 𝗥𝗲𝗷𝗲𝗰𝘁𝗲𝗱\n
+${nmsr} RPG tidak aktif, Silahkan hubungi owner mengaktifkan fitur ini!`,
+        restrict: `𝗖𝗠𝗗 𝗥𝗲𝗷𝗲𝗰𝘁𝗲𝗱\n
+${nmsr} *Fitur Ini Turn Off*`
     }[type]
-    if (msg) return conn.sendButton(m.chat, hiasan, msg, thumbEror, [['SEWA BOT', '.sewabot'],['OKE', 'Ok'],['SPEED', '.speed']],m)
+    if (msg) return conn.sendButton(m.chat, hiasan, msg, thumbEror, [['𝐎𝐖𝐍𝐄𝐑', '.owner'],['𝐌𝐄𝐍𝐔', '.menu'],['𝐃𝐎𝐍𝐀𝐒𝐈', '.donasi']],m)
 }
     
 let file = global.__filename(import.meta.url, true)
