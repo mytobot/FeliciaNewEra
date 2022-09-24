@@ -5,7 +5,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     }[(args[0] || '')]
     if (isClose === undefined)
         throw `
-*Format salah! Contoh :*
+*FORMAT SALAH, Contoh:*
   *${l}❌${r} ${usedPrefix + command} close*
   *${l}✅${r} ${usedPrefix + command} open*
 `.trim()

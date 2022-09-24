@@ -1,8 +1,8 @@
 import moment from 'moment-timezone'
 let handler = async (m, { conn }) => {
-  if (!m.quoted) m.reply('*Reply message*')
+  if (!m.quoted) m.reply('*Reply Message Bot*')
                 let msg = await conn.serializeM(await m.getQuotedObj())
-                if (!m.quoted.isBaileys) throw '*The message was not sent by a bot!*'
+                if (!m.quoted.isBaileys) throw '*Pesan Itu Tidak Dikirim Oleh Bot.*'
                 let teks = ''
                 for (let i of msg.userReceipt) {
                     let read = i.readTimestamp

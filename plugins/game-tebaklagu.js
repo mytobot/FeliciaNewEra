@@ -9,7 +9,7 @@ let imgr = flaaa.getRandom()
     conn.tebaklagu = conn.tebaklagu ? conn.tebaklagu : {}
     let id = m.chat
     if (id in conn.tebaklagu) {
-        conn.sendButton(m.chat, hiasan, 'Masih ada soal yang belum selesai', thumb, butons, conn.tebaklagu[id][0])
+        conn.sendButton(m.chat, hiasan, '*Selesaikan Dulu Soal Ini*', thumb, butons, conn.tebaklagu[id][0])
         throw false
     }
     let res = await fetch(`https://api.xteam.xyz/game/tebaklagu?id=${spotify_id}&apikey=NezukoTachibana281207`)
@@ -21,27 +21,27 @@ let imgr = flaaa.getRandom()
     let wktuhbis = `https://telegra.ph/file/766634332da2be211976e.jpg`
 
     let caption = `
-*TEBAK LAGU*
-Penyanyi: ${json.artist}
+*GAME TEBAK LAGU*
 
-Timeout *${(timeout / 1000).toFixed(2)} detik*
-Ketik *${usedPrefix}hlag* untuk bantuan
-Bonus: ${poin} XP
+*🎤ᴘᴇɴʏᴀɴʏɪ:* ${json.artist}
+*⏱️ ᴛɪᴍᴇᴏᴜᴛ: ${(timeout / 1000).toFixed(2)} detik*
+*🔎 ʜɪɴᴛ:* ${usedPrefix}hlag* untuk bantuan
+*🎁 ᴘʀɪᴢᴇ:* ${poin} XP
 
-*[❗]Gesek pesan ini untuk menjawab!*`.trim()
+*📍ʙᴀʟᴀs ᴘᴇsᴀɴ ɪɴɪ ᴜɴᴛᴜᴋ ᴍᴇɴᴊᴀᴡᴀʙ*`.trim()
     conn.tebaklagu[id] = [
         await conn.sendButton(m.chat, bottime, caption, `${imgr + command}`, buttons, m),
         json, poin,
         setTimeout(() => {
-            if (conn.tebaklagu[id]) conn.sendButton(m.chat, hiasan, `Waktu habis!\nJawabannya adalah *${json.judul}*`, wktuhbis, [
-                ['COBA LAGI', '/tebaklagu']
+            if (conn.tebaklagu[id]) conn.sendButton(m.chat, hiasan, `*⏱️ Waktu Habis*\n📑 Jawabannya Adalah *${json.judul}*`, wktuhbis, [
+                ['𝐓𝐄𝐁𝐀𝐊 𝐋𝐀𝐆𝐔', '/tebaklagu']
             ], conn.tebaklagu[id][0])
             delete conn.tebaklagu[id]
         }, timeout)
     ]
     await conn.sendFile(m.chat, json.preview, 'coba-lagi.mp3', '', m)
     } else if (json.artist == '404') {
-    m.reply(`*Ulangi! Command ${usedPrefix + command} Karena ${json.judul}*`)
+    m.reply(`*Ulangi Command ${usedPrefix + command} Karena ${json.judul}*`)
     }
 }
 handler.help = ['tebaklagu']
@@ -51,10 +51,10 @@ handler.command = /^tebaklagu/i
 export default handler
 
 const buttons = [
-    ['BANTUAN', '/hlag'],
-    ['SUREND', 'menyerah']
+    ['🔎', '/hlag'],
+    ['𝐍𝐘𝐄𝐑𝐀𝐇', 'menyerah']
 ]
 
 const butons = [
-    ['OKE', 'Ok']
+    ['𝐎𝐊𝐄', 'Ok']
 ]

@@ -1,5 +1,7 @@
+
 let handler = async (m, { conn }) => {
-  let stats = Object.entries(db.data.stats).map(([key, val]) => {
+  let imgr = flaaa.getRandom()
+  let stats = Object.entries(global.db.data.stats).map(([key, val]) => {
     let name = Array.isArray(plugins[key]?.help) ? plugins[key]?.help?.join(' & ') : plugins[key]?.help || key 
     if (/exec/.test(name)) return
     return { name, ...val }
@@ -7,13 +9,21 @@ let handler = async (m, { conn }) => {
   stats = stats.sort((a, b) => b.total - a.total)
   let txt = stats.slice(0, 10).map(({ name, total, last }, idx) => {
     if (name.includes('-') && name.endsWith('.js')) name = name.split('-')[1].replace('.js', '')
-    return `(${idx + 1})\nCommand : *${name}*\nHit : *${total}x*\nLast Used : *${getTime(last)}*`
-  }).join`\n\n`
-  m.reply(`Dashboard *${conn.user.name}*\n\n${txt}`)
+    return `${htki} ${idx + 1} ${htka}
+*${htjava} C M D ${htjava}*
+${name}
+
+*${htjava} H I T ${htjava}*
+${total}
+
+*${htjava} T I M E ${htjava}*
+${getTime(last)}
+`}).join`\n\n`
+  conn.sendButton(m.chat, hiasan, txt, `${imgr + 'Dashboard'}`, [['LISTPC', '.listpc'],['MENU', '.menu']],m)
 }
 handler.help = ['dashboard']
-handler.tags = ['misc']
-handler.command = /^dashboard$/i
+handler.tags = ['info']
+handler.command = /^d(as(hbo(ard?|r)|bo(ard?|r))|b)$/i
 
 export default handler
 
@@ -32,8 +42,8 @@ export function parseMs(ms) {
 
 export function getTime(ms) {
   let now = parseMs(+new Date() - ms)
-  if (now.days) return `${now.days} days ago`
-  else if (now.hours) return `${now.hours} hours ago`
-  else if (now.minutes) return `${now.minutes} minutes ago`
-  else return `a few seconds ago`
+  if (now.days) return `${now.days} Hari yang lalu`
+  else if (now.hours) return `${now.hours} Jam yang lalu`
+  else if (now.minutes) return `${now.minutes} Menit yang lalu`
+  else return `Barusan`
 }

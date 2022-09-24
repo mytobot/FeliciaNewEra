@@ -1,38 +1,30 @@
 let handler = async (m, { conn }) => {
 let info = `
-*${htki} INFO BOT ${htka}*
+*${htki} PUSH EXP ${htka}*
 
-Gunakan Game ini dengan bijak
-• Dilarang spam
-• Dilarang Keras bermain
+*KEUNTUNGAN BERMAIN*
 
-
-◪ *Keuntungan bermain*
-
-1. Mendapatkan Banyak exp
+1. Seru
 2. Mudah
-3. Menghilangkan rasa gabut
-4. Seru
+3. Mendapatkan Banyak Exp
+4. Menghilangkan Rasa Gabut
 
-◪ *Kekurangan Bermain*
-1. Kecanduan
-
-Selamat bermain & Mencari exp
+*Tips: Sesuai Untuk Push EXP Santai*
 `
 const sections = [
    {
 	title: `❪ LIST`,
 	rows: [
-	    {title: "┈┈┈┈ Tebak Kata ┈┈┈┈", rowId: '.tebakkata', description: '╰► Push Exp' },
-	    {title: "┈┈┈┈ Tebak Gambar ┈┈┈┈", rowId: '.tebakgambar', description: '╰► Push Exp' },
-	    {title: "┈┈┈┈ Tebak Lagu ┈┈┈┈", rowId: '.tebaklagu', description: '╰► Push Exp' },
-	{title: "┈┈┈┈ Tebak Jenaka ┈┈┈┈", rowId: '.tebakjenaka', description: '╰► Push Exp' },
-	{title: "┈┈┈┈ Tebak Logo ┈┈┈┈", rowId: '.tebaklogo', description: '╰► Push Exp' }
+	    {title: "🎮 TEBAK KATA", rowId: '.tebakkata', description: 'Menebak Kata Melalui Ciri-Ciri Kata-nya' },
+	    {title: "🎮 TEBAK GAMBAR", rowId: '.tebakgambar', description: 'Menebak Kalimat Melalui Gambar' },
+	    {title: "🎮 TEBAK LAGU", rowId: '.tebaklagu', description: 'Menebak Judul Lagu' },
+	{title: "🎮 TEBAK JENAKA", rowId: '.tebakjenaka', description: 'Menebak Untuk Sakit' },
+	{title: "🎮 TEBAK LOGO", rowId: '.tebaklogo', description: 'Menebak Suatu Logo' }
 	]
     }, {
 	title: `❪ UNDANG TEMAN`,
 	rows: [
-	    {title: "┈┈┈┈ Referal ┈┈┈┈", rowId: '.ref', description: '╰► Undang teman mu, agar bisa mendapatkan Ribuan Exp' },
+	    {title: "💌 REFEREAL", rowId: '.ref', description: 'Udang Temanmu Untuk Bermain Bot Ini (Prize Exp Untukmu Dan Temanmu)' },
 	]
     },
 ]
@@ -41,7 +33,7 @@ const listMessage = {
   text: ' ',
   footer: info,
   title: null,
-  buttonText: "Click Here",
+  buttonText: "🎮 𝐂𝐇𝐎𝐎𝐒𝐄 𝐆𝐀𝐌𝐄 🎮",
   sections
 }
 await conn.sendMessage(m.chat, listMessage, { quoted: m})

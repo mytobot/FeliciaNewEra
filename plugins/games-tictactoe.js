@@ -36,7 +36,7 @@ Ketik *nyerah* untuk nyerah
         if (room.x !== room.o) await conn.sendButton(room.x, str, author, ['Nyerah', 'nyerah'], m, {
             mentions: conn.parseMention(str)
         })
-        await conn.sendButton(room.o, str, author, ['Nyerah', 'nyerah'], m, {
+        await conn.sendButton(room.o, str, author, ['𝐍𝐘𝐄𝐑𝐀𝐇', 'nyerah'], m, {
             mentions: conn.parseMention(str)
         })
     } else {

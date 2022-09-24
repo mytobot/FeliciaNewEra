@@ -1,7 +1,7 @@
 let handler = async (m, { conn, text, isROwner, isOwner }) => {
-  if (!text) throw "gimme a name grup"
+  if (!text) throw "*Example: #setname 𝗙𝗲𝗹𝗶𝗰𝗶𝗮 𝗕𝗼𝘁 𝗙𝗮𝗻 𝗖𝗼𝗺𝗺𝘂𝗻𝗶𝘁𝘆*"
   await conn.groupUpdateSubject(m.chat, text)
- m.reply(`${text ? `${text}` : 'None'} Now is name this groups`)
+ m.reply(`*${text ? `${text}` : 'None'}*\n\nNama Group Sekarang.`)
 }
 handler.help = ['setname <teks>']
 handler.tags = ['group']

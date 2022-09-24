@@ -6,7 +6,7 @@ export async function before(m) {
         return !0
     this.tebakkalimat = this.tebakkalimat ? this.tebakkalimat : {}
     if (!(id in this.tebakkalimat))
-        return conn.sendButton(m.chat, 'Soal itu telah berakhir', author, null, buttontebakkalimat, m)
+        return conn.sendButton(m.chat, '*Soal Itu Telah Berakhir*', author, null, buttontebakkalimat, m)
     if (m.quoted.id == this.tebakkalimat[id][0].id) {
         let isSurrender = /^((me)?nyerah|surr?ender)$/i.test(m.text)
         if (isSurrender) {
@@ -18,15 +18,15 @@ export async function before(m) {
         // m.reply(JSON.stringify(json, null, '\t'))
         if (m.text.toLowerCase() == json.jawaban.toLowerCase().trim()) {
             global.db.data.users[m.sender].exp += this.tebakkalimat[id][2]
-            conn.sendButton(m.chat, `*Benar!*\n+${this.tebakkalimat[id][2]} XP`, author, null, buttontebakkalimat, m)
+            conn.sendButton(m.chat, `*✅BENAR*\n+${this.tebakkalimat[id][2]} XP`, author, null, buttontebakkalimat, m)
             clearTimeout(this.tebakkalimat[id][3])
             delete this.tebakkalimat[id]
         } else if (similarity(m.text.toLowerCase(), json.jawaban.toLowerCase().trim()) >= threshold)
-            m.reply(`*Dikit Lagi!*`)
+            m.reply(`*Hampir Benar*`)
         else
-            conn.sendButton(m.chat, `*Salah!*`, author, null, [
-                ['Hint', '/hkal'],
-                ['Nyerah', 'menyerah']
+            conn.sendButton(m.chat, `*Salah*`, author, null, [
+                ['🔎', '/hkal'],
+                ['𝐍𝐘𝐄𝐑𝐀𝐇', 'menyerah']
             ], m)
     }
     return !0
@@ -34,5 +34,5 @@ export async function before(m) {
 export const exp = 0
 
 const buttontebakkalimat = [
-    ['tebakkalimat', '/tebakkalimat']
+    ['𝐓𝐄𝐁𝐀𝐊 𝐊𝐀𝐋𝐈𝐌𝐀𝐓', '/tebakkalimat']
 ]

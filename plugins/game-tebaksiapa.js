@@ -1,30 +1,32 @@
 import fetch from 'node-fetch'
-let timeout = 120000
-let poin = 4999
+let timeout = 60000
+let poin = 7999
 let handler = async (m, { conn, command, usedPrefix }) => {
 let imgr = flaaa.getRandom()
 
     conn.tebaksiapa = conn.tebaksiapa ? conn.tebaksiapa : {}
     let id = m.chat
     if (id in conn.tebaksiapa) {
-        conn.sendButton(m.chat, 'Masih ada soal belum terjawab di chat ini', author, null, buttons, conn.tebaksiapa[id][0])
+        conn.sendButton(m.chat, '*Selesaikan Dulu Soal Ini*', author, null, buttons, conn.tebaksiapa[id][0])
         throw false
     }
     let res = await fetch('https://anabotofc.herokuapp.com/api/kuis/siapaaku?apikey=AnaBot')
     let json = await res.json()
     let caption = `
-${json.soal}
+*GAME TEBAK SIAPA*
 
-Timeout *${(timeout / 1000).toFixed(2)} detik*
-Ketik ${usedPrefix}hsia untuk bantuan
-Bonus: ${poin} XP
+*${json.soal}*
+
+*⏱️ ᴛɪᴍᴇᴏᴜᴛ: ${(timeout / 1000).toFixed(2)}s*
+*🔎 ʜɪɴᴛ:* ${usedPrefix}hsia ᴜɴᴛᴜᴋ ʙᴀɴᴛᴜᴀɴ
+*🎁 ᴘʀɪᴢᴇ: ${poin} ᴇxᴘ
     `.trim()
     conn.tebaksiapa[id] = [
         await conn.sendButton(m.chat, caption, author, `${imgr + command}`, buttons, m),
         json, poin,
         setTimeout(() => {
-            if (conn.tebaksiapa[id]) conn.sendButton(m.chat, `Waktu habis!\nJawabannya adalah *${json.jawaban}*`, author, null, [
-                ['tebaksiapa', '/tebaksiapa']
+            if (conn.tebaksiapa[id]) conn.sendButton(m.chat, `*⏱️ Waktu Habis*\n📑 Jawabannya Adalah *${json.jawaban}*`, author, null, [
+                ['𝐓𝐄𝐁𝐀𝐊 𝐒𝐈𝐀𝐏𝐀', '/tebaksiapa']
             ], conn.tebaksiapa[id][0])
             delete conn.tebaksiapa[id]
         }, timeout)
@@ -37,6 +39,6 @@ handler.command = /^tebaksiapa/i
 export default handler
 
 const buttons = [
-    ['Hint', '/hsia'],
-    ['Nyerah', 'menyerah']
+    ['🔎', '/hsia'],
+    ['𝐍𝐘𝐄𝐑𝐀𝐇', 'menyerah']
 ]

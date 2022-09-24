@@ -4,30 +4,31 @@ let handler = async (m, { conn, participants, groupMetadata }) => {
     const groupAdmins = participants.filter(p => p.admin)
     const listAdmin = groupAdmins.map((v, i) => `${i + 1}. @${v.id.split('@')[0]}`).join('\n')
     const owner = groupMetadata.owner || groupAdmins.find(p => p.admin === 'superadmin')?.id || m.chat.split`-`[0] + '@s.whatsapp.net'
-    let text = `*「 Group Information 」*\n
-*ID:* 
+    let text = `*「 GROUP INFORMATION 」*\n
+*ɪᴅ:* 
 ${groupMetadata.id}
-*Name:* 
+*ɴᴀᴍᴇ:* 
 ${groupMetadata.subject}
-*Description:* 
+*ᴅᴇsᴄʀɪᴘᴛɪᴏɴ:* 
 ${groupMetadata.desc?.toString() || 'unknown'}
-*Total Members:*
-${participants.length} Members
-*Group Owner:* 
+*ᴛᴏᴛᴀʟ ᴍᴇᴍʙᴇʀ:*
+${participants.length} ᴍᴇᴍʙᴇʀ
+*ɢʀᴏᴜᴘ ᴏᴡɴᴇʀ:* 
 @${owner.split('@')[0]}
-*Group Admins:*
+*ɢʀᴏᴜᴘ ᴀᴅᴍɪɴ:*
 ${listAdmin}
-*Group Settings:*
-${isBanned ? '✅' : '❌'} Banned
-${welcome ? '✅' : '❌'} Welcome
-${detect ? '✅' : '❌'} Detect
-${del ? '❌' : '✅'} Anti Delete
-${antiLink ? '✅' : '❌'} Anti Link
-*Message Settings:*
-Welcome: ${sWelcome}
-Bye: ${sBye}
-Promote: ${sPromote}
-Demote: ${sDemote}
+*ɢʀᴏᴜᴘ sᴇᴛᴛɪɴɢ:*
+${isBanned ? '✅' : '❌'} ʙᴀɴɴᴇᴅ
+${welcome ? '✅' : '❌'} ᴡᴇʟᴄᴏᴍᴇ
+${detect ? '✅' : '❌'} ᴅᴇᴛᴇᴄᴛ
+${del ? '❌' : '✅'} ᴀɴᴛɪᴅᴇʟᴇᴛᴇ
+${antiLink ? '✅' : '❌'} ᴀɴᴛɪʟɪɴᴋ
+
+*ᴍᴇssᴀɢᴇ sᴇᴛᴛɪɴɢ:*
+ᴡᴇʟᴄᴏᴍᴇ: ${sWelcome}
+ʙʏᴇ: ${sBye}
+ᴘʀᴏᴍᴏᴛᴇ: ${sPromote}
+ᴅᴇᴍᴏᴛᴇ: ${sDemote}
 `.trim()
     conn.sendFile(m.chat, pp, 'pp.jpg', text, m, false, { mentions: [...groupAdmins.map(v => v.id), owner] })
 }

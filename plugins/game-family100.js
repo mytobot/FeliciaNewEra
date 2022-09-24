@@ -1,23 +1,26 @@
 import { family100 } from '@bochilteam/scraper'
-const winScore = 4999
+const winScore = 9999
 async function handler(m) {
     this.game = this.game ? this.game : {}
     let id = 'family100_' + m.chat
     if (id in this.game) {
-        this.reply(m.chat, 'Masih ada kuis yang belum terjawab di chat ini', this.game[id].msg)
+        this.reply(m.chat, '*Selesaikan Dulu Kuis Yang Ini*', this.game[id].msg)
         throw false
     }
     const json = await family100()
     let caption = `
-*Soal:* ${json.soal}
-Terdapat *${json.jawaban.length}* jawaban${json.jawaban.find(v => v.includes(' ')) ? `
-(beberapa jawaban terdapat spasi)
+*GAME FAMILY100*
+
+*📔 sᴏᴀʟ:* ${json.soal}
+
+Terdapat *${json.jawaban.length}* Jawaban ${json.jawaban.find(v => v.includes(' ')) ? `
+(Beberapa Jawaban Terdapat Spasi)
 `: ''}
-+${winScore} XP tiap jawaban benar
++${winScore} EXP Setiap Jawaban Benar
     `.trim()
     this.game[id] = {
         id,
-        msg: await this.sendButton(m.chat, caption, author, null, [['Nyerah', 'nyerah']], m),
+        msg: await this.sendButton(m.chat, caption, author, null, [['𝐌𝐄𝐍𝐘𝐄𝐑𝐀𝐇', 'nyerah']], m),
         ...json,
         terjawab: Array.from(json.jawaban, () => false),
         winScore,

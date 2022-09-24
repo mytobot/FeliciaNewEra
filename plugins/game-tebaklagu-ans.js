@@ -6,27 +6,27 @@ export async function before(m) {
         return !0
     this.tebaklagu = this.tebaklagu ? this.tebaklagu : {}
     if (!(id in this.tebaklagu))
-        return conn.sendButton(m.chat, 'Soal itu telah berakhir', author, null, buttontebaklagu, m)
+        return conn.sendButton(m.chat, '*Soal Itu Telah Berakhir*', author, null, buttontebaklagu, m)
     if (m.quoted.id == this.tebaklagu[id][0].id) {
         let isSurrender = /^((me)?nyerah|surr?ender)$/i.test(m.text)
         if (isSurrender) {
             clearTimeout(this.tebaklagu[id][3])
             delete this.tebaklagu[id]
-            return conn.sendButton(m.chat, '*Yah Menyerah :( !*', author, null, buttontebaklagu, m)
+            return conn.sendButton(m.chat, '*Menyerah Ya.*', author, null, buttontebaklagu, m)
         }
         let json = JSON.parse(JSON.stringify(this.tebaklagu[id][1]))
         // m.reply(JSON.stringify(json, null, '\t'))
         if (m.text.toLowerCase() == json.judul.toLowerCase().trim()) {
             global.db.data.users[m.sender].exp += this.tebaklagu[id][2]
-            conn.sendButton(m.chat, `*Benar!*\n+${this.tebaklagu[id][2]} XP`, author, null, buttontebaklagu, m)
+            conn.sendButton(m.chat, `*✅BENAR*\n+${this.tebaklagu[id][2]} XP`, author, null, buttontebaklagu, m)
             clearTimeout(this.tebaklagu[id][3])
             delete this.tebaklagu[id]
         } else if (similarity(m.text.toLowerCase(), json.judul.toLowerCase().trim()) >= threshold)
-            m.reply(`*Dikit Lagi!*`)
+            m.reply(`*Hampir Benar*`)
         else
-            conn.sendButton(m.chat, `*Salah!*`, author, null, [
-                ['Hint', '/hlag'],
-                ['Nyerah', 'menyerah']
+            conn.sendButton(m.chat, `*Salah*`, author, null, [
+                ['🔎', '/hlag'],
+                ['𝐍𝐘𝐄𝐑𝐀𝐇', 'menyerah']
             ], m)
     }
     return !0
@@ -34,5 +34,5 @@ export async function before(m) {
 export const exp = 0
 
 const buttontebaklagu = [
-    ['tebaklagu', '/tebaklagu']
+    ['𝐓𝐄𝐁𝐀𝐊 𝐋𝐀𝐆𝐔', '/tebaklagu']
 ]

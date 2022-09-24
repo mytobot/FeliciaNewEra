@@ -8,8 +8,15 @@ let urut = text.split`|`
   let thm = urut[0]
   let text1 = urut[1]
   let text2 = urut[2]
-if (!text) throw `Contoh penggunaan ${usedPrefix}${command} id|teks1|teks2
-*List id:*
+if (!text) throw `*MEME MAKER*
+
+Contoh Penggunaan:
+*${usedPrefix}${command} ID|teks1|teks2*
+
+Example:
+*${usedPrefix}${command} 61516|Ketika|Tikati*
+
+*LIST ID:*
 • 21735 The
 • 61516 Philosoraptor
 • 61520 Futurama
@@ -112,7 +119,7 @@ if (!text) throw `Contoh penggunaan ${usedPrefix}${command} id|teks1|teks2
 • 259237855 Laughing`
 let res = await fetch(`https://api.imgflip.com/caption_image?template_id=${thm}&username=Wudysoft&password=Wudysoft&text0=${text1}&text1=${text2}`)
   let x = await res.json()
-  return conn.sendButton(m.chat, `Result from *${command}*`, author, await(await fetch(x.data.url)).buffer(), [['🎀 Menu', '/menu'], ['🔄 Sticker 🔄', '.s']], m,)
+  return conn.sendButton(m.chat, `Result From *${command}*`, author, await(await fetch(x.data.url)).buffer(), [['🎀 Menu', '/menu'], ['🔄 Sticker 🔄', '.s']], m,)
 }
 handler.command = /^(memaker)$/i
 

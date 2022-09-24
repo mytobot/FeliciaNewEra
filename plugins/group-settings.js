@@ -1,13 +1,13 @@
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
 let text = `*${htki} GROUP ${htka}*
 
+ᴘɪʟɪʜ ᴏᴘsɪ ᴅɪʙᴀᴡᴀʜ sᴇsᴜᴀɪ ᴋᴇʙᴜᴛᴜʜᴀɴ
 
-              📮ᴍᴀᴜ ᴍᴏᴅᴇ ᴀᴘᴀ?
 `
 const templateButtons = [
-    {index: 3, urlButton: {displayText: '💬 ᴏᴡɴᴇʀ', url: 'https://wa.me/6288215689772'}},
-    {index: 4, quickReplyButton: {displayText: 'Open', id: '.g open'}},
-    {index: 5, quickReplyButton: {displayText: 'Close', id: '.g close'}},
+    {index: 3, urlButton: {displayText: 'ᴏᴡɴᴇʀ', url: 'https://wa.me/6281347927862'}},
+    {index: 4, quickReplyButton: {displayText: '𝗢𝗣𝗘𝗡', id: '.g open'}},
+    {index: 5, quickReplyButton: {displayText: '𝗖𝗟𝗢𝗦𝗘', id: '.g close'}},
 ]
 let tm = {
 text: text,

@@ -10,9 +10,9 @@ let pp = await conn.profilePictureUrl(who).catch(_ => hwaifu.getRandom())
 let name = await conn.getName(who)
 let stiker = false
 
-    if (!m.quoted) throw 'reply stikernya...'
+    if (!m.quoted) throw '*Reply Sticker.*'
   let mime = m.quoted.mimetype || ''
-  if (!/webp/.test(mime)) throw 'stiker invalid'
+  if (!/webp/.test(mime)) throw 'Stiker Invalid'
   let media = await m.quoted.download()
   let out = Buffer.alloc(0)
     try {

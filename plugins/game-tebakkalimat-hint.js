@@ -4,7 +4,7 @@ let handler = async (m, { conn }) => {
     if (!(id in conn.tebakkalimat)) throw false
     let json = conn.tebakkalimat[id][1]
     conn.sendButton(m.chat, '```' + json.jawaban.replace(/[AIUEOaiueo]/ig, '_') + '```', author, null, [
-        ['Nyerah', 'menyerah']
+        ['𝐍𝐘𝐄𝐑𝐀𝐇', 'menyerah']
     ], m)
 }
 handler.command = /^hkal$/i

@@ -4,14 +4,9 @@ let info = `
 `
 const sections = [
    {
-	title: `𝗝𝗢𝗜𝗡 𝗞𝗘 𝗚𝗥𝗨𝗣 𝗢𝗙𝗙𝗜𝗖𝗜𝗔𝗟 𝗦𝗛𝗜𝗡𝗡 𝗕𝗢𝗧*\n\n\n━━━〔 Dᴏɴ'ᴛ ғᴏʀɢᴇᴛ Dᴏɴᴀᴛɪᴏɴ 〕━━━`,
+	title: `𝗙𝗘𝗟𝗜𝗖𝗜𝗔 𝗕𝗢𝗧 𝗢𝗙𝗙𝗜𝗖𝗜𝗔𝗟 𝗚𝗥𝗢𝗨𝗣\n\n`,
 	rows: [
-	    {title: '💌 › Group Fangz BOT', description: "Group Utama Fangz BOT", rowId:".gcbot"},
-        {title: '✉️ › Grup TokoBot', description: "Group Kedua", rowId:".gcbot2"},
-        {title: '📧 › Group Full Bot', description: "Gruop Ketiga", rowId:".gcbot3"},
-        {title: '🎐 › Owner', description: "Creator Fangz BOT >ω<", rowId:".owner"},
-        {title: '🧿 › Info Fangz BOT', description: "Info Fangz BOT >ω<", rowId:".info"},
-        {title: '📮 › Donasi', description: "Donasi Untuk Fangz ≧▽≦", rowId:".donasi"},
+	    {title: 'Main Group Only 1', description: "Official", rowId:".gcbot"},
 	    ]
       },
 ]
@@ -20,7 +15,7 @@ const listMessage = {
   text: ' ',
   footer: info,
   title: null,
-  buttonText: "Klik di sini",
+  buttonText: "Klik Di Sini",
   sections
 }
 await conn.sendMessage(m.chat, listMessage, { quoted: m})

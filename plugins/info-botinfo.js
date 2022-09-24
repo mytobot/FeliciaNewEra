@@ -52,31 +52,27 @@ let handler = async (m, { conn, usedPrefix, __dirname, text, command }) => {
   let neww = performance.now()
   let speed = neww - old
     conn.sendHydrated(m.chat, 
-    '*––––––『 BOT INFO 』––––––*', 
-`🤖 ɴᴀᴍᴇ: ${_package.name}
-🧩 ᴠᴇʀsɪᴏɴ: ${_package.version}
-📚 ʟɪʙʀᴀʀʏ: ${_package.description}
-👩‍💻 ᴅᴇᴠᴇʟᴏᴘᴇʀ: Fangz
+    '*BOT DASHBOARD*', 
+`*👤 ɴᴀᴍᴇ:* ${_package.name}
+*👑 ᴅᴇᴠᴇʟᴏᴘᴇʀ:* Kitsune & Clara
+*🤖 ᴠᴇʀsɪᴏɴ:* 35.0
+*🔼 ʀᴇʟᴇᴀsᴇ:* 28 September 2021
+*⏳ ᴜᴩᴛɪᴍᴇ:* ${uptime}
+*📁 ᴅᴀᴛᴀʙᴀsᴇ:* ${totalreg}
 
-⏳ ᴜᴩᴛɪᴍᴇ: ${uptime}
-📈 ᴅᴀᴛᴀʙᴀsᴇ: ${totalreg}
+🌐 sᴇʀᴠᴇʀ ɪɴғᴏ :
+ᴩɪɴɢ: ${speed} ᴍs
+ʀᴀᴍ: ${format(totalmem() - freemem())} / ${format(totalmem())}
 
-📅 ᴅᴀᴛᴇ: ${date}
-⌚ ᴛɪᴍᴇ: ${time} ﹙ɢᴍᴛ +5:30﹚
-
-💻 sᴇʀᴠᴇʀ ɪɴғᴏ :
-⮕ ᴩɪɴɢ: ${speed} ᴍs
-⮕ ʀᴀᴍ: ${format(totalmem() - freemem())} / ${format(totalmem())}
-
-💬 ᴡʜᴀᴛsᴀᴩᴩ sᴛᴀᴛᴜs :
-⮕ ${groupsIn.length} - Group Chats
-⮕ ${groupsIn.length} - Groups Joined
-⮕ ${groupsIn.length - groupsIn.length} - Groups Left
-⮕ ${chats.length - groupsIn.length} - Personal Chats
-⮕ ${chats.length} - Total Chats
-`.trim(), './media/botinfo.jpg', 'https://fangzbot.websites.co.in/', '🎀ʙᴏᴛ sᴄʀɪᴩᴛ', null, null, [
-[`👑ᴏᴡɴᴇʀ`, `${usedPrefix}owner`],
-[`💱ᴅᴏɴᴀᴛᴇ`, `${usedPrefix}donate`]
+🪀 ᴡʜᴀᴛsᴀᴩᴩ sᴛᴀᴛᴜs :
+${groupsIn.length} - Group Chats
+${groupsIn.length} - Groups Joined
+${groupsIn.length - groupsIn.length} - Groups Left
+${chats.length - groupsIn.length} - Personal Chats
+${chats.length} - Total Chats
+`.trim(), './media/botinfo.jpg', 'https://chat.whatsapp.com/JPXhbeh6DsI6G8guMGKrEQ', 'Group Bot', null, null, [
+[`SEWA BOT`, `${usedPrefix}sewa`],
+[`DONASI`, `${usedPrefix}donate`]
 ], m, {asLocation: true})
 }
 handler.help = ['botinfo']

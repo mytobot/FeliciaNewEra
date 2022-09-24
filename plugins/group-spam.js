@@ -1,9 +1,9 @@
 let handler = async(m, { conn, text }) => {
 
-    if (!text) return conn.reply(m.chat, 'Masukan Teks yang akan dispam!', m)
+    if (!text) return conn.reply(m.chat, '*Example: #groupspam Kitsuneee', m)
 
     let pesan = `${text}`
-    await m.reply('*SPAM DIMULAI!*\n\nNote : Bot akan spam 30 kali')
+    await m.reply('*Bot Akan Spam 30×*')
     await m.reply(pesan)
     await m.reply(pesan)
     await m.reply(pesan)
@@ -34,7 +34,7 @@ let handler = async(m, { conn, text }) => {
     await m.reply(pesan)
     await m.reply(pesan)
 
-    conn.reply(m.chat, '📮Akhir Dari Spam', m)
+    conn.reply(m.chat, '*Selesai Spam 30×*', m)
 }
 handler.help = ['groupspam'].map(v => v + ' <teks>')
 handler.tags = ['group']

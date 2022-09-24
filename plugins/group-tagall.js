@@ -3,13 +3,13 @@ let handler = async(m, { conn, usedPrefix, text, participants }) => {
     let user = global.db.data.users[m.sender]
     let timers = (cooldown - (new Date - user.lastlimit))
     if (new Date - user.lastlimit <= cooldown) return conn.sendButton(m.chat, 
-'*–––––『 COOLDOWN 』–––––*',
-`*ᴛᴀɢ-ᴀʟʟ* ʀᴇᴄᴇɴᴛʟʏ ᴜsᴇᴅ, ᴩʟᴇᴀsᴇ ᴡᴀɪᴛ ᴛɪʟʟ ᴄᴏᴏʟᴅᴏᴡɴ ғɪɴɪsʜ.
+'*COOLDOWN*',
+`*ᴛᴀɢᴀʟʟ sᴇᴅᴀɴɢ ᴄᴏᴏʟᴅᴏᴡɴ*
 
 ⏱️ ${timers.toTimeString()}`.trim(), './media/cooldown.jpg', [[`ᴍᴇɴᴜ`, `${usedPrefix}valor`]], m, {asLocation: true})
-  let teks = `${text ? text : '*––––––『 TAG All 』––––––*'}\n\n${readMore}`
+  let teks = `${text ? text : '*TAG SEMUA ANGGOTA*'}\n\n${readMore}`
 		      	for (let mem of participants) {
-		            teks += `\n@${mem.id.split('@')[0]}`
+		            teks += `\n*• @${mem.id.split('@')[0]}*`
 				}
             await conn.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, )
     user.lastlimit = new Date * 1

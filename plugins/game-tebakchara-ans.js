@@ -6,27 +6,27 @@ export async function before(m) {
         return !0
     this.tebakchara = this.tebakchara ? this.tebakchara : {}
     if (!(id in this.tebakchara))
-        return conn.sendButton(m.chat, 'Soal itu telah berakhir', author, null, buttontebakchara, m)
+        return conn.sendButton(m.chat, '*Soal Itu Telah Berakhir*', author, null, buttontebakchara, m)
     if (m.quoted.id == this.tebakchara[id][0].id) {
         let isSurrender = /^((me)?nyerah|surr?ender)$/i.test(m.text)
         if (isSurrender) {
             clearTimeout(this.tebakchara[id][3])
             delete this.tebakchara[id]
-            return conn.sendButton(m.chat, '*Yah Menyerah :( !*', author, null, buttontebakchara, m)
+            return conn.sendButton(m.chat, '*Menyerah Ya.*', author, null, buttontebakchara, m)
         }
         let json = JSON.parse(JSON.stringify(this.tebakchara[id][1]))
         // m.reply(JSON.stringify(json, null, '\t'))
         if (m.text.toLowerCase() == json.name.toLowerCase().trim()) {
             global.db.data.users[m.sender].exp += this.tebakchara[id][2]
-            conn.sendButton(m.chat, `*Benar!*\n+${this.tebakchara[id][2]} XP`, author, null, buttontebakchara, m)
+            conn.sendButton(m.chat, `*✅ BENAR*\n+${this.tebakchara[id][2]} XP`, author, null, buttontebakchara, m)
             clearTimeout(this.tebakchara[id][3])
             delete this.tebakchara[id]
         } else if (similarity(m.text.toLowerCase(), json.name.toLowerCase().trim()) >= threshold)
-            m.reply(`*Dikit Lagi!*`)
+            m.reply(`*Hampir Benar*`)
         else
-            conn.sendButton(m.chat, `*Salah!*`, author, null, [
+            conn.sendButton(m.chat, `*Salah*`, author, null, [
                 ['Hint', '/hcha'],
-                ['Nyerah', 'menyerah']
+                ['𝐍𝐘𝐄𝐑𝐀𝐇', 'menyerah']
             ], m)
     }
     return !0
@@ -34,5 +34,5 @@ export async function before(m) {
 export const exp = 0
 
 const buttontebakchara = [
-    ['tebakchara', '/tebakchara']
+    ['𝐓𝐄𝐁𝐀𝐊 𝐂𝐇𝐀𝐑𝐀', '/tebakchara']
 ]
