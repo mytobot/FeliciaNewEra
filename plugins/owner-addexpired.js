@@ -1,6 +1,6 @@
 let handler = async (m, { conn, args, usedPrefix, command }) => {
     if (!args[0] || isNaN(args[0])) throw `Masukan angka mewakili jumlah hari!\n\ncontoh:\n${usedPrefix + command} 30`
-
+    
     let who
     if (m.isGroup) who = args[1] ? args[1] : m.chat
     else who = args[1]
@@ -9,8 +9,9 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     var now = new Date() * 1
     if (now < global.db.data.chats[who].expired) global.db.data.chats[who].expired += jumlahHari
     else global.db.data.chats[who].expired = now + jumlahHari
-    let caption = `Berhasil menetapkan hari kedaluarsa untuk ${await conn.getName(who)} selama ${args[0]} hari.\n\${msToDate(global.db.data.chats[who].expired - now)}`
-    conn.sendButton(m.chat, caption, wm, thumbExpired, null, [['PERPANJANG EXPIRED', '/sewabot'], ['CEK EXPIRED', '/cekexpired']], m)
+    let caption = `*Berhasil Menetapkan Hari Kedaluarsa Untuk ${await conn.getName(who)} Selama ${args[0]} Hari*`
+    let imgr = flaaa.getRandom()
+    conn.sendButton(m.chat, caption, wm, `${imgr + command}`, [['PERPANJANG EXPIRED', '/sewabot'], ['CEK EXPIRED', '/cekexpired']], m)
 }
 handler.help = ['addexpired <hari>']
 handler.tags = ['owner']

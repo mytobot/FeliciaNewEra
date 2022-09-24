@@ -42,7 +42,7 @@ let handler  = async (m, { conn, text }) => {
     users[jid].money = Math.floor(users[jid].money)
     users[jid].limit = Math.floor(users[jid].limit)
   }
-  return conn.reply(m.chat,`*📮Berhasil memperbaiki ${total} error di database.*`,m)
+  return conn.reply(m.chat,`*Berhasil Memperbaiki ${total} Error Di Database.*`,m)
 }
 handler.help = ['fix'].map(v => v + ' <database>')
 handler.tags = ['owner']

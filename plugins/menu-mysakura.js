@@ -106,7 +106,7 @@ switch (template) {
         case 'nulis2':
     let ling = `https://hadi-api.herokuapp.com/api/canvas/${args[0]}?text=${text1}`
     await conn.sendButton(m.chat, 'Nih', wm, ling, [
-                ['Next', `${usedPrefix + command}`]
+                ['𝗡𝗘𝗫𝗧', `${usedPrefix + command}`]
             ], m, fdoc)
             break
             
@@ -116,7 +116,7 @@ switch (template) {
         let x = await f.json()
         let captionab = `*Result:* ${x.result}`
         await conn.sendButton(m.chat, captionab, wm, null, [
-                ['Next', `${usedPrefix + command}`]
+                ['𝗡𝗘𝗫𝗧', `${usedPrefix + command}`]
             ], m, fdoc)
             break
             
@@ -131,7 +131,7 @@ switch (template) {
 *update:* ${xA.update}
 `
         await conn.sendButton(m.chat, captionA, wm, null, [
-                ['Next', `${usedPrefix + command}`]
+                ['𝗡𝗘𝗫𝗧', `${usedPrefix + command}`]
             ], m, fdoc)
             break
             
@@ -155,7 +155,7 @@ ${xabt.malam}
         let xabu = await fabu.json()
         let captionabu = `*Result:* ${xabu.result}`
         await conn.sendButton(m.chat, captionabu, wm, null, [
-                ['Next', `${usedPrefix + command}`]
+                ['𝗡𝗘𝗫𝗧', `${usedPrefix + command}`]
             ], m, fdoc)
             break
             
@@ -164,7 +164,7 @@ ${xabt.malam}
         let xabl = await fabl.json()
         let captionabl = `*Result:* ${command}`
         await conn.sendButton(m.chat, captionabl, wm, xabl.result, [
-                ['Next', `${usedPrefix + command}`]
+                ['𝗡𝗘𝗫𝗧', `${usedPrefix + command}`]
             ], m, fdoc)
             break
             
@@ -178,7 +178,7 @@ ${xabt.malam}
 ${xabk.Time}
 `
         await conn.sendButton(m.chat, captionabk, wm, xabk.result.img_url, [
-                ['Next', `${usedPrefix + command}`]
+                ['𝗡𝗘𝗫𝗧', `${usedPrefix + command}`]
             ], m, fdoc)
             break
             
@@ -188,7 +188,7 @@ ${xabk.Time}
         let xabb = await fabb.json()
         let captionabb = `*Result:* ${xabb.result}`
         await conn.sendButton(m.chat, captionabb, wm, null, [
-                ['Next', `${usedPrefix + command}`]
+                ['𝗡𝗘𝗫𝗧', `${usedPrefix + command}`]
             ], m, fdoc)
             break
             
@@ -198,7 +198,7 @@ ${xabk.Time}
         let xabc = await f.json()
         let captionabc = `*Result:* ${xabc.result}`
         await conn.sendButton(m.chat, captionabc, wm, null, [
-                ['Next', `${usedPrefix + command}`]
+                ['𝗡𝗘𝗫𝗧', `${usedPrefix + command}`]
             ], m, fdoc)
             break
             
@@ -218,7 +218,7 @@ ${xabk.Time}
 *location:* ${xabg.location}
 `
         await conn.sendButton(m.chat, captionabg, wm, xabg.avatar, [
-                ['Next', `${usedPrefix + command}`]
+                ['𝗡𝗘𝗫𝗧', `${usedPrefix + command}`]
             ], m, fdoc)
             break
             
@@ -248,7 +248,7 @@ ${xabk.Time}
                 let peabz = await fetch(`https://mysakura.herokuapp.com/api/nsfw/${args[0]}?apikey=sakura404`)
         let xabz = await peabz.json()
         await conn.sendButton(m.chat, `${command}`, wm, xabz.result, [
-                ['Next', `${usedPrefix + command}`]
+                ['𝗡𝗘𝗫𝗧', `${usedPrefix + command}`]
             ], m, fdoc)
             break
             
@@ -259,7 +259,7 @@ ${xabk.Time}
                 let peabg = await fetch(`https://mysakura.herokuapp.com/api/wallpaper/${args[0]}?apikey=sakura404`)
         let xeabg = await peabg.json()
         await conn.sendButton(m.chat, `${command}`, wm, xeabg.result.url, [
-                ['Next', `${usedPrefix + command}`]
+                ['𝗡𝗘𝗫𝗧', `${usedPrefix + command}`]
             ], m, fdoc)
             break
             
@@ -271,7 +271,7 @@ ${xabk.Time}
                 let pesb = await fetch(`https://mysakura.herokuapp.com/api/${args[0]}?apikey=sakura404`)
         let xsb = await pesb.json()
         await conn.sendButton(m.chat, `${command}`, wm, xsb.result.url, [
-                ['Next', `${usedPrefix + command}`]
+                ['𝗡𝗘𝗫𝗧', `${usedPrefix + command}`]
             ], m, fdoc)
             break
             
@@ -290,7 +290,7 @@ ${xabk.Time}
                 let peaa = await fetch(`https://mysakura.herokuapp.com/api/sfw/${args[0]}?apikey=sakura404`)
         let xaa = await peaa.json()
         await conn.sendButton(m.chat, `${command}`, wm, xaa.result.url, [
-                ['Next', `${usedPrefix + command}`]
+                ['𝗡𝗘𝗫𝗧', `${usedPrefix + command}`]
             ], m, fdoc)
             break
             
@@ -298,7 +298,7 @@ ${xabk.Time}
         let pebb = await fetch(`https://mysakura.herokuapp.com/api/${args[0]}?apikey=sakura404`)
         let xbb = await pebb.json()
         await conn.sendButton(m.chat, `*Bucin* ${xbb.result.result}`, wm, null, [
-                ['Next', `${usedPrefix}${command}`]
+                ['𝗡𝗘𝗫𝗧', `${usedPrefix}${command}`]
             ], m, fdoc)
             break
             
@@ -306,7 +306,7 @@ ${xabk.Time}
         let pecc = await fetch(`https://mysakura.herokuapp.com/api/${args[0]}?apikey=sakura404`)
         let xcc = await pecc.json()
         await conn.sendButton(m.chat, `*pantun* ${xcc.result.pantun}`, wm, null, [
-                ['Next', `${usedPrefix}${command}`]
+                ['𝗡𝗘𝗫𝗧', `${usedPrefix}${command}`]
             ], m, fdoc)
             break
             
@@ -314,7 +314,7 @@ ${xabk.Time}
         let pedd = await fetch(`https://mysakura.herokuapp.com/api/${args[0]}?apikey=sakura404`)
         let xdd = await pedd.json()
         await conn.sendButton(m.chat, `*dare* ${xdd.result.dare}`, wm, null, [
-                ['Next', `${usedPrefix}${command}`]
+                ['𝗡𝗘𝗫𝗧', `${usedPrefix}${command}`]
             ], m, fdoc)
             break
             
@@ -322,7 +322,7 @@ ${xabk.Time}
         let peee = await fetch(`https://mysakura.herokuapp.com/api/${args[0]}?apikey=sakura404`)
         let xee = await peee.json()
         await conn.sendButton(m.chat, `*trut* ${xee.result.trut}`, wm, null, [
-                ['Next', `${usedPrefix}${command}`]
+                ['𝗡𝗘𝗫𝗧', `${usedPrefix}${command}`]
             ], m, fdoc)
             break
             
@@ -330,7 +330,7 @@ ${xabk.Time}
         let peff = await fetch(`https://mysakura.herokuapp.com/api/truth/${args[0]}?apikey=sakura404`)
         let xff = await peff.json()
         await conn.sendButton(m.chat, `*truth* ${xff.result.truth}`, wm, null, [
-                ['Next', `${usedPrefix}${command}`]
+                ['𝗡𝗘𝗫𝗧', `${usedPrefix}${command}`]
             ], m, fdoc)
             break
             
@@ -338,7 +338,7 @@ ${xabk.Time}
         let pegg = await fetch(`https://mysakura.herokuapp.com/api/${args[0]}?apikey=sakura404`)
         let xgg = await pegg.json()
         await conn.sendButton(m.chat, `*motivasi* ${xgg.result.motivasi}`, wm, null, [
-                ['Next', `${usedPrefix}${command}`]
+                ['𝗡𝗘𝗫𝗧', `${usedPrefix}${command}`]
             ], m, fdoc)
             break
             
@@ -346,7 +346,7 @@ ${xabk.Time}
         let pehh = await fetch(`https://mysakura.herokuapp.com/api/quote/${args[0]}?apikey=sakura404`)
         let xhh = await pehh.json()
         await conn.sendButton(m.chat, `*quote* ${xhh.quotes}`, wm, null, [
-                ['Next', `${usedPrefix}${command}`]
+                ['𝗡𝗘𝗫𝗧', `${usedPrefix}${command}`]
             ], m, fdoc)
             break
             
@@ -354,7 +354,7 @@ ${xabk.Time}
         let peii = await fetch(`https://mysakura.herokuapp.com/api/quote/${args[0]}?apikey=sakura404`)
         let xii = await peii.json()
         await conn.sendButton(m.chat, `*quote* ${xii.result}`, wm, null, [
-                ['Next', `${usedPrefix}${command}`]
+                ['𝗡𝗘𝗫𝗧', `${usedPrefix}${command}`]
             ], m, fdoc)
             break
             
@@ -363,7 +363,7 @@ ${xabk.Time}
         let pejj = await fetch(`https://mysakura.herokuapp.com/api/quote/${args[0]}?apikey=sakura404`)
         let xjj = await pejj.json()
         await conn.sendButton(m.chat, `*quote* ${xjj.result.quotes}`, wm, null, [
-                ['Next', `${usedPrefix}${command}`]
+                ['𝗡𝗘𝗫𝗧', `${usedPrefix}${command}`]
             ], m, fdoc)
             break
             
@@ -371,7 +371,7 @@ ${xabk.Time}
         let pekk = await fetch(`https://mysakura.herokuapp.com/api/quote/${args[0]}?apikey=sakura404`)
         let xkk = await pekk.json()
         await conn.sendButton(m.chat, `*quote* ${args[0]}`, wm, xkk.result.url, [
-                ['Next', `${usedPrefix}${command}`]
+                ['𝗡𝗘𝗫𝗧', `${usedPrefix}${command}`]
             ], m, fdoc)
             break
             

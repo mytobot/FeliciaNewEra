@@ -17,7 +17,7 @@ contextInfo: { externalAdReply :{
 }
 
 handler.help = ['tesbot']
-handler.tags = ['owner']
-handler.command = ['tesbot']
+handler.tags = ['iwusgs']
+handler.command = ['jehsgd']
 handler.owner = true
 export default handler

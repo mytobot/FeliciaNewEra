@@ -1,7 +1,7 @@
 import { WAProto } from '@adiwajshing/baileys'
 
 let handler = async (m, { conn, command, usedPrefix, text }) => {
-    let thumbMsg = `https://telegra.ph/file/9623ebeacceeff16b1a26.jpg`
+    let imgr = flaaa.getRandom()
     let M = WAProto.WebMessageInfo
     let which = command.replace(/add/i, '')
     if (!m.quoted) throw `Balas pesan dengan perintah *${usedPrefix + command}*`
@@ -9,12 +9,10 @@ let handler = async (m, { conn, command, usedPrefix, text }) => {
     let msgs = global.db.data.msgs
     if (text in msgs) throw `${text} telah terdaftar!`
     msgs[text] = M.fromObject(await m.getQuotedObj()).toJSON()
-    if (global.db.data.chats[m.chat].getmsg) return m.reply(`Berhasil menambahkan pesan ${text}
-    
-Akses dengan mengetik namanya`.trim())
-    else return await conn.sendButton(m.chat, bottime, `Berhasil menambahkan pesan ${text}
-    
-akses dengan ${usedPrefix}get${which} ${text}`, thumbMsg, [['ON GET MSG', '.on getmsg'],['LIST MSG', '.listmsg']], m)
+    if (global.db.data.chats[m.chat].getmsg) return m.reply(`Berhasil menambahkan pesan ${text}    
+Akses dengan mengetik namanya
+`.trim())
+conn.sendButton(m.chat, `Berhasil menambahkan pesan ${text}\nakses dengan ${usedPrefix}get${which} ${text}`, `${botol}`, [['⋮☰ MENU','.menu']],m)
 }
 handler.help = ['vn', 'msg', 'video', 'audio', 'img', 'stiker', 'gif'].map(v => 'add' + v + ' <teks>')
 handler.tags = ['database']

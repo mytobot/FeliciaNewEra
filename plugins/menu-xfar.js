@@ -59,5 +59,5 @@ if (args[0] == 'scdl') {
 
 handler.command = /^(xfr)$/i
 handler.limit = true
-
+handler.tags = ['tools']
 export default handler

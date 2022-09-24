@@ -12,12 +12,12 @@ let xx = await f.json()
 let dapet = xx.articles
 	let row = Object.values(dapet).map((v, index) => ({
 		title: index + ' ' + v.title,
-		description: '\nAuthor: ' + v.author + '\nSource: ' + v.source.name + '\nDescription: ' + v.description + '\nLink: ' + v.url + '\nThumbnail: ' + v.urlToImage + '\nPublished: ' + v.publishedAt,
+		description: '\n*ᴀᴜᴛʜᴏʀ:* ' + v.author + '\n*sᴏᴜʀᴄᴇ:*' + v.source.name + '\n*ᴅᴇsᴄ:* ' + v.description + '\n*ʟɪɴᴋ:* ' + v.url + '\n*ᴛʜᴜᴍʙ:* ' + v.urlToImage + '\n*ᴘᴜʙʟɪsʜᴇᴅ:* ' + v.publishedAt,
 		rowId: usedPrefix + 'ss ' + v.url
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Search Disini ☂️`,
-		description: `⚡ Hai ${name}, Silakan pilih ${command} Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `𝗦𝗲𝗹𝗲𝗰𝘁 𝗡𝗲𝘄𝘀 𝗢𝗽𝘁𝗶𝗼𝗻𝘀`,
+		description: `*Silahkan Pilih Opsi Berita Dibawah...*`,
 		footerText: wm
 	}
 	return conn.sendListM(m.chat, button, row, m)
@@ -53,12 +53,12 @@ let xx = await f.json()
 let dapet = xx.result
 	let row = Object.values(dapet).map((v, index) => ({
 		title: index + ' ' + v.title,
-		description: '\nBerita: ' + v.berita,
+		description: '\n*ɴᴇᴡs:* ' + v.berita,
 		rowId: usedPrefix + 'ss ' + v.berita_url
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Search Disini ☂️`,
-		description: `⚡ Hai ${name}, Silakan pilih ${command} Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `𝗦𝗲𝗹𝗲𝗰𝘁 𝗡𝗲𝘄𝘀 𝗢𝗽𝘁𝗶𝗼𝗻𝘀`,
+		description: `*Silahkan Pilih Opsi Berita Dibawah...*`,
 		footerText: wm
 	}
 	return conn.sendListM(m.chat, button, row, m)
@@ -94,12 +94,12 @@ let json = res.data
 let dapet = json.result
 	let row = Object.values(dapet).map((v, index) => ({
 		title: index + ' ' + v.category,
-		description: '\nDate: ' + v.date + '\nNews: ' + v.news + '\nUrl: ' + v.url + '\nThumb: ' + v.thumbnail,
+		description: '\n*ᴅᴀᴛᴇ:*' + v.date + '\n*ɴᴇᴡs:* ' + v.news + '\n*ᴜʀʟ:* ' + v.url + '\n*ᴛʜᴜᴍʙ:* ' + v.thumbnail,
 		rowId: usedPrefix + 'ss ' + v.url
 	}))
 	let button = {
-		buttonText: `☂️ ${command} Search Disini ☂️`,
-		description: `⚡ Hai ${name}, Silakan pilih ${command} Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
+		buttonText: `𝗦𝗲𝗹𝗲𝗰𝘁 𝗡𝗲𝘄𝘀 𝗢𝗽𝘁𝗶𝗼𝗻𝘀`,
+		description: `*Silahkan Pilih Opsi Berita Dibawah...*`,
 		footerText: wm
 	}
 	return conn.sendListM(m.chat, button, row, m)
@@ -109,5 +109,6 @@ let dapet = json.result
 handler.help = ['newsapi', 'newsapi2', 'news'].map(v => v + ' <app>')
 handler.command = ['newsapi', 'newsapi2', 'news']
 handler.tags = ['internet']
-
+handler.register = true
+handler.limit = true
 export default handler

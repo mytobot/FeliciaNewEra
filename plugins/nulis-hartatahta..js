@@ -2,10 +2,10 @@ let handler = async (m, { conn, text }) => {
     conn.hartatahta = conn.hartatahta ? conn.hartatahta : {}
     if (m.chat in conn.hartatahta) throw 'Masih ada yang sedang membuat\nTeks Harta Tahta\ndi chat ini... tunggu sampai selesai'
     else conn.hartatahta[m.chat] = true
-    m.reply('_Sedang membuat..._\n*Mohon tunggu sekitar 1 menit*')
+    m.reply('*Sedang membuat...*\n*Mohon Tunggu Sekitar 1 Menit*')
     try {
         let img = await ht(text ? text : ':v')
-        conn.sendFile(m.chat, img, 'Harta Tahta.png', '*© Nurutomo*\nMade with FFmpeg', m)
+        conn.sendFile(m.chat, img, 'Harta Tahta.png', '*么 Kitsuneee*\nMade with FFmpeg', m)
     } finally {
         delete conn.hartatahta[m.chat]
     }
@@ -13,7 +13,7 @@ let handler = async (m, { conn, text }) => {
 handler.help = ['tahta <teks>']
 handler.tags = ['nulis']
 handler.command = /^((harta)?tahta)$/i
-
+handler.register = true
 handler.limit = true
 
 export default handler
@@ -31,7 +31,7 @@ let aesthetic = join(src, 'Aesthetic')
 function ht(text = '') {
     return new Promise((resolve, reject) => {
         let img = join(aesthetic, pickRandom(readdirSync(aesthetic)))
-        let font = join(_font, 'Roboto-Black.ttf')
+        let font = join(_font, 'My_handwriting.ttf')
         let w = 1024
         let h = w
         let s = w + 'x' + h

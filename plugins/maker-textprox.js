@@ -1,8 +1,11 @@
 let handler = async(m, { conn, text, args, usedPrefix, command }) => {
 let fdoc = {quoted:{key : {participant : '0@s.whatsapp.net'},message: {documentMessage: {title: `${command}`}}}}
 
-  if (!args[0]) return m.reply(`Example : ${usedPrefix + command} neon helo
-   *List Efek:*
+  if (!args[0]) return m.reply(`*MAKER TEXTPROX 🎨*
+
+*Example : ${usedPrefix + command} neon helo*
+
+*LIST EFEK:*
 3d-effect
 3d-rubystone
 3d-text-sub-zombie
@@ -215,11 +218,11 @@ word-leaves`)
   let thm = args[0]
   let text1 = args.slice(1).join(' ')
         let images = `https://violetics.pw/api/textpro/${thm}?apikey=beta&text=${text1}`
-        let caption = `*⎔┉━「 ${command} 」━┉⎔*
-🤠 *Query* : ${thm}`
+        let caption = `*${command}*
+*ǫᴜᴇʀʏ* : ${thm}`
   await conn.sendButton(m.chat, caption, wm, images, [
-                ['Next', `${usedPrefix + command}`],
-                ['Menu', `${usedPrefix}menu`]
+                ['𝗡𝗘𝗫𝗧', `${usedPrefix + command}`],
+                ['𝗠𝗘𝗡𝗨', `${usedPrefix}menu`]
             ], m, fdoc)
             }
 
