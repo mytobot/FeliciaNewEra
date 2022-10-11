@@ -56,7 +56,7 @@ let handler = async function (m, { text, usedPrefix, command }) {
   #daftar ${conn.getName(m.sender)}.17
 
 `, 
-   footer: `么 Kitsuneee`, 
+   footer: `么 Levi-Ganz`, 
    title: "", 
    buttonText: "ᴄʟɪᴄᴋ ʜᴇʀᴇ", 
    sections 
