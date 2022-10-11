@@ -30,41 +30,41 @@ global.wktuwib = `${global.wibh} H ${global.wibm} M ${global.wibs} S`
 // Kalau gapunya di biarin aja!, atau ga di kasih tanda '-'
 
 // kalo ga punya ketik "-" atau biarin aja biar ada creditsnya :v
-global.sig = 'https://instagram.com/katyushaclara' //Instagram mu
-global.sgh = 'http://tiktok.com/@onlyonegreat' //Github mu 
-global.swb = 'wa.me/6281347927862'
+global.sig = 'https://instagram.com/imleviofc' //Instagram mu
+global.sgh = 'https://www.tiktok.com/@leviatnansyah?_t=8UnaVTcn97p&_r=1' //Github mu 
+global.swb = 'wa.me/6285172446692'
 global.sfb = 'https://www.facebook.com/'
 global.syt = 'https://www.youtube.com/'
-global.syt = 'https://bili.im/EktBYXY' //YT Mu
-global.sgc = 'https://chat.whatsapp.com/JPXhbeh6DsI6G8guMGKrEQ' //Group WhatsApp mu
-global.sdc = 'https://t.me/feliciabotfancommunity' //Discord Mu
+global.syt = 'https://www.youtube.com/' //YT Mu
+global.sgc = 'https://chat.whatsapp.com/JkdB3gSCwCRGgOdCRfkAt1' //Group WhatsApp mu
+global.sdc = '-' //Discord Mu
 global.snh = 'https://nhentai.net/g/365296/' //Make ini aja gausah di ganti.
 
 /*⫘⫘⫘⫘ALL PAYMENT⫘⫘⫘⫘⫘*/
-global.pdana = '082253479547' //Dana
-global.povo = '082253479547' //Ovo
-global.pgopay = '082253479547' //Gopay
-global.ppulsa = '082253479547' //Pulsa 
-global.ppulsa2 = '-' //Pulsa, Kalau nomor cuma 1, yg ini kasih tanda -
-global.psaweria = 'https://saweria.co/kitsunee928' //Saweria
-global.donate = '𝗗𝗢𝗡𝗔𝗧𝗜𝗢𝗡 𝗙𝗢𝗥 𝗕𝗢𝗧\n\n*Choice Via*\n*- OVO:* 082253479547\n*- DANA:* 082253479547\n*- GOPAY:* 082253479547\n*- SAWERIA:* https://saweria.co/kitsunee928\n\n✉️MESSAGE\n_Hub Owner Jika Ingin Donasi_'
+global.pdana = '085172446692' //Dana
+global.povo = '085172446692' //Ovo
+global.pgopay = '085172446692' //Gopay
+global.ppulsa = '085172446692' //Pulsa 
+global.ppulsa2 = '085172446692' //Pulsa, Kalau nomor cuma 1, yg ini kasih tanda -
+global.psaweria = '-' //Saweria
+global.donate = '𝗗𝗢𝗡𝗔𝗧𝗜𝗢𝗡 𝗙𝗢𝗥 𝗕𝗢𝗧\n\n*Choice Via*\n*- OVO:* 085172446692\n*- DANA:* 085172446692\n*- PULSA:* 085172446692\n*- SAWERIA:* -_\n\n✉️MESSAGE\n_Hub Owner Jika Ingin Donasi_'
 
 /*⫘⫘⫘⫘ GLOBAL NOMOR ⫘⫘⫘⫘⫘*/
-global.nomorbot = '6285163083750' //Nomor Bot mu
-global.nomorown = '6281347927862' //Nomormu
-global.namebot = '⌬ Felicia-MD' //Nama bot mu
-global.nameown = '么 Kitsuneee' //Nama mu
+global.nomorbot = '6282131369002' //Nomor Bot mu
+global.nomorown = '6285172446692' //Nomormu
+global.namebot = '⌬ Levi-Mods-MD' //Nama bot mu
+global.nameown = '么 Levi-Ganz' //Nama mu
 
 /*⫘⫘⫘⫘GLOBAL FUNCTION⫘⫘⫘⫘⫘*/
 //KALAU MAGER EDIT, MENDING GAUSAH DI APA² IN. SAMA AJA//
-global.swo = 'https://wa.me/6281347927862' //Nomor mu
-global.linksc = 'https://wa.me/6281347927862' //Gausah di ganti, biar ga eror
+global.swo = 'https://wa.me/6285172446692' //Nomor mu
+global.linksc = 'https://wa.me/6285172446692' //Gausah di ganti, biar ga eror
 global.danied = '𝗘𝗥𝗥𝗢𝗥 𝟰𝟬𝟰' //Gausah di apa² in
 global.botclick = '𝍤 MENU OPTIONS' //Bebas, Kalau gw saranin mending gausah di ganti.
-global.after = 'Bot By 么 Kitsuneee'
-global.author = '                么 Kitsuneee' //Wm author
-global.acguest = 'Kamu Akan Menggunakan Akun Guest Dari ⌬ Felicia-MD\n\nPress the button below.'
-global.botintro = 'Hai, Perkenalkan Saya ⌬ Felicia-MD Salah Satu Bot Whatsapp Yang Dapat Membantu Anda Di WhatsApp Dan Saya Dirilis Pada Tanggal\n*🗓28/11/2021*'
+global.after = 'Bot By 么 Levi-Ganz'
+global.author = '                么 Levi-Ganz' //Wm author
+global.acguest = 'Kamu Akan Menggunakan Akun Guest Dari ⌬ Levi-Mods-MD\n\nPress the button below.'
+global.botintro = 'Hai, Perkenalkan Saya ⌬ Levi-Mods-MD Salah Satu Bot Whatsapp Yang Dapat Membantu Anda Di WhatsApp Dan Saya Dirilis Pada Tanggal\n*🗓28/11/2021*'
 global.sc = 'https://telegra.ph/file/6c280089a0b40057dcdb7.jpg'
 global.sallam = '*Waalaikumussalam*'
 global.thumbBanned = 'https://telegra.ph/file/6eb58988d0b50966593f5.jpg'
@@ -89,10 +89,10 @@ global.guest = 'https://telegra.ph/file/464d9c241a3df4b8420a1.jpg'
 global.thumbmenfes = 'https://telegra.ph/file/c995e434b6969e05a1781.jpg'
 /*⫘⫘⫘⫘ STAFF ⫘⫘⫘⫘⫘*/
 global.owner = [
-  ['6281347927862'], //Owner1
-  ['6281347927862'], //Owner2
-  ['6281347927862'], //Owner3
-  ['6281347927862', '么 Kitsuneee', true] //Ini buat kamu!
+  ['6285172446692'], //Owner1
+  ['6285172446692'], //Owner2
+  ['6285172446692'], //Owner3
+  ['6285172446692', '么 Levi-Ganz', true] //Ini buat kamu!
   // [number, dia creator/owner?, dia developer?]
 ] // Put your number here
 global.mods = [] // Want some help?
@@ -145,13 +145,13 @@ global.APIKeys = { // APIKey Here
 
 /*⫘⫘⫘⫘ WATERMAK ⫘⫘⫘⫘⫘*/
 //GANTI JANGAN NGASAL.
-global.wm = '                「 ⌬ Felicia-MD 」' //Wm
-global.wm2 = '么 Kitsuneee' //Name Wm
-global.wm3 = 'FeliciaBot-MD'
+global.wm = '                「 ⌬ Levi-Mods-MD 」' //Wm
+global.wm2 = '么 Levi-Ganz' //Name Wm
+global.wm3 = 'LeviMods-MD'
 global.hiasan = '⠂⠁⠈⠂⠄⠄⠂⠁⠁⠂⠄⠄⠂⠁⠁⠂⠂⠄⠄⠂⠁⠁⠂⠂'
 global.botdate = `${week} ${date}`
 global.bottime = `${wktuwib}`
-global.titlebot = '𝗙𝗲𝗹𝗶𝗰𝗶𝗮 𝗕𝗼𝘁' //Ganti serah lu
+global.titlebot = 'Levi-Mods-Ganz' //Ganti serah lu
 
 /*⫘⫘⫘⫘ LOGO ⫘⫘⫘⫘⫘*/
 // INI JUGA GANTI SETERAH MU
@@ -467,11 +467,11 @@ global.fsizedoc = '99999999999999' // 10TB
 global.fpagedoc = '999' //Gausah di ganti.
 
 /*⫘⫘⫘⫘ BIO OWNER ⫘⫘⫘⫘⫘*/
-global.nameowner = 'Kitsune (CodeName)'
-global.umurowner = '17'
-global.asalowner = 'Borneo'
-global.nomorowner = 'wa.me/6281347927862'
-global.pacarowner = 'Sudah Menikah'
+global.nameowner = 'Levi-Ganz'
+global.umurowner = '14'
+global.asalowner = 'Kaltim'
+global.nomorowner = 'wa.me/6285172446692'
+global.pacarowner = 'Harem'
 /*⫘⫘⫘⫘ HIASAN ⫘⫘⫘⫘⫘*/
 // DEFAULT MENU
 global.dmenut = '❑━━━━╾⎔' //top
@@ -502,7 +502,7 @@ global.thumbdoc = 'https://telegra.ph/file/6e45318d7c76f57e4a8bd.jpg'
 
 /*⫘⫘⫘⫘ STICKER ⫘⫘⫘⫘⫘*/
 global.stickpack = '么 Kitsuneee'
-global.stickauth = `𝗙𝗔𝗠𝗢𝗨𝗦 𝗦𝗧𝗜𝗖𝗞𝗘𝗥𝗦\n〄 Made by Felicia-Bot\n〄 Number 6285163083750`
+global.stickauth = `𝗙𝗔𝗠𝗢𝗨𝗦 𝗦𝗧𝗜𝗖𝗞𝗘𝗥𝗦\n〄 Made by Levi-Ganz\n〄 Number 085172446692`
 global.packname = 'By 么 Kitsuneee'
 
 
@@ -567,7 +567,7 @@ global.fpay = {
 			requestFrom: '0@s.whatsapp.net',
 			noteMessage: {
 				extendedTextMessage: {
-					text: '么 Kitsuneee'
+					text: '么 Levi-Ganz'
 				}
 			},
 			expiryTimestamp: 999999999,
@@ -584,7 +584,7 @@ global.fpayment = (m) => {
 		key: {
 		remoteJid: '0@s.whatsapp.net',
 		fromMe: false,
-		id: '么 Kitsuneee',
+		id: '么 Levi-Ganz',
 		participant: '0@s.whatsapp.net'
 	},
 	message: {
@@ -594,7 +594,7 @@ global.fpayment = (m) => {
 			requestFrom: (m !== null && m !== undefined) ? m.sender : '0@s.whatsapp.net',
 			noteMessage: {
 				extendedTextMessage: {
-					text: (m !== null && m !== undefined) ? m.text : '么 Kitsuneee'
+					text: (m !== null && m !== undefined) ? m.text : '么 Levi-Ganz'
 				}
 			},
 			expiryTimestamp: 999999999,
