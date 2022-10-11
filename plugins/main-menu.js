@@ -197,17 +197,17 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
    {
 	title: `${htki} 𝗔𝗕𝗢𝗨𝗧 𝗕𝗢𝗧 ${htka}`,
 	rows: [
-	    {title: `𝗜𝗡𝗙𝗢 𝗕𝗢𝗧 ℹ️ `, rowId: ".info", description: "• ɪɴғᴏʀᴍᴀsɪ ᴛᴇɴᴛᴀɴɢ ⌬ ғᴇʟɪᴄɪᴀ-ᴍᴅ"},
-	    {title: `𝗢𝗪𝗡𝗘𝗥 👤`, rowId: ".owner", description: "• ɪɴғᴏʀᴍᴀsɪ ᴛᴇɴᴛᴀɴɢ ᴏᴡɴᴇʀ ⌬ ғᴇʟɪᴄɪᴀ-ᴍᴅ"},
-	{title: `𝗕𝗢𝗧 𝗦𝗧𝗔𝗧𝗦 📊`, rowId: ".botinfo", description: "• sᴛᴀᴛɪsᴛɪᴋ ⌬ ғᴇʟɪᴄɪᴀ-ᴍᴅ"},
-	{title: `𝗧𝗘𝗦𝗧 𝗦𝗣𝗘𝗘𝗗 ⚡`, rowId: ".testspeed", description: "• ᴋᴇᴄᴇᴘᴀᴛᴀɴ sᴇʀᴠᴇʀ ⌬ ғᴇʟɪᴄɪᴀ-ᴍᴅ"},
-	{title: `𝗦𝗣𝗘𝗘𝗗 ⏩`, rowId: ".speed", description: "• ᴋᴇᴄᴇᴘᴀᴛᴀɴ ʀᴇsᴘᴏɴ ⌬ ғᴇʟɪᴄɪᴀ-ᴍᴅ"},
-    {title: `𝗦𝗘𝗪𝗔 𝗕𝗢𝗧 🏷️`, rowId: ".sewa", description: "• ᴊɪᴋᴀ ɪɴɢɪɴ sᴇᴡᴀ ⌬ ғᴇʟɪᴄɪᴀ-ᴍᴅ ᴍᴀsᴜᴋ ɢʀᴜᴘ-ᴍᴜ"},
-    {title: `𝗨𝗣 𝗣𝗥𝗘𝗠𝗜𝗨𝗠 🌟`, rowId: ".premium", description: "• ᴍᴇɴᴊᴀᴅɪ ᴜsᴇʀ ᴘʀᴇᴍɪᴜᴍ ⌬ ғᴇʟɪᴄɪᴀ-ᴍᴅ"},
-    {title: `𝗥𝗔𝗧𝗜𝗡𝗚 ⭐`, rowId: ".rate", description: '• ᴍᴇɴɪʟᴀɪ ʙᴏᴛ ⌬ ғᴇʟɪᴄɪᴀ-ᴍᴅ'},
+	    {title: `𝗜𝗡𝗙𝗢 𝗕𝗢𝗧 ℹ️ `, rowId: ".info", description: "• ɪɴғᴏʀᴍᴀsɪ ᴛᴇɴᴛᴀɴɢ ⌬ ʟᴇᴠɪ-ᴍᴏᴅs-ᴍᴅ"},
+	    {title: `𝗢𝗪𝗡𝗘𝗥 👤`, rowId: ".owner", description: "• ɪɴғᴏʀᴍᴀsɪ ᴛᴇɴᴛᴀɴɢ ᴏᴡɴᴇʀ ⌬ ʟᴇᴠɪ-ᴍᴏᴅs-ᴍᴅ"},
+	{title: `𝗕𝗢𝗧 𝗦𝗧𝗔𝗧𝗦 📊`, rowId: ".botinfo", description: "• sᴛᴀᴛɪsᴛɪᴋ ⌬ ʟᴇᴠɪ-ᴍᴏᴅs-ᴍᴅ"},
+	{title: `𝗧𝗘𝗦𝗧 𝗦𝗣𝗘𝗘𝗗 ⚡`, rowId: ".testspeed", description: "• ᴋᴇᴄᴇᴘᴀᴛᴀɴ sᴇʀᴠᴇʀ ⌬ ʟᴇᴠɪ-ᴍᴏᴅs-ᴍᴅ"},
+	{title: `𝗦𝗣𝗘𝗘𝗗 ⏩`, rowId: ".speed", description: "• ᴋᴇᴄᴇᴘᴀᴛᴀɴ ʀᴇsᴘᴏɴ ⌬ ʟᴇᴠɪ-ᴍᴏᴅs-ᴍᴅ"},
+    {title: `𝗦𝗘𝗪𝗔 𝗕𝗢𝗧 🏷️`, rowId: ".sewa", description: "• ᴊɪᴋᴀ ɪɴɢɪɴ sᴇᴡᴀ ⌬ ʟᴇᴠɪ-ᴍᴏᴅs-ᴍᴅ ᴍᴀsᴜᴋ ɢʀᴜᴘ-ᴍᴜ"},
+    {title: `𝗨𝗣 𝗣𝗥𝗘𝗠𝗜𝗨𝗠 🌟`, rowId: ".premium", description: "• ᴍᴇɴᴊᴀᴅɪ ᴜsᴇʀ ᴘʀᴇᴍɪᴜᴍ ⌬ ʟᴇᴠɪ-ᴍᴏᴅs-ᴍᴅ"},
+    {title: `𝗥𝗔𝗧𝗜𝗡𝗚 ⭐`, rowId: ".rate", description: '• ᴍᴇɴɪʟᴀɪ ʙᴏᴛ ⌬ ʟᴇᴠɪ-ᴍᴏᴅs-ᴍᴅ'},
     {title: `𝗘𝗩𝗘𝗡𝗧 🎉`, rowId: ".event", description: "• ᴀᴄᴀʀᴀ ʏᴀɴɢ ʙᴇʀᴊᴀʟᴀɴ"},
-    {title: `𝗥𝗨𝗟𝗘𝗦 🚨`, rowId: ".rules", description: `• s&ᴋ ⌬ ғᴇʟɪᴄɪᴀ-ᴍᴅ`},
-    {title: `𝗗𝗢𝗡𝗔𝗦𝗜 💱`, rowId: ".donasi", description: '• ᴅᴏɴᴀsɪ ᴀɢᴀʀ ⌬ ғᴇʟɪᴄɪᴀ-ᴍᴅ ʟᴇʙɪʜ ʙᴇʀᴋᴇᴍʙᴀɴɢ'},
+    {title: `𝗥𝗨𝗟𝗘𝗦 🚨`, rowId: ".rules", description: `• s&ᴋ ⌬ ʟᴇᴠɪ-ᴍᴏᴅs-ᴍᴅ`},
+    {title: `𝗗𝗢𝗡𝗔𝗦𝗜 💱`, rowId: ".donasi", description: '• ᴅᴏɴᴀsɪ ᴀɢᴀʀ ⌬ ʟᴇᴠɪ-ᴍᴏᴅs-ᴍᴅ ʟᴇʙɪʜ ʙᴇʀᴋᴇᴍʙᴀɴɢ'},
     {title: `𝗚𝗥𝗢𝗨𝗣 👥`, rowId: ".groupbot", description: '• ⚠️ ᴡᴀᴊɪʙ ʙᴇʀɢᴀʙᴜɴɢ'},
 	]
     },{
@@ -254,7 +254,7 @@ let usrs = db.data.users[m.sender]
     let wktuwib = `${wibh} H ${wibm} M ${wibs} S`
  
 let tek = `
-*📊 DASHBOARD ⌬ Felicia-MD 📊*
+*📊 DASHBOARD ⌬ ʟᴇᴠɪ-ᴍᴏᴅs-ᴍᴅ 📊*
 
 *INFO USER*
 *⬡ ɴᴀᴍᴇ:* ${await conn.getName(m.sender)}*
@@ -279,7 +279,7 @@ let tek = `
 `
 const listMessage = {
   text: tek,
-  footer: '© 么 Kitsuneee | REVOLUTION',
+  footer: '© 么 ʟᴇᴠɪ-ɢᴀɴᴢ | REVOLUTION',
   mentions: await conn.parseMention(tek),
   title: ``,
   buttonText: `𝗠𝗘𝗡𝗨 𝗖𝗔𝗧𝗘𝗚𝗢𝗥𝗜𝗘𝗦`,
